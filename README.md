@@ -141,6 +141,59 @@ Ver [docs/REFERENCIA.md §7](docs/REFERENCIA.md#7-cli-n2t) para detalles.
 
 ---
 
+## Skill de Claude Code
+
+El repo trae una skill lista para usar con
+[Claude Code](https://claude.com/claude-code). Permite pedir circuitos
+en lenguaje natural ("dibujá un divisor de tensión con R1=1k y R2=2k")
+y obtener el PDF/PNG/TikZ correspondiente sin escribir el netlist a
+mano.
+
+La fuente canónica de la skill vive en `skill/` (versionada en este
+repo). Para activarla en tu máquina hay que crear un symlink desde el
+directorio global de skills de Claude Code:
+
+```bash
+mkdir -p ~/.claude/skills
+ln -s "$(pwd)/skill" ~/.claude/skills/netlist2tikz
+```
+
+Verificación:
+
+```bash
+ls -la ~/.claude/skills/netlist2tikz/SKILL.md
+# debe mostrar el symlink al skill/SKILL.md del repo
+```
+
+A partir de ahí, la skill se activa **automáticamente** cuando le
+escribas a Claude algo como "dibujá un circuito RC" o "renderizá un
+opamp inversor"; o **manualmente** con `/netlist2tikz`.
+
+La skill usa el `n2t` del venv del repo (`./.venv/bin/n2t`), así que
+asegurate de tener el venv creado y el paquete instalado en modo
+editable:
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate && pip install -e .
+```
+
+Si migrás de máquina: cloná el repo, recreá el venv y el symlink. La
+skill (incluyendo templates y referencia) viaja con el repo.
+
+Contenido de `skill/`:
+
+```
+skill/
+├── SKILL.md           # instrucciones para Claude (entry point)
+├── REFERENCIA.md      # catálogo completo de sintaxis (referencia)
+├── EJEMPLOS.md        # galería visual de circuitos curriculares
+└── templates/         # 19 netlists base listos para adaptar
+    ├── 01_resistor_simple.sch
+    ├── 02_divisor_resistivo.sch
+    ├── ...
+    └── 21_transformador_real.sch
+```
+
 ## Licencia y atribución
 
 LGPL-2.1, heredada de lcapy. Ver [LICENCE](LICENCE) y [NOTICE](NOTICE).
