@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netlist2tikz"
+version = "0.1.0"
+description = "Generación de esquemáticos circuitikz a partir de netlists tipo SPICE (fork extractivo de lcapy)"
+authors = [{name = "Javier I. Velez"}]
+license = {file = "LICENCE"}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "sympy>=1.10",
+    "numpy",
+    "scipy",
+]
+
+[project.optional-dependencies]
+display = ["matplotlib"]
+
+[project.urls]
+Upstream = "https://github.com/mph-/lcapy"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["netlist2tikz*"]
