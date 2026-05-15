@@ -154,6 +154,23 @@ Cada línea: `Nombre N+ N- [valor]; opciones`.
 | `scale` | float | `1.0` |
 | `node_spacing` | float | `2.0` |
 
+## Labels con comas internas (importante)
+
+Labels que contengan secuencias LaTeX con coma como `\,` (espacio fino),
+`\;`, `\:`, `\!` o coma decimal `{,}` se preservan sin necesidad de
+envolver en llaves. Los siguientes funcionan tal cual:
+
+```
+V1 1 0; down, l=5\,I_1                  # ← 5 [espacio fino] I_1
+R2 4 0; down, l=16{,}2\,V_a             # ← 16,2 V_a (coma decimal española)
+F1 3 0 V1; up, l=r_m\,I_1
+V3 1 0; down, l=0{,}0395\,V_1
+```
+
+Si encontrás un PDF generado de menos de ~2 KB y `to_pdf()` emite un
+warning de "PDF sospechosamente chico", el problema suele ser una
+label mal escapada — revisar las secuencias LaTeX y los espacios finos.
+
 ## Patrones que funcionan (importantísimo)
 
 El motor de layout es **estricto con la consistencia direccional**. Si dos
