@@ -35,7 +35,13 @@ class LabelMaker:
 
     def _format_value_units(self, value, units, style):
         sexpr = _sympify_safe(value)
-        if sexpr is None or not sexpr.is_constant():
+        if sexpr is None:
+            return _latex_math(value)
+        try:
+            is_const = bool(sexpr.is_constant())
+        except (AttributeError, TypeError):
+            is_const = False
+        if not is_const:
             return _latex_math(value)
         return value_formatter(style=style).latex_math(sexpr, units)
 
@@ -77,7 +83,7 @@ class LabelMaker:
         if len(cpt.args):
 
             # TODO, extend for mechanical and acoustical components.
-            units_map = {'V': 'V', 'I': 'A', 'R': '$\Omega$',
+            units_map = {'V': 'V', 'I': 'A', 'R': r'$\Omega$',
                          'C': 'F', 'L': 'H'}
 
             expr = value_parser(cpt.args[0])

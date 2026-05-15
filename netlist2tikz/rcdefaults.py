@@ -14,13 +14,13 @@ def imaginary_update(k, v):
 
     if v == 'i':
         str_expr_map[sym.I] = 'i'
-        latex_expr_map[sym.I] = '\mathrm{i}'
+        latex_expr_map[sym.I] = r'\mathrm{i}'
         iunicode = '\u2148'
         atoms_table['ImaginaryUnit'] = iunicode
         pretty_expr_map[sym.I] = iunicode
     elif v == 'j':
         str_expr_map[sym.I] = 'j'
-        latex_expr_map[sym.I] = '\mathrm{j}'
+        latex_expr_map[sym.I] = r'\mathrm{j}'
         junicode = '\u2149'
         atoms_table['ImaginaryUnit'] = junicode
         pretty_expr_map[sym.I] = junicode
@@ -53,21 +53,12 @@ def units_update(k, v):
         state.check_units = v
 
 
-def print_order_update(k, v):
-    # No-op en netlist2tikz: el pretty-printer interactivo de sympy no se
-    # configura desde aquí porque solo emitimos código TikZ para LaTeX. El
-    # callback se conserva con la misma firma para no romper rcdefaults.
-    pass
-
-
 c = RcChecker()
 
 rcdefaults = {
     'sympy.solver' : ('DM', ('GJ', 'QR', 'CRAMER',
                              'GE', 'LU', 'ADJ', 'LDL', 'CH', 'DM')),
     'sympy.matrix.inverse' : ('DM', ('GE', 'LU', 'ADJ', 'LDL', 'CH', 'DM')),
-    'sympy.print_order': ('lex', ('lex', 'grlex', 'grevlex'),
-                          print_order_update),
 
     # Definition of H(0).  With H(0) = 0.5 then sgn(0) = 0 as expected
     # by SymPy and NumPy

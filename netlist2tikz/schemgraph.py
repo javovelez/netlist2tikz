@@ -659,10 +659,16 @@ class Graph(dict):
         try:
             traverse(from_gnode)
         except RuntimeError:
-            msg = "The %s schematic graph is dodgy, probably a component is attached to the wrong nodes.\n" % self.name
+            edges = list(from_gnode.fedges) + list(from_gnode.redges)
+            cpts = sorted({e.cpt.name for e in edges
+                           if getattr(e, 'cpt', None) is not None})
+            msg = (
+                "The %s schematic graph is dodgy starting at node '%s'. "
+                "Components touching this node: %s. "
+                "Probably a component is attached to the wrong nodes."
+            ) % (self.name, from_gnode.name, cpts)
             if self.debug:
-                msg += str(self)
-
+                msg += '\n' + str(self)
             raise RuntimeError(msg)
 
         return self.makepath(from_gnode)
@@ -674,9 +680,16 @@ class Graph(dict):
         gnode = from_gnode
         while gnode.next is not None:
             if gnode.next.to_gnode == gnode:
-                msg = "The %s schematic graph is dodgy, probably a component is attached to the wrong nodes or a direction attribute is bogus.\n" % self.name
+                cpt = getattr(gnode.next, 'cpt', None)
+                cpt_name = cpt.name if cpt is not None else '<?>'
+                msg = (
+                    "The %s schematic graph is dodgy at node '%s' "
+                    "(self-loop edge from component '%s'). "
+                    "Probably a component is attached to the wrong nodes "
+                    "or a direction attribute is bogus."
+                ) % (self.name, gnode.name, cpt_name)
                 if self.debug:
-                    msg += str(self)
+                    msg += '\n' + str(self)
                 raise RuntimeError(msg)
 
             path.append(gnode.next)
@@ -722,10 +735,18 @@ class Graph(dict):
             # W b d; up
             above = 'above' if self.name == 'vertical' else 'left of'
             below = 'below' if self.name == 'vertical' else 'right of'
-            msg = "The %s schematic graph has a loop.  For example, a node needs to be both %s and %s another node.  Probably a component is attached to the wrong nodes.\n" % \
-                (self.name, above, below)
+            edges = list(from_gnode.fedges) + list(from_gnode.redges)
+            cpts = sorted({e.cpt.name for e in edges
+                           if getattr(e, 'cpt', None) is not None})
+            visited = sorted(self.keys(), key=str)
+            msg = (
+                "The %s schematic graph has a loop starting at node '%s' "
+                "(for example, a node needs to be both %s and %s another). "
+                "Components touching this node: %s. Nodes traversed: %s. "
+                "Probably a component is attached to the wrong nodes."
+            ) % (self.name, from_gnode.name, above, below, cpts, visited)
             if self.debug:
-                msg += str(self)
+                msg += '\n' + str(self)
             raise RuntimeError(msg)
 
         return self.makepath(from_gnode)
