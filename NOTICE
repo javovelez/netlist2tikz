@@ -1,0 +1,29 @@
+netlist2tikz
+============
+
+Este proyecto es un fork extractivo del paquete `lcapy` que conserva
+únicamente el subsistema de generación de esquemáticos circuitikz/TikZ
+a partir de un netlist tipo SPICE.
+
+Upstream original
+-----------------
+Proyecto:  lcapy
+Autor:     Michael Hayes, UCECE (University of Canterbury, Electrical
+           and Computer Engineering)
+Repo:      https://github.com/mph-/lcapy
+Copyright: 2014--2025 Michael Hayes, UCECE
+Licencia:  GNU Lesser General Public License v2.1 (LGPL-2.1)
+
+Cambios introducidos en netlist2tikz
+------------------------------------
+- Se eliminaron los módulos del paquete original que implementan el
+  motor de análisis simbólico (Laplace, Fourier, MNA, etc.).
+- `schematic.py`: se removieron dos imports fantasma a `.expr` y `sympy`.
+- `schematics/components/transformer.py`: la importación
+  `from ...expr import expr` se reemplazó por `sympy.sympify`.
+- `state.py`: se reemplazó por un stub no-op (las únicas dos llamadas
+  que sobreviven, `switch_context`/`restore_context`, no hacen falta
+  para dibujar esquemáticos).
+
+Esta obra derivada permanece bajo licencia LGPL-2.1, igual que el
+upstream. El archivo `LICENCE` contiene el texto completo de la licencia.
