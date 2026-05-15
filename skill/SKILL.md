@@ -137,6 +137,29 @@ Cada línea: `Nombre N+ N- [valor]; opciones`.
 | `f=`, `f^=` | texto libre |
 | `color=blue`, `thick`, `dashed` | estilo |
 
+### Control fino de nodos visibles
+
+`draw_nodes` controla los **puntos** y `label_nodes` controla las
+**etiquetas de texto**. Casos de uso típicos:
+
+| Querés mostrar | Combinación |
+|---|---|
+| Solo nodos principales (`1`, `2`) — default | `draw_nodes=primary, label_nodes=primary` |
+| **Solo nodos específicos** que listés vos | `label_nodes={1, 2, out}` |
+| Nodos nombrados con letra (`in`, `out`, `aux`) y nada más | nombralos así + `label_nodes=alpha` |
+| Puntos sí, texto no | `draw_nodes=primary, label_nodes=none` |
+| Nada (esquemático limpio para presentación) | `draw_nodes=none, label_nodes=none` |
+| Solo uniones reales (3 o más conexiones) | `draw_nodes=connections` |
+
+Convención que se aprovecha:
+- Nombres **numéricos sin sufijo** (`1`, `2`, `3`) → "primarios" → se muestran con `primary`.
+- Nombres con guión bajo (`0_1`, `2_aux`) → secundarios → quedan ocultos con `primary`.
+- Nombres que **empiezan con letra** (`in`, `out`, `aux`) → reconocibles con `alpha`.
+
+Truco para circuitos curriculares: usar `in` y `out` para los puertos
+relevantes y nodos `2_aux`, `0_1`, etc. para layout interno. Con
+`label_nodes=alpha` aparecen solo `in` y `out`.
+
 ### Opciones globales (línea que empieza con `;`)
 
 ```
@@ -145,8 +168,8 @@ Cada línea: `Nombre N+ N- [valor]; opciones`.
 
 | Opción | Valores | Default |
 |---|---|---|
-| `draw_nodes` | `all`/`none`/`primary`/`connections` | `primary` |
-| `label_nodes` | `all`/`none`/`primary`/`alpha` | `none` |
+| `draw_nodes` | `all` / `none` / `primary` / `connections` | `primary` |
+| `label_nodes` | `all` / `none` / `primary` / `alpha` / **`{n1, n2, ...}`** | `none` |
 | `label_ids` | `True`/`False` | `True` |
 | `label_values` | `True`/`False` | `True` |
 | `style` | `american`/`british`/`european` | `american` |

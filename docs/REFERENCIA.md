@@ -237,12 +237,26 @@ componente), o como kwargs a `Schematic.draw(...)`.
 | Opción | Valores | Default | Efecto |
 |---|---|---|---|
 | `draw_nodes` | `all` / `none` / `primary` / `connections` | `primary` | qué nodos se dibujan como punto |
-| `label_nodes` | `all` / `none` / `primary` / `alpha` | `none` | qué nodos se etiquetan con texto |
+| `label_nodes` | `all` / `none` / `primary` / `alpha` / `{n1, n2, …}` | `none` | qué nodos se etiquetan con texto |
 
 Convención:
 - *primary*: nodos numéricos (`1`, `2`, …), no los sub-nodos `0_1`.
 - *connections*: solo nodos con 3+ conexiones (uniones reales).
 - *alpha*: solo nodos cuyo nombre empieza con letra (`in`, `out`).
+- *`{n1, n2, …}`*: **lista explícita** entre llaves de qué nodos etiquetar
+  (p.ej. `label_nodes={1, out}`). Útil cuando ninguna heurística calza
+  y querés decidir nodo por nodo.
+
+Patrones útiles (combinando ambas opciones):
+
+| Querés mostrar | Combinación |
+|---|---|
+| Solo nodos numéricos principales — default | `draw_nodes=primary, label_nodes=primary` |
+| Solo nodos específicos | `label_nodes={1, 2, out}` |
+| Solo nodos con nombre alfabético (`in`, `out`) | `label_nodes=alpha` (más nombres alfa en el netlist) |
+| Punto sí, texto no | `draw_nodes=primary, label_nodes=none` |
+| Esquemático completamente pelado | `draw_nodes=none, label_nodes=none` |
+| Solo uniones reales (3+ conexiones) | `draw_nodes=connections` |
 
 ### 4.2 Etiquetas de componentes
 
