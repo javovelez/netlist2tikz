@@ -41,9 +41,13 @@ Requisitos:
 
 - Python ≥ 3.9
 - `sympy`, `numpy`, `scipy` (se instalan automáticamente)
-- Para renderizar a PDF/PNG/SVG: distribución LaTeX con `circuitikz`
-  ≥ 1.4.5 disponible en `PATH`. En macOS con MacTeX o BasicTeX:
-  `sudo tlmgr install circuitikz`.
+- **Para generar PDF / PNG / SVG localmente**: distribución LaTeX con
+  `circuitikz` ≥ 1.4.5 disponible en `PATH`. En macOS con MacTeX o
+  BasicTeX: `sudo tlmgr install circuitikz`.
+- **Si no tenés LaTeX local**: alcanza con Python. Generás el código
+  TikZ con `to_tikz()` o `n2t render --tikz` y lo compilás en
+  [Overleaf](https://www.overleaf.com) u otro editor en línea.
+  Ver [Generación sin LaTeX local (Overleaf)](#generación-sin-latex-local-overleaf).
 
 Verificación rápida:
 
@@ -141,6 +145,108 @@ Códigos de salida: `0` OK · `1` error de parseo · `2` error de render
 Ver [docs/REFERENCIA.md §7](docs/REFERENCIA.md#7-cli-n2t) para detalles.
 
 ---
+
+## Generación sin LaTeX local (Overleaf)
+
+Si **no tenés** una distribución LaTeX instalada, podés usar el paquete
+igual: generás el código TikZ y lo compilás en
+[Overleaf](https://www.overleaf.com) (o cualquier editor LaTeX online).
+
+### Opción A — Documento standalone (compilable directo)
+
+Desde Python:
+
+```python
+from netlist2tikz import Schematic
+
+sch = Schematic.from_string("""
+V1 1 0_1 ac; down
+R1 1 2; right
+Z1 2 3; right, l=Z_1
+C1 3 0_3; down
+W 0_1 0_3; right
+; draw_nodes=connections
+""")
+
+# Documento LaTeX completo, listo para compilar
+print(sch.to_tikz())
+```
+
+O desde la consola:
+
+```bash
+n2t render circuito.sch -o circuito.tex     # archivo
+n2t render circuito.sch --tikz > circuito.tex
+```
+
+El `circuito.tex` resultante incluye `\documentclass[standalone]{...}`,
+`\usepackage{circuitikz}` y el bloque del esquemático. Pasos en
+Overleaf:
+
+1. New Project → Blank Project.
+2. Borrá el `main.tex` que viene por defecto y subí (drag & drop)
+   tu `circuito.tex`.
+3. Asegurate de que esté seleccionado como "Main document".
+4. Recompile → bajás el PDF.
+
+### Opción B — Fragmento para insertar en tu propio documento
+
+Si querés pegar el esquemático dentro de un apunte / TP / paper que ya
+tenés en Overleaf:
+
+```python
+print(sch.to_tikz(standalone=False))
+```
+
+```bash
+n2t render circuito.sch --tikz --no-standalone > fragmento.tex
+```
+
+Esto produce **solo** el bloque `\begin{tikzpicture}…\end{tikzpicture}`
+(sin `\documentclass` ni preámbulo). En tu documento principal:
+
+```latex
+\documentclass{article}
+\usepackage{circuitikz}     % requisito mínimo del preámbulo
+\begin{document}
+
+Y este es el circuito que vamos a analizar:
+
+\input{fragmento.tex}       % ← se inserta el esquemático aquí
+
+\end{document}
+```
+
+### Ejemplo concreto end-to-end
+
+Supongamos que querés un divisor resistivo para tu TP de TCII y no
+tenés LaTeX en la PC:
+
+```bash
+# 1. Crear el netlist
+cat > divisor.sch <<'EOF'
+V1 1 0_1 10; down
+R1 1 2 1k; right=2.5
+R2 2 0_2 2k; down=2
+W 0_1 0_2; right=2.5
+; draw_nodes=connections, label_nodes=primary
+EOF
+
+# 2. Generar el .tex standalone
+n2t render divisor.sch -o divisor.tex
+
+# 3. Inspeccionar (opcional)
+head -10 divisor.tex
+# \documentclass[a4paper]{standalone}
+# \usepackage{amsmath}
+# \usepackage{circuitikz}
+# ...
+
+# 4. Subir divisor.tex a Overleaf, recompilar, descargar PDF.
+```
+
+El `.tex` generado pesa unos pocos KB y compila en Overleaf en
+segundos.
 
 ## Skill de Claude Code
 
