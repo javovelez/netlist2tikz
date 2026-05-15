@@ -741,15 +741,35 @@ class Schematic(NetfileMixin):
     # API ergonómica: alias de draw() con extensión fija + to_tikz()
     # ------------------------------------------------------------------
 
+    _SUSPICIOUS_PDF_BYTES = 2000
+    _SUSPICIOUS_PNG_BYTES = 1500
+
+    @staticmethod
+    def _warn_if_tiny(path, limit, kind):
+        from os.path import getsize, exists
+        if not exists(path):
+            return
+        size = getsize(path)
+        if size < limit:
+            warn(
+                "El {} generado es sospechosamente chico ({} bytes < {}). "
+                "Posibles causas: label rota por mal escapado (probá envolver "
+                "en llaves: l={{...}}) o circuito sin componentes visibles.".format(
+                    kind, size, limit),
+                stacklevel=3,
+            )
+
     def to_pdf(self, path, **opts):
         """Renderiza a PDF. Wrapper de `draw()` con extensión `.pdf`."""
         self.draw(str(path), **opts)
+        self._warn_if_tiny(str(path), self._SUSPICIOUS_PDF_BYTES, 'PDF')
         return str(path)
 
     def to_png(self, path, dpi=PNG_DPI, **opts):
         """Renderiza a PNG (mapa de bits). `dpi` controla la resolución."""
         opts.setdefault('dpi', dpi)
         self.draw(str(path), **opts)
+        self._warn_if_tiny(str(path), self._SUSPICIOUS_PNG_BYTES, 'PNG')
         return str(path)
 
     def to_svg(self, path, **opts):

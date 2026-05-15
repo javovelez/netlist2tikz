@@ -23,11 +23,27 @@ class Opts(dict):
     def add(self, string):
 
         def split(s):
-            """Split a string by ',' except if in braces"""
+            """Split a string by ',' respetando dos contextos atómicos:
+            - llaves balanceadas `{...}` (pueden contener comas literales,
+              p.ej. coma decimal española `{,}` o etiquetas anidadas)
+            - secuencias LaTeX `\\X` (el caracter post-backslash se
+              consume junto, evitando que `\\,` o `\\;` se interpreten
+              como separador)
+            """
             parts = []
             bracket_level = 0
             current = []
-            for c in (s + ','):
+            s_ext = s + ','
+            i = 0
+            while i < len(s_ext):
+                c = s_ext[i]
+                # `\X`: consumir como token único, sin interpretar la X
+                # como caracter de control (cubre `\,` `\;` `\:` `\!` etc.)
+                if c == '\\' and i + 1 < len(s_ext):
+                    current.append(s_ext[i])
+                    current.append(s_ext[i + 1])
+                    i += 2
+                    continue
                 if c == ',' and bracket_level == 0:
                     parts.append(''.join(current))
                     current = []
@@ -37,6 +53,7 @@ class Opts(dict):
                     elif c == '}':
                         bracket_level -= 1
                     current.append(c)
+                i += 1
             if bracket_level != 0:
                 raise ValueError('Mismatched braces for ' + s)
             return parts
