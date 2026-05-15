@@ -101,6 +101,31 @@ class SchematicOpts(Opts):
 
 class Schematic(NetfileMixin):
 
+    @classmethod
+    def from_file(cls, path, allow_anon=False):
+        """Carga un netlist desde un archivo `.sch` (path explícito).
+
+        Equivalente a `Schematic(path)` pero sin la heurística de
+        detección path-vs-string. Útil cuando se quiere garantizar
+        que la entrada se trata como ruta de archivo.
+        """
+        sch = cls(allow_anon=allow_anon)
+        sch.netfile_add(str(path))
+        return sch
+
+    @classmethod
+    def from_string(cls, netlist, allow_anon=False):
+        """Carga un netlist desde un string multilínea (explícito).
+
+        Equivalente a `Schematic(netlist)` cuando el string contiene
+        saltos de línea o `;`, pero garantiza el tratamiento como
+        netlist literal sin importar el contenido.
+        """
+        sch = cls(allow_anon=allow_anon)
+        for line in netlist.splitlines():
+            sch._add(line, '')
+        return sch
+
     def __init__(self, filename=None, allow_anon=False, **kwargs):
 
         self.elements = OrderedDict()
@@ -711,6 +736,65 @@ class Schematic(NetfileMixin):
             return
 
         self.tikz_draw(filename=filename, **kwargs)
+
+    # ------------------------------------------------------------------
+    # API ergonómica: alias de draw() con extensión fija + to_tikz()
+    # ------------------------------------------------------------------
+
+    def to_pdf(self, path, **opts):
+        """Renderiza a PDF. Wrapper de `draw()` con extensión `.pdf`."""
+        self.draw(str(path), **opts)
+        return str(path)
+
+    def to_png(self, path, dpi=PNG_DPI, **opts):
+        """Renderiza a PNG (mapa de bits). `dpi` controla la resolución."""
+        opts.setdefault('dpi', dpi)
+        self.draw(str(path), **opts)
+        return str(path)
+
+    def to_svg(self, path, **opts):
+        """Renderiza a SVG vectorial."""
+        self.draw(str(path), **opts)
+        return str(path)
+
+    def to_tikz(self, standalone=True, **opts):
+        """Devuelve el código TikZ del esquemático como string.
+
+        Parameters
+        ----------
+        standalone : bool, default True
+            Si True, retorna un documento LaTeX completo compilable
+            directamente con `pdflatex`. Si False, retorna solo el
+            bloque `\\begin{tikzpicture}...\\end{tikzpicture}` para
+            insertar en otro documento con `\\input{}`.
+        **opts
+            Mismas opciones que `draw()`: `style`, `scale`, `dpi`, etc.
+        """
+        from os import remove as _remove
+        from tempfile import NamedTemporaryFile
+
+        with NamedTemporaryFile(suffix='.tex', delete=False, mode='w') as f:
+            tmp_path = f.name
+        try:
+            self.draw(tmp_path, **opts)
+            with open(tmp_path, 'r') as f:
+                content = f.read()
+        finally:
+            try:
+                _remove(tmp_path)
+            except OSError:
+                pass
+
+        if standalone:
+            return content
+
+        # Extraer solo el cuerpo entre \begin{document} y \end{document}.
+        import re as _re
+        match = _re.search(r'\\begin\{document\}(.*?)\\end\{document\}',
+                           content, _re.DOTALL)
+        if match:
+            return match.group(1).strip() + '\n'
+        return content
 
     def pdb(self):
         """Enter the python debugger."""

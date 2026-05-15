@@ -297,43 +297,150 @@ Prefijos SI soportados: `f`, `p`, `n`, `u`, `m`, `k`, `M` (mega),
 
 ## 6. Uso desde Python
 
-### 6.1 Cargar desde archivo
+### 6.1 Constructores
+
+Tres formas equivalentes de cargar un netlist:
 
 ```python
 from netlist2tikz import Schematic
 
+# (a) Constructor genérico — adivina si la entrada es path o string-netlist
 sch = Schematic('mi_circuito.sch')
-sch.draw('salida.pdf')        # también .png, .svg, .tex, .sch
-```
 
-### 6.2 Construir desde string
+# (b) Constructor explícito desde archivo — más claro y valida ruta
+sch = Schematic.from_file('mi_circuito.sch')
 
-```python
-sch = Schematic("""
+# (c) Constructor explícito desde string — sin heurística
+sch = Schematic.from_string("""
 V1 1 0 ac; down
 R1 1 2; right
-C1 2 0; down
+C1 2 0_2; down
 W 0 0_2; right
 """)
-sch.draw('rc.pdf')
 ```
 
-### 6.3 Pasar opciones desde Python
+Los classmethods `from_file` y `from_string` son la API recomendada
+cuando se sabe exactamente qué tipo de entrada se tiene. Aceptan
+`pathlib.Path` o `str`.
+
+### 6.2 Salidas con extensión fija
+
+Cuatro métodos con nombre que envuelven `draw()` y son más
+descubribles:
 
 ```python
-sch.draw('rc.pdf',
-         draw_nodes='none',
-         label_nodes='none',
-         label_ids=False,
-         label_values=False,
-         scale=0.8)
+sch.to_pdf('salida.pdf')           # PDF vectorial
+sch.to_png('salida.png', dpi=600)  # PNG a 600 dpi
+sch.to_svg('salida.svg')           # SVG
+sch.to_tikz()                      # string TikZ standalone (compilable)
+sch.to_tikz(standalone=False)      # solo \begin{tikzpicture}…\end{tikzpicture}
 ```
 
-Tienen prioridad sobre las opciones globales del netlist.
+Todos devuelven la ruta como string (o el contenido en el caso de
+`to_tikz()`), útil para encadenar.
+
+### 6.3 `draw()` genérico (compat)
+
+El método `draw()` original sigue funcionando y elige el formato por
+la extensión del archivo:
+
+```python
+sch.draw('rc.pdf')   # PDF
+sch.draw('rc.png')   # PNG
+sch.draw('rc.svg')   # SVG
+sch.draw('rc.tex')   # solo TikZ standalone, sin compilar
+```
+
+### 6.4 Pasar opciones desde Python
+
+Todas las opciones globales del schematic (sección 4) se aceptan
+como kwargs y tienen prioridad sobre las del netlist:
+
+```python
+sch.to_pdf('rc.pdf',
+           draw_nodes='none',
+           label_nodes='none',
+           label_ids=False,
+           label_values=False,
+           scale=0.8)
+```
 
 ---
 
-## 7. Formatos de salida
+## 7. CLI `n2t`
+
+El paquete instala un binario `n2t` con dos subcomandos:
+
+```bash
+n2t render INPUT.sch [-o OUTPUT] [--pdf|--png|--svg|--tikz] [opciones]
+n2t lint   INPUT.sch
+```
+
+### 7.1 `n2t render`
+
+Renderiza un netlist. Si `-o` tiene extensión conocida (`.pdf`,
+`.png`, `.svg`, `.tex`), infiere el formato automáticamente.
+
+```bash
+# Inferencia por extensión (forma típica)
+n2t render circuito.sch -o circuito.pdf
+n2t render circuito.sch -o circuito.png --dpi 600
+n2t render circuito.sch -o circuito.svg
+
+# Formato explícito (cuando no hay -o)
+n2t render circuito.sch --tikz                  # imprime a stdout
+n2t render circuito.sch --tikz --no-standalone  # solo el bloque tikzpicture
+
+# Flags de estilo
+n2t render circuito.sch -o limpio.png --no-nodes --no-labels
+n2t render circuito.sch -o europeo.pdf --style european --scale 0.8
+```
+
+Flags disponibles:
+
+| Flag | Efecto |
+|---|---|
+| `-o`, `--output` | archivo de salida (sin `-o` y `--tikz` → stdout) |
+| `--pdf` / `--png` / `--svg` / `--tikz` | fuerza formato (mutuamente excluyentes) |
+| `--dpi N` | resolución del PNG (default 300) |
+| `--style {american,british,european}` | estilo de símbolos |
+| `--scale N` | escala global |
+| `--no-nodes` | sin puntos ni etiquetas en los nodos |
+| `--no-labels` | sin nombres ni valores de componentes |
+| `--no-standalone` | con `--tikz`, emite solo el bloque tikzpicture |
+
+### 7.2 `n2t lint`
+
+Valida que el netlist se parsea sin errores. **No** detecta loops
+topológicos (eso solo se ve al renderizar):
+
+```bash
+n2t lint circuito.sch
+# OK: circuito.sch (5 elementos, 4 nodos)
+```
+
+### 7.3 Códigos de salida
+
+| Código | Significado |
+|---|---|
+| `0` | OK |
+| `1` | netlist inválido (error de parseo) |
+| `2` | error de render (LaTeX falla, o el placer detecta loop) |
+| `3` | error de I/O (archivo no existe, extensión desconocida, permisos) |
+
+Útil para integrar en Makefiles o scripts de validación:
+
+```makefile
+%.pdf: %.sch
+\tn2t render $< -o $@
+
+validate:
+\t@for f in *.sch; do n2t lint $$f || exit 1; done
+```
+
+---
+
+## 8. Formatos de salida
 
 | Extensión | Resultado |
 |---|---|
@@ -350,7 +457,7 @@ sch.draw('big.png', dpi=600)
 
 ---
 
-## 8. Errores típicos y diagnóstico
+## 9. Errores típicos y diagnóstico
 
 ### 8.1 `RuntimeError: horizontal schematic graph has a loop`
 
@@ -383,7 +490,7 @@ Removido en la limpieza de código muerto del fork.
 
 ---
 
-## 9. Diferencias con lcapy upstream
+## 10. Diferencias con lcapy upstream
 
 `netlist2tikz` es un fork extractivo de
 [lcapy](https://github.com/mph-/lcapy). Solo se conserva la

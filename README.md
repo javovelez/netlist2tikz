@@ -98,25 +98,46 @@ con vista previa.
 ```python
 from netlist2tikz import Schematic
 
-# Desde archivo
-Schematic('mi_circuito.sch').draw('mi_circuito.pdf')
+# Constructores explícitos
+sch = Schematic.from_file('mi_circuito.sch')
+sch = Schematic.from_string("R1 1 0; down\n")
 
-# Desde string-netlist multilínea
-sch = Schematic("""
-R1 1 0; down
-""")
-sch.draw('out.pdf')           # PDF vectorial
-sch.draw('out.png', dpi=600)  # PNG alta resolución
-sch.draw('out.svg')           # SVG
-sch.draw('out.tex')           # solo el TikZ standalone
+# Salidas con extensión fija
+sch.to_pdf('out.pdf')                # PDF vectorial
+sch.to_png('out.png', dpi=600)       # PNG alta resolución
+sch.to_svg('out.svg')                # SVG
+sch.to_tikz()                        # → string TikZ standalone
+sch.to_tikz(standalone=False)        # → solo \begin{tikzpicture}…
 
 # Opciones globales como kwargs (anulan las del netlist)
-sch.draw('pelado.pdf',
-         draw_nodes='none',
-         label_nodes='none',
-         label_ids=False,
-         label_values=False)
+sch.to_pdf('pelado.pdf',
+           draw_nodes='none',
+           label_nodes='none',
+           label_ids=False,
+           label_values=False)
 ```
+
+El constructor genérico `Schematic(...)` y `sch.draw(filename)`
+siguen funcionando (compatibilidad con docs/EJEMPLOS).
+
+## CLI `n2t`
+
+El paquete instala un binario `n2t`:
+
+```bash
+n2t render circuito.sch -o circuito.pdf       # formato por extensión
+n2t render circuito.sch -o circuito.png --dpi 600
+n2t render circuito.sch --tikz                # TikZ a stdout
+n2t render circuito.sch --tikz --no-standalone > frag.tex
+n2t render circuito.sch -o limpio.png --no-nodes --no-labels
+
+n2t lint circuito.sch                          # exit 0 si parsea, 1 si no
+```
+
+Códigos de salida: `0` OK · `1` error de parseo · `2` error de render
+(LaTeX/loop) · `3` I/O (archivo no encontrado, extensión desconocida).
+
+Ver [docs/REFERENCIA.md §7](docs/REFERENCIA.md#7-cli-n2t) para detalles.
 
 ---
 
