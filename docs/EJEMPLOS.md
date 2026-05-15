@@ -24,6 +24,7 @@ imagen generada. Los archivos viven en
 5. [Cuadripolos](#5-cuadripolos)
    - [5.1 Cuadripolo en T](#51-cuadripolo-en-t)
    - [5.2 Cuadripolo en π](#52-cuadripolo-en-π)
+   - [5.3 Caja negra (TP)](#53-caja-negra-tp)
 6. [Acoplamiento magnético](#6-acoplamiento-magnético)
    - [6.1 Transformador ideal](#61-transformador-ideal)
    - [6.2 Transformador real](#62-transformador-real)
@@ -243,6 +244,32 @@ W 0_3 0_4; right=0.5
 ```
 
 ![](../examples/18_cuadripolo_pi.png)
+
+### 5.3 Caja negra (TP)
+
+Cuadripolo abstracto cuando no interesa la topología interna sino
+trabajar con los parámetros del dos-puertos (Z, Y, H, ABCD).
+Distinto de los anteriores (5.1 y 5.2) que sí muestran la estructura.
+
+**[`22_cuadripolo_caja_negra.sch`](../examples/22_cuadripolo_caja_negra.sch)**
+```
+TP1 1 2 3 4; right, l=Red\ R
+W 1 1a; right=0.5, i^<=I_2
+W 2 2a; right=0.5, i_=I_2
+W 3a 3; right=0.5, i=I_1
+W 4a 4; right=0.5, ir=I_1
+P 1a 2a; down, v^=V_2
+P 3a 4a; down, v_=V_1
+; draw_nodes=none, label_nodes=none
+```
+
+![](../examples/22_cuadripolo_caja_negra.png)
+
+Variantes útiles:
+
+- `shape=cloud` reemplaza el rectángulo por una nube (red indefinida).
+- `TPZ`, `TPY`, `TPH`, `TPA`, `TPB`, `TPG` etiquetan automáticamente
+  con TP_Z, TP_Y, etc. (sin necesidad de pasar `l=`).
 
 ---
 

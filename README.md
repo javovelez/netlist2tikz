@@ -86,6 +86,7 @@ Algunos destacados:
 | [15_opamp_integrador.sch](examples/15_opamp_integrador.sch) | Integrador con op-amp |
 | [17_cuadripolo_T.sch](examples/17_cuadripolo_T.sch) | Cuadripolo en T |
 | [18_cuadripolo_pi.sch](examples/18_cuadripolo_pi.sch) | Cuadripolo en π |
+| [22_cuadripolo_caja_negra.sch](examples/22_cuadripolo_caja_negra.sch) | Cuadripolo como caja negra (TP) |
 | [21_transformador_real.sch](examples/21_transformador_real.sch) | Transformador con fuga y resistencia de devanado |
 
 Ver [docs/EJEMPLOS.md](docs/EJEMPLOS.md) para la galería completa

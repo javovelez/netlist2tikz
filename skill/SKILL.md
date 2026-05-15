@@ -102,10 +102,18 @@ Cada línea: `Nombre N+ N- [valor]; opciones`.
 | `O` | circuito abierto | gap | `O 1 2; right` |
 | `P` | puerto | círculos vacíos | `P1 1 0; down, v=V_1` |
 | `TF` | transformador | dos espirales | `TF 1 0 2 0; right, l={N_1:N_2}` |
+| `TP` | **cuadripolo caja negra** | **rectángulo con texto** | `TP1 1 2 3 4; right, l=Red\\ R` |
+| `TPZ`, `TPY`, `TPH`, `TPA`, `TPB`, `TPG` | cuadripolo con parámetros nombrados | rectángulo etiquetado | `TPZ 1 2 3 4; right` (etiqueta automática TP_Z) |
 | `E` | VCVS (también opamp) | rombo / triángulo | `E1 out 0 opamp inp inm A` |
 | `F` | CCCS | rombo | `F1 1 0 V1 beta; down` |
 | `G` | VCCS | rombo | `G1 1 0 nc+ nc- gm; down` |
 | `H` | CCVS | rombo | `H1 1 0 V1 R; down` |
+
+> **Cuadripolos `TP*`**: la sintaxis es `TPname n1+ n1- n2+ n2-` (4 nodos
+> en orden: puerto-1+, puerto-1-, puerto-2+, puerto-2-). Acepta `shape=cloud`
+> para dibujar como nube en lugar de rectángulo (útil para "red indefinida").
+> Distinto del cuadripolo construido con impedancias `Z` en topología T o π
+> (que muestra la estructura interna).
 
 ### Direcciones y tamaños (después del `;`)
 
@@ -222,6 +230,30 @@ W 3_1 3_2; down
 ; draw_nodes=connections
 ```
 
+### "Cuadripolo como caja negra con etiqueta 'Red R'"
+
+Cuando el usuario NO quiere mostrar la topología interna (solo la
+abstracción del dos-puertos), usar `TP` en lugar de armar la red con
+`Z` en T/π:
+
+```
+TP1 1 2 3 4; right, l=Red\ R
+W 1 1a; right=0.5, i^<=I_2
+W 2 2a; right=0.5, i_=I_2
+W 3a 3; right=0.5, i=I_1
+W 4a 4; right=0.5, ir=I_1
+P 1a 2a; down, v^=V_2
+P 3a 4a; down, v_=V_1
+; draw_nodes=none, label_nodes=none
+```
+
+Variantes:
+- Para etiquetar con tipo de parámetros (Z, Y, H, ABCD, …): usar `TPZ`,
+  `TPY`, `TPH`, `TPA`, `TPB`, `TPG` — la etiqueta sale automáticamente
+  como TP_Z, TP_Y, etc.
+- Para dibujar como **nube** en lugar de rectángulo (red indefinida):
+  agregar `shape=cloud` a las opciones.
+
 ### "RLC paralelo alimentado por fuente de corriente AC"
 
 ```
@@ -260,7 +292,7 @@ y adaptar:
 | Transitorios | `03_rc_transitorio.sch`, `05_rl_con_switch.sch` |
 | Régimen senoidal | `04_rlc_serie.sch`, `11_resonante_paralelo.sch` |
 | Impedancias | `09_impedancia_generica.sch`, `10_dipolo_thevenin.sch` |
-| Cuadripolos | `06_cuadripolo.sch`, `17_cuadripolo_T.sch`, `18_cuadripolo_pi.sch` |
+| Cuadripolos | `06_cuadripolo.sch`, `17_cuadripolo_T.sch`, `18_cuadripolo_pi.sch`, `22_cuadripolo_caja_negra.sch` |
 | Transformadores | `07_transformador.sch`, `21_transformador_real.sch` |
 | Op-amps | `08_opamp_inversor.sch`, `14_opamp_no_inversor.sch`, `15_opamp_integrador.sch`, `16_opamp_derivador.sch` |
 | Filtros | `19_filtro_RC_pasabajo.sch`, `20_filtro_CR_pasaalto.sch` |
