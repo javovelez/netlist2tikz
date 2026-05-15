@@ -5,7 +5,6 @@ Copyright 2021--2024 Michael Hayes, UCECE
 """
 from math import floor, log10
 from sympy import re, im
-from .printing import latex
 
 
 class ValueFormatter(object):
@@ -32,12 +31,12 @@ class ValueFormatter(object):
             pass
 
         if unit == 'ohm':
-            unit = '$\Omega$'
+            unit = r'$\Omega$'
 
         if expr.is_real:
             return self._do1(expr, unit, aslatex)
 
-        jstr = '\mathrm{j}' if aslatex else 'j'
+        jstr = r'\mathrm{j}' if aslatex else 'j'
 
         rexpr = re(expr)
         iexpr = im(expr)
@@ -146,118 +145,18 @@ class EngValueFormatter(ValueFormatter):
         return s
 
 
-class SPICEValueFormatter(ValueFormatter):
-
-    def _fmt(self, valstr, unit='', prefix='', aslatex=True):
-
-        if unit == '' and prefix == '':
-            return valstr
-
-        if unit == '$\\Omega$':
-            if prefix == '':
-                unit = 'R'
-            else:
-                unit = ''
-
-        # Ugly!
-        if prefix == 'k':
-            prefix = 'K'
-        elif prefix == 'M':
-            prefix = 'Meg'
-
-        if not aslatex:
-            return valstr + ' ' + prefix + unit
-
-        return valstr + '\\,' + '\\mathrm{' + prefix + unit + '}'
-
-
-class SciValueFormatter(ValueFormatter):
-
-    def _do1(self, expr, unit, aslatex):
-
-        value = float(expr)
-
-        fmt = '%%.%dE' % (self.num_digits - 1)
-
-        valstr = fmt % value
-
-        if not aslatex:
-            return valstr + unit
-
-        parts = valstr.split('E')
-        exp = parts[1]
-
-        if exp == '+00':
-            valstr = parts[0]
-        else:
-            if exp[0] == '+':
-                exp = exp[1:]
-                if exp[0] == '0':
-                    exp = exp[1:]
-            elif exp[0] == '-' and exp[1] == '0':
-                exp = '-' + exp[2]
-            valstr = parts[0] + '\\times 10^{' + exp + '}'
-
-        if unit == '':
-            return valstr
-
-        if unit.startswith('$'):
-            return valstr + '\\,' + unit[1:-1]
-
-        return valstr + '\\,' + '\\mathrm{' + unit + '}'
-
-
-class RatfunValueFormatter(ValueFormatter):
-
-    def _do1(self, expr, unit, aslatex):
-
-        if not aslatex:
-            if unit == '':
-                return str(expr)
-            else:
-                return str(expr) + ' ' + unit
-
-        valstr = latex(expr)
-        if unit == '':
-            return valstr
-
-        if unit.startswith('$'):
-            return valstr + '\\,' + unit[1:-1]
-
-        return valstr + '\\,' + '\\mathrm{' + unit + '}'
-
-
-class SympyValueFormatter(ValueFormatter):
-
-    def _do(self, expr, unit, aslatex):
-
-        try:
-            expr = expr.sympy
-        except AttributeError:
-            pass
-
-        if aslatex:
-            return latex(expr)
-        else:
-            return str(expr)
-
-
 def value_formatter(style='eng3'):
-    """Return ValueFormatter class for style in 'sympy', 'eng', 'sci', 'spice',
-    or 'ratfun'"""
+    """Return an EngValueFormatter. Solo se soporta la familia 'eng'.
 
+    El upstream lcapy soportaba también 'sympy', 'spice', 'sci', 'ratfun';
+    netlist2tikz los descartó porque dependían del motor simbólico que no
+    se extrajo. Para reintroducirlos, restaurar las clases correspondientes
+    desde el upstream.
+    """
     style = style.lower()
-
-    if style.startswith('sympy'):
-        return SympyValueFormatter(fmt='')
-    elif style.startswith('eng'):
-        return EngValueFormatter(fmt=style[3:])
-    elif style.startswith('spice'):
-        return SPICEValueFormatter(fmt=style[5:])
-    elif style.startswith('sci'):
-        return SciValueFormatter(fmt=style[3:])
-    elif style.startswith('ratfun'):
-        return RatfunValueFormatter(fmt='')
-    else:
-        raise ValueError('Unknown style: ' + style + \
-                         '. Known styles: eng, ratfun, sci, spice, sympy' )
+    if not style.startswith('eng'):
+        raise ValueError(
+            f"Unsupported style: {style!r}; only the 'eng' family is "
+            "supported in netlist2tikz."
+        )
+    return EngValueFormatter(fmt=style[3:])

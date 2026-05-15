@@ -21,7 +21,7 @@ class Wire(Bipole):
 
         The general form of the generated string is:
 
-        \draw[dargs] (pos1) to [short, args] (pos2);
+        \\draw[dargs] (pos1) to [short, args] (pos2);
 
         Unlike a wire, a short can have labels.  It can have an endarrow
         but not a startarrow.
@@ -41,7 +41,7 @@ class Wire(Bipole):
 
         The general form of the generated string is:
 
-        \draw[-, dargs] (pos1) to (pos2);
+        \\draw[-, dargs] (pos1) to (pos2);
 
         A wire cannot have labels; use a short instead.
 

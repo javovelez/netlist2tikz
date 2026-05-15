@@ -784,7 +784,7 @@ class Cpt(object):
 
         The general form of the generated string is:
 
-        \draw[dargs] (pos) node[cpt, args] {label};
+        \\draw[dargs] (pos) node[cpt, args] {label};
 
         """
 
@@ -819,7 +819,7 @@ class Cpt(object):
 
         The general form of the generated string is:
 
-        \draw[dargs] (pos1) to [cpt, args] (pos2);
+        \\draw[dargs] (pos1) to [cpt, args] (pos2);
 
         """
 
