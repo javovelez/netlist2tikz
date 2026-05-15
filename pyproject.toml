@@ -19,6 +19,9 @@ dependencies = [
 [project.optional-dependencies]
 display = ["matplotlib"]
 
+[project.scripts]
+n2t = "netlist2tikz.cli:main"
+
 [project.urls]
 Upstream = "https://github.com/mph-/lcapy"
 
