@@ -19,6 +19,22 @@ id	theme	file	title	tags	cpts	params
 20-filtro-cr-pasaalto	00_curricular	sch/00_curricular/20_filtro_CR_pasaalto.sch	20 filtro CR pasaalto	cpt:c, cpt:p, cpt:r, cpt:w, curricular-base, curricular:tcii, etiqueta, etiqueta-v, visibilidad-nodos	c,p,r,w	down,draw_nodes,l,label_nodes,right,v,v_
 21-transformador-real	00_curricular	sch/00_curricular/21_transformador_real.sch	21 transformador real	cpt:l, cpt:r, cpt:tf, cpt:v, cpt:w, curricular-base, curricular:tcii, etiqueta, etiquetas-globales, visibilidad-nodos	l,r,tf,v,w	down,draw_nodes,l,label_ids,right
 22-cuadripolo-caja-negra	00_curricular	sch/00_curricular/22_cuadripolo_caja_negra.sch	22 cuadripolo caja negra	cpt:p, cpt:tp, cpt:w, curricular-base, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	p,tp,w	down,draw_nodes,i,i^<,i_,ir,l,label_nodes,right,v^,v_
+tp4-ej01-bloques	00_curricular	sch/00_curricular/tp4_ej01_bloques.sch	Tp4 ej01 bloques	cpt:r, cpt:tp, cpt:v, cpt:w, curricular-base, curricular:tcii, estilo, etiqueta	r,tp,v,w	down,fill,l,right,up
+tp4-ej02-proto-pb	00_curricular	sch/00_curricular/tp4_ej02_proto_pb.sch	Tp4 ej02 proto pb	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta	c,l,w	down,l^,l_,right
+tp4-ej03-proto-norm	00_curricular	sch/00_curricular/tp4_ej03_proto_norm.sch	Tp4 ej03 proto norm	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta	c,l,w	down,l^,l_,right
+tp4-ej04-mderiv-pb	00_curricular	sch/00_curricular/tp4_ej04_mderiv_pb.sch	Tp4 ej04 mderiv pb	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta	c,l,w	down,l^,l_,right
+tp4-ej05-hemi-pb	00_curricular	sch/00_curricular/tp4_ej05_hemi_pb.sch	Tp4 ej05 hemi pb	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta	c,l,w	down,l^,l_,right
+tp4-ej06a-proto-pa	00_curricular	sch/00_curricular/tp4_ej06a_proto_pa.sch	Tp4 ej06a proto pa	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta	c,l,w	down,l^,l_,right
+tp4-ej06b-proto-pbanda	00_curricular	sch/00_curricular/tp4_ej06b_proto_pbanda.sch	Tp4 ej06b proto pbanda	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta, layout	c,l,w	down,l,l^,l_,offset,right
+tp4-ej07-enunciado	00_curricular	sch/00_curricular/tp4_ej07_enunciado.sch	Tp4 ej07 enunciado	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta	c,l,w	down,l^,l_,right
+tp4-ej07-sol	00_curricular	sch/00_curricular/tp4_ej07_sol.sch	Tp4 ej07 sol	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta	c,l,w	down,l^,l_,right
+tp4-ej08-enunciado	00_curricular	sch/00_curricular/tp4_ej08_enunciado.sch	Tp4 ej08 enunciado	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta	c,l,w	down,l^,l_,right
+tp4-ej08-hemi-pa	00_curricular	sch/00_curricular/tp4_ej08_hemi_pa.sch	Tp4 ej08 hemi pa	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta	c,l,w	down,l^,l_,right
+tp4-ej09-hemi	00_curricular	sch/00_curricular/tp4_ej09_hemi.sch	Tp4 ej09 hemi	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta, layout	c,l,w	down,l^,l_,offset,right
+tp4-ej09-mderiv	00_curricular	sch/00_curricular/tp4_ej09_mderiv.sch	Tp4 ej09 mderiv	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta, layout	c,l,w	down,l,l^,l_,offset,right
+tp4-ej09-proto	00_curricular	sch/00_curricular/tp4_ej09_proto.sch	Tp4 ej09 proto	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta, layout	c,l,w	down,l,l^,l_,offset,right
+tp4-ej10-mderiv	00_curricular	sch/00_curricular/tp4_ej10_mderiv.sch	Tp4 ej10 mderiv	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta, layout	c,l,w	down,l^,l_,offset,right
+tp4-ej10-proto	00_curricular	sch/00_curricular/tp4_ej10_proto.sch	Tp4 ej10 proto	cpt:c, cpt:l, cpt:w, curricular-base, curricular:tcii, etiqueta, layout	c,l,w	down,l^,l_,offset,right
 c-stamp	01_pasivos	sch/01_pasivos/C-stamp.sch	C stamp	cpt:c, cpt:p, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, pasivo, tierra, visibilidad-nodos	c,p,w	down,ground,i,label_nodes,right,v
 capacitors	01_pasivos	sch/01_pasivos/capacitors.sch	Capacitors	cpt:c, curricular:tcii, etiqueta, kind, kind:curved, kind:electrolytic, kind:polar, kind:sensor, kind:tunable, kind:variable, pasivo, visibilidad-nodos	c	draw_nodes,kind,l,label_nodes,right
 cpe1	01_pasivos	sch/01_pasivos/CPE1.sch	CPE1	cpt:cpe, curricular:tcii, pasivo	cpe	right

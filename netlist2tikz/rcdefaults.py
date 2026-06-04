@@ -88,7 +88,7 @@ rcdefaults = {
     'schematics.scale': (1.0, c.float),
     'schematics.dpi': (300, c.int),
     'schematics.cpt_size': (1.5, c.float),
-    'schematics.node_spacing': (1.2, c.float),
+    'schematics.node_spacing': (1.5, c.float),
     'schematics.help_lines': (0.0, c.float),
     'schematics.style': ('american', ('american', 'british', 'european')),
     'schematics.voltage_dir': ('RP', ('RP', 'EF')),

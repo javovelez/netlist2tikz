@@ -1,6 +1,6 @@
 # Curriculares del autor (loop-safe, convenciones propias)
 
-Tema `00_curricular` · **20** ejemplos. Espejados de lcapy (LGPL). Buscá por tag con `rg -l "n2t-tags:.*<tag>" sch/00_curricular/`.
+Tema `00_curricular` · **36** ejemplos. Espejados de lcapy (LGPL). Buscá por tag con `rg -l "n2t-tags:.*<tag>" sch/00_curricular/`.
 
 > Curricular: **Teoría de Circuitos II**
 
@@ -26,3 +26,19 @@ Tema `00_curricular` · **20** ejemplos. Espejados de lcapy (LGPL). Buscá por t
 | [20-filtro-cr-pasaalto](sch/00_curricular/20_filtro_CR_pasaalto.sch) · 20 filtro CR pasaalto | c,p,r,w | curricular-base, etiqueta, etiqueta-v, visibilidad-nodos | ![](sch/00_curricular/20_filtro_CR_pasaalto.png) |
 | [21-transformador-real](sch/00_curricular/21_transformador_real.sch) · 21 transformador real | l,r,tf,v,w | curricular-base, etiqueta, etiquetas-globales, visibilidad-nodos | ![](sch/00_curricular/21_transformador_real.png) |
 | [22-cuadripolo-caja-negra](sch/00_curricular/22_cuadripolo_caja_negra.sch) · 22 cuadripolo caja negra | p,tp,w | curricular-base, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos | ![](sch/00_curricular/22_cuadripolo_caja_negra.png) |
+| [tp4-ej01-bloques](sch/00_curricular/tp4_ej01_bloques.sch) · Tp4 ej01 bloques | r,tp,v,w | curricular-base, estilo, etiqueta | ![](sch/00_curricular/tp4_ej01_bloques.png) |
+| [tp4-ej02-proto-pb](sch/00_curricular/tp4_ej02_proto_pb.sch) · Tp4 ej02 proto pb | c,l,w | curricular-base, etiqueta | ![](sch/00_curricular/tp4_ej02_proto_pb.png) |
+| [tp4-ej03-proto-norm](sch/00_curricular/tp4_ej03_proto_norm.sch) · Tp4 ej03 proto norm | c,l,w | curricular-base, etiqueta | ![](sch/00_curricular/tp4_ej03_proto_norm.png) |
+| [tp4-ej04-mderiv-pb](sch/00_curricular/tp4_ej04_mderiv_pb.sch) · Tp4 ej04 mderiv pb | c,l,w | curricular-base, etiqueta | ![](sch/00_curricular/tp4_ej04_mderiv_pb.png) |
+| [tp4-ej05-hemi-pb](sch/00_curricular/tp4_ej05_hemi_pb.sch) · Tp4 ej05 hemi pb | c,l,w | curricular-base, etiqueta | ![](sch/00_curricular/tp4_ej05_hemi_pb.png) |
+| [tp4-ej06a-proto-pa](sch/00_curricular/tp4_ej06a_proto_pa.sch) · Tp4 ej06a proto pa | c,l,w | curricular-base, etiqueta | ![](sch/00_curricular/tp4_ej06a_proto_pa.png) |
+| [tp4-ej06b-proto-pbanda](sch/00_curricular/tp4_ej06b_proto_pbanda.sch) · Tp4 ej06b proto pbanda | c,l,w | curricular-base, etiqueta, layout | ![](sch/00_curricular/tp4_ej06b_proto_pbanda.png) |
+| [tp4-ej07-enunciado](sch/00_curricular/tp4_ej07_enunciado.sch) · Tp4 ej07 enunciado | c,l,w | curricular-base, etiqueta | ![](sch/00_curricular/tp4_ej07_enunciado.png) |
+| [tp4-ej07-sol](sch/00_curricular/tp4_ej07_sol.sch) · Tp4 ej07 sol | c,l,w | curricular-base, etiqueta | ![](sch/00_curricular/tp4_ej07_sol.png) |
+| [tp4-ej08-enunciado](sch/00_curricular/tp4_ej08_enunciado.sch) · Tp4 ej08 enunciado | c,l,w | curricular-base, etiqueta | ![](sch/00_curricular/tp4_ej08_enunciado.png) |
+| [tp4-ej08-hemi-pa](sch/00_curricular/tp4_ej08_hemi_pa.sch) · Tp4 ej08 hemi pa | c,l,w | curricular-base, etiqueta | ![](sch/00_curricular/tp4_ej08_hemi_pa.png) |
+| [tp4-ej09-hemi](sch/00_curricular/tp4_ej09_hemi.sch) · Tp4 ej09 hemi | c,l,w | curricular-base, etiqueta, layout | ![](sch/00_curricular/tp4_ej09_hemi.png) |
+| [tp4-ej09-mderiv](sch/00_curricular/tp4_ej09_mderiv.sch) · Tp4 ej09 mderiv | c,l,w | curricular-base, etiqueta, layout | ![](sch/00_curricular/tp4_ej09_mderiv.png) |
+| [tp4-ej09-proto](sch/00_curricular/tp4_ej09_proto.sch) · Tp4 ej09 proto | c,l,w | curricular-base, etiqueta, layout | ![](sch/00_curricular/tp4_ej09_proto.png) |
+| [tp4-ej10-mderiv](sch/00_curricular/tp4_ej10_mderiv.sch) · Tp4 ej10 mderiv | c,l,w | curricular-base, etiqueta, layout | ![](sch/00_curricular/tp4_ej10_mderiv.png) |
+| [tp4-ej10-proto](sch/00_curricular/tp4_ej10_proto.sch) · Tp4 ej10 proto | c,l,w | curricular-base, etiqueta, layout | ![](sch/00_curricular/tp4_ej10_proto.png) |
