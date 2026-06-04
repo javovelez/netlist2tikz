@@ -1,0 +1,7 @@
+# n2t-id: vilrc  ·  VILRC
+# n2t-tags: cpt:c, cpt:i, cpt:l, cpt:r, cpt:v, curricular:tcii, etiqueta-i, pasivo  ·  cpts: c,i,l,r,v  ·  src: doc/examples/netlists/VILRC.sch
+V 1 2; right, i={-i}
+I1 2 3; right, i={-i}
+L 3 4; right, i=i
+R 4 5; right, i=i
+C 5 6; right, i=i

@@ -412,7 +412,11 @@ class Schematic(NetfileMixin):
         if options is not None:
             opts.append(options)
 
-        global_options = ['font', 'voltage_dir', 'color']
+        # Fuente por defecto 25% mas chica que la base 10pt del standalone
+        # (7.5pt). Sobreescribible con el global `font=` del netlist.
+        opts.append('font={' + kwargs.pop('font', r'\fontsize{7.5}{9}\selectfont') + '}')
+
+        global_options = ['voltage_dir', 'color']
 
         for opt in global_options:
             if opt in kwargs:

@@ -1,0 +1,16 @@
+# n2t-id: fdopamp3  ·  Fdopamp3
+# n2t-tags: cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, opamp, visibilidad-nodos  ·  cpts: e,p,r,w  ·  src: doc/examples/schematics/fdopamp3.sch
+P1 1 4; down
+R1 1 5; right
+R3 4 2; right
+E1 6_2 3_2 fdopamp 5 2 7 A; right
+W 3_2 3; right
+W 6_2 6; right
+P2 3 0_3; down
+W 3_1 3_2; down
+W 5_1 5; down
+W 2 2_1; down
+R2 5_1 3_1; right
+W 6_2 6_1; down
+R4 2_1 6_1; right
+; draw_nodes=connections

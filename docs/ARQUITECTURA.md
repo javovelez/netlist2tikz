@@ -5,8 +5,9 @@ un PDF/PNG. Pensado para quien necesite extender el paquete, debuggear
 un error oscuro o entender por qué tal o cual opción del netlist
 produce tal o cual resultado.
 
-Si solo querés usarlo, alcanza con [REFERENCIA.md](REFERENCIA.md) y
-[EJEMPLOS.md](EJEMPLOS.md).
+Si solo querés usarlo, alcanza con la documentación de la skill:
+[COMPONENTES.md](../skill/COMPONENTES.md), [PARAMETROS.md](../skill/PARAMETROS.md),
+[INDICE.md](../skill/INDICE.md) y la [galería](../skill/galeria/README.md).
 
 ---
 

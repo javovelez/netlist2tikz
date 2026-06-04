@@ -1016,7 +1016,7 @@ class Cpt(object):
 
         return s
 
-    def draw_node(self, n, draw_nodes, dargs):
+    def draw_node(self, n, draw_nodes, dargs, label_nodes='none'):
         """Draw a node symbol.  This also draws the node label
         for implicit and connection nodes."""
 
@@ -1044,7 +1044,14 @@ class Cpt(object):
         elif kind is not None:
             s += self.draw_implicit(n, kind, draw_nodes)
 
-        if not n.visible(draw_nodes) or n.pin or not draw_nodes:
+        visible = n.visible(draw_nodes)
+        # In 'labeled' mode a non-port/non-dangling node still gets a dot
+        # if it carries a visible label.
+        if (not visible and draw_nodes in ('labeled', 'label')
+                and not n.pin and n.show_label(label_nodes)):
+            visible = True
+
+        if not visible or n.pin or not draw_nodes:
             return s
 
         symbol = n.opts.get('symbol', 'ocirc' if n.is_port or
@@ -1058,11 +1065,15 @@ class Cpt(object):
         draw_nodes = self.draw_nodes_opt
         if draw_nodes is None:
             draw_nodes = kwargs.get('draw_nodes', True)
+        label_nodes = self.label_nodes_opt
+        if label_nodes is None:
+            label_nodes = kwargs.get('label_nodes', 'none')
         dargs = self.draw_args(self.opts, **kwargs)
 
         s = ''
         for n in self.drawn_nodes:
-            s += self.draw_node(n, draw_nodes=draw_nodes, dargs=dargs)
+            s += self.draw_node(n, draw_nodes=draw_nodes,
+                                label_nodes=label_nodes, dargs=dargs)
 
         return s
 

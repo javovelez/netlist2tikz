@@ -1,0 +1,22 @@
+# n2t-id: accelerometer1  ·  Accelerometer1
+# n2t-tags: cpt:c, cpt:l, cpt:p, cpt:r, cpt:tf, cpt:w, estilo, etiqueta-i, etiqueta-v, layout, transistor, visibilidad-nodos  ·  cpts: c,l,p,r,tf,w  ·  src: doc/examples/schematics/accelerometer1.sch
+Pm1 1 0_1; down, v=f_1
+Pm2 2 0_2; down, v=f_2
+Lm1 1 3; right=3, i>^=u_1
+Lm2 3 2; right=3, i^<=u_2
+Rm 3 4; down
+Cm 4 5; down
+TF 5 6 9 0 k; right, turns
+W 6 0_6; down
+W 0_1 0_10; right
+W 0_10 0_6; right, free
+W 0_6 0_2; right
+
+Pe 7 0_7; down, v_=v
+W 7 8; right=0.75, i=i
+W 0_7 0_8; right=0.75
+W 8 9; right
+W 0_8 0; right
+C0 8 0_8; down
+W 0 0_10; down, dashed
+; label_nodes=none, draw_nodes=connections

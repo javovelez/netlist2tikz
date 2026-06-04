@@ -1,0 +1,6 @@
+# n2t-id: mx1  ·  MX1
+# n2t-tags: bloque, cpt:mx, cpt:w, curricular:senales, layout  ·  cpts: mx,w  ·  src: doc/examples/schematics/MX1.sch
+MX1 ._1 ._2 ._3; right
+W MX1._1 1; right=0.5, endarrow=tri
+W 2 MX1._2; right=0.5, endarrow=tri
+W 3 MX1._3; up=0.5, endarrow=tri

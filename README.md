@@ -61,9 +61,11 @@ python -c "from netlist2tikz import Schematic; Schematic('R1 1 0; down').draw('/
 
 | Documento | Propósito |
 |---|---|
-| **[docs/REFERENCIA.md](docs/REFERENCIA.md)** | Catálogo exhaustivo de sintaxis: componentes, opciones por componente, opciones globales, formatos de salida. |
-| **[docs/EJEMPLOS.md](docs/EJEMPLOS.md)** | Galería visual con ~25 circuitos curriculares de TCII (transitorios, resonancia, cuadripolos, transformadores, op-amps, filtros). |
-| **[docs/ARQUITECTURA.md](docs/ARQUITECTURA.md)** | Cómo funciona internamente: pipeline parser → placer → emisor TikZ → pdflatex. Estructura de archivos, decisiones de diseño del fork. |
+| **[skill/INDICE.md](skill/INDICE.md)** | Despacho de búsqueda: intención → id, vocabulario de tags, ruta curricular. Punto de entrada. |
+| **[skill/COMPONENTES.md](skill/COMPONENTES.md)** | Ficha unificada por **componente** (`cpt-*`), con soporte real del fork (✅/⚠️). |
+| **[skill/PARAMETROS.md](skill/PARAMETROS.md)** | Ficha unificada por **parámetro modificable** (`param-*`, `gl-*`): dirección, etiquetas, `kind`, tierras, globales. |
+| **[skill/galeria/](skill/galeria/README.md)** | **Espejo navegable de ~520 esquemáticos** de lcapy + curriculares, con miniaturas, tags e índice máquina (`index.tsv`). |
+| **[docs/ARQUITECTURA.md](docs/ARQUITECTURA.md)** | Cómo funciona internamente: pipeline parser → placer → emisor TikZ → pdflatex. Decisiones de diseño del fork. |
 
 ---
 
@@ -291,15 +293,20 @@ Contenido de `skill/`:
 
 ```
 skill/
-├── SKILL.md           # instrucciones para Claude (entry point)
-├── REFERENCIA.md      # catálogo completo de sintaxis (referencia)
-├── EJEMPLOS.md        # galería visual de circuitos curriculares
-└── templates/         # 19 netlists base listos para adaptar
-    ├── 01_resistor_simple.sch
-    ├── 02_divisor_resistivo.sch
-    ├── ...
-    └── 21_transformador_real.sch
+├── SKILL.md           # instrucciones para Claude (entry point) + protocolo de búsqueda
+├── INDICE.md          # despacho intención→id, vocabulario de tags, ruta curricular
+├── COMPONENTES.md     # ficha unificada por componente (cpt-*)
+├── PARAMETROS.md      # ficha unificada por parámetro modificable (param-*, gl-*)
+└── galeria/           # espejo navegable de ~520 ejemplos
+    ├── README.md      # mapa de 24 temas + cómo buscar
+    ├── 00_curricular.md … 23_otros.md   # índice visual por tema (miniaturas + tags)
+    ├── index.tsv      # índice máquina (id·tema·archivo·título·tags·cpts·params)
+    ├── render.py      # regenera PDF/PNG + RENDER_REPORT.md
+    └── sch/<tema>/*.sch (+ *.png)        # netlists + miniaturas
 ```
+
+La documentación está pensada para **buscar con `rg`**: cada componente/parámetro
+tiene un `id:` estable y cada `.sch` un header `# n2t-tags:` con sus tags.
 
 ## Licencia y atribución
 
