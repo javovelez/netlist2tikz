@@ -1,6 +1,6 @@
 # Galería de ejemplos — netlist2tikz
 
-Espejo navegable de **521** esquemáticos de la documentación de [lcapy](https://github.com/mph-/lcapy) (LGPL-2.1), reproducidos con este fork (**517/520** renderizan; ver [RENDER_REPORT.md](RENDER_REPORT.md)).
+Espejo navegable de **537** esquemáticos de la documentación de [lcapy](https://github.com/mph-/lcapy) (LGPL-2.1), reproducidos con este fork (**533/536** renderizan; ver [RENDER_REPORT.md](RENDER_REPORT.md)).
 
 ## Cómo buscar
 
@@ -20,7 +20,7 @@ Espejo navegable de **521** esquemáticos de la documentación de [lcapy](https:
 
 | tema | ejemplos | |
 |---|--:|---|
-| [00_curricular](00_curricular.md) | 20 | Curriculares del autor (loop-safe, convenciones propias) · ⭐ curricular |
+| [00_curricular](00_curricular.md) | 36 | Curriculares del autor (loop-safe, convenciones propias) · ⭐ curricular |
 | [01_pasivos](01_pasivos.md) | 40 | Pasivos R/L/C, Z/Y, básicos · ⭐ curricular |
 | [02_fuentes](02_fuentes.md) | 8 | Fuentes independientes y controladas · ⭐ curricular |
 | [03_diodos](03_diodos.md) | 12 | Diodos |

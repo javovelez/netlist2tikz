@@ -121,8 +121,15 @@ modificadores `^`/`_` (arriba/abajo) y `<`/`>` (sentido).
 
 ### `offset` — desplazamiento perpendicular
 `id: param-offset` · ámbito: componente · grupo: geometría · fork: ✅
-- **qué hace** desplaza el componente ⊥ a su rama; útil para **componentes en paralelo**.
-- **ejemplo** `R2 1 2; right, offset=0.5`
+- **qué hace** desplaza el componente ⊥ a su rama; útil para **componentes en paralelo** (tanque `L‖C`).
+- **ejemplo** `R2 1 2; right, offset=0.5` · tanque: `L 1 2; right, offset=0.3` + `C 1 2; right, offset=-0.3`
+- **patrón "tee"** (derivación que sale como un **único cable** y recién abajo se bifurca en las ramas `offset`): no abrir el `offset` directo desde el nodo del riel, sino bajar primero con un nodo de split y abrir desde ahí. Sin el split, el `offset` dibuja **dos cables separados** en el riel.
+  ```
+  W c sp; down=0.5          # un solo cable baja del riel
+  L2 sp 5; down, offset=-0.45   # ramas paralelas salen del split sp
+  C2 sp 5; down, offset=0.45
+  ```
+  Ejemplos en galería: `rg -l "tp4-ej(06b|09)" skill/galeria/sch/`.
 
 ### `mirror` — espejo en el eje de la rama
 `id: param-mirror` · ámbito: componente · grupo: espejo · fork: ✅
@@ -396,7 +403,8 @@ Fuente autoritativa: `netlist2tikz/rcdefaults.py`.
 
 ### `node_spacing` — separación base entre nodos
 `id: gl-node_spacing` · ámbito: global · grupo: geometría · fork: ✅
-- **valores** float · **default** 1.2 (default del fork, dibujos compactos; lcapy upstream usa 2.0) · **ejemplo** `; node_spacing=2.5` · **ver** `param-size`
+- **valores** float · **default** 1.5 (default del fork, compacto; lcapy upstream usa 2.0) · **ejemplo** `; node_spacing=2.5` · **ver** `param-size`
+- **REGLA IMPORTANTE** `node_spacing ≥ cpt_size` (1.5). Si una rama queda más corta que el símbolo (`N × node_spacing < cpt_size`), circuitikz **comprime el símbolo** y queda sin terminal de un lado (típico: inductor en derivación con `down` chico). Por eso `node_spacing=1.5` (= `cpt_size`) es el mínimo seguro con ramas simples (`right`/`down`, N=1).
 
 ### `help_lines` — grilla de ayuda
 `id: gl-help_lines` · ámbito: global · grupo: depuración · fork: ✅

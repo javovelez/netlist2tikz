@@ -51,7 +51,7 @@ ubicá el `id` y leé sólo esa ficha.
 | [INDICE.md](INDICE.md) | despacho intención→id, vocabulario de tags, ruta curricular |
 | [COMPONENTES.md](COMPONENTES.md) | ficha de cada componente (`cpt-*`) |
 | [PARAMETROS.md](PARAMETROS.md) | ficha de cada parámetro modificable (`param-*`, `gl-*`) |
-| [galeria/](galeria/README.md) | ~520 ejemplos espejados de lcapy + curriculares, con miniaturas |
+| [galeria/](galeria/README.md) | ~537 ejemplos espejados de lcapy + curriculares (incl. 16 filtros TP4), con miniaturas |
 
 ## Cómo invocar el paquete
 
@@ -137,11 +137,12 @@ Cada línea: `Nombre N+ N- [valor]; opciones`. Catálogo completo → COMPONENTE
 | `label_ids` · `label_values` | True/False | `True` |
 | `style` | american / british / european | `american` |
 | `voltage_dir` | RP (pasiva) / EF (activa) | `RP` |
-| `scale` · `node_spacing` · `cpt_size` | float | 1.0 / **1.2** / 1.5 |
+| `scale` · `node_spacing` · `cpt_size` | float | 1.0 / **1.5** / 1.5 |
 | `font` | comando LaTeX | `\fontsize{7.5}{9}\selectfont` (−25%); `; font=\normalsize` para tamaño pleno |
 
 Detalle y todos los demás parámetros → `PARAMETROS.md` (grep `id: gl-…`).
-**Defaults del fork** (dibujos limpios y compactos para cátedra): `draw_nodes=labeled` (punto solo en puertos/terminales o nodos etiquetados), `label_nodes=none`, `node_spacing=1.2`, fuente −25%. No hace falta agregar `; draw_nodes=…, label_nodes=…` en cada netlist.
+**Defaults del fork** (dibujos limpios y compactos para cátedra): `draw_nodes=labeled` (punto solo en puertos/terminales o nodos etiquetados), `label_nodes=none`, `node_spacing=1.5`, fuente −25%. No hace falta agregar `; draw_nodes=…, label_nodes=…` en cada netlist.
+⚠️ **`node_spacing ≥ cpt_size` (1.5)**: si una rama es más corta que el símbolo (`N×node_spacing < cpt_size`), el símbolo se comprime y pierde el terminal de un lado. Con `node_spacing=1.5` las ramas simples (`right`/`down`) andan bien.
 
 ## Labels con comas internas (importante)
 
@@ -213,6 +214,23 @@ P 3a 4a; down, v_=V_1
 ; draw_nodes=none, label_nodes=none
 ```
 Variantes con parámetros: `TPZ`/`TPY`/`TPH`/`TPA`/`TPB`/`TPG`. Nube: `shape=cloud`.
+
+**"Filtro LC pasabanda: tanque `L‖C` serie + derivación tee a un tanque `L‖C`"**
+(estrena `offset` para paralelos y el patrón **tee**; con los defaults nuevos no hace falta `; draw_nodes/label_nodes`)
+```
+W in_t 1; right=0.4
+L1 1 1a; right=1.5, l^=13\,\mathrm{mH}
+C1 1a c; right=1.5, l^=18{,}5\,\mathrm{nF}
+W c out_t; right=0.6
+W c sp; down=0.5                                  # tee: un solo cable baja
+L2 sp 5; down=1.6, offset=-0.45, l_=3{,}3\,\mathrm{mH}   # tanque paralelo
+C2 sp 5; down=1.6, offset=0.45,  l^=74\,\mathrm{nF}
+W 5 0; down=0.5
+W in_b 0; right=3.4
+W 0 out_b; right=0.6
+```
+Familia completa de filtros (T, m-derivada, hemisecciones; PB/PA/pasabanda/suprimebanda)
+→ `rg -l "tp4-" skill/galeria/sch/`.
 
 Más patrones → buscá en la galería (`rg -l "cpt:tp" skill/galeria/sch/`, etc.).
 
