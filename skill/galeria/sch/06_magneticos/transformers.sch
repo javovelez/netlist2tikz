@@ -1,0 +1,12 @@
+# n2t-id: transformers  ·  Transformers
+# n2t-tags: cpt:o, cpt:tf, cpt:w, curricular:tcii, kind, magnetico  ·  cpts: o,tf,w  ·  src: doc/examples/schematics/transformers.sch
+TF1 1 2 3 4; right
+
+TF2 11 12 13 14; right, core=true
+
+TF3 21 22 23 24 tap _25 _26; right
+W 25 _25; right=0.5
+W _26 26; right=0.5
+
+O 1 13; right
+O 11 23; right

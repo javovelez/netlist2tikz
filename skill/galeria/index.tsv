@@ -1,0 +1,522 @@
+id	theme	file	title	tags	cpts	params
+01-resistor-simple	00_curricular	sch/00_curricular/01_resistor_simple.sch	01 resistor simple	cpt:r, curricular-base, curricular:tcii	r	down
+02-divisor-resistivo	00_curricular	sch/00_curricular/02_divisor_resistivo.sch	02 divisor resistivo	cpt:r, cpt:v, cpt:w, curricular-base, curricular:tcii, visibilidad-nodos	r,v,w	down,draw_nodes,label_nodes,right
+03-rc-transitorio	00_curricular	sch/00_curricular/03_rc_transitorio.sch	03 rc transitorio	cpt:c, cpt:r, cpt:v, cpt:w, curricular-base, curricular:tcii	c,r,v,w	down,right,size
+04-rlc-serie	00_curricular	sch/00_curricular/04_rlc_serie.sch	04 rlc serie	cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, curricular-base, curricular:tcii, visibilidad-nodos	c,l,r,v,w	down,draw_nodes,right
+05-rl-con-switch	00_curricular	sch/00_curricular/05_rl_con_switch.sch	05 rl con switch	cpt:l, cpt:r, cpt:v, cpt:w, curricular-base, curricular:tcii, visibilidad-nodos	l,r,v,w	down,draw_nodes,right
+06-cuadripolo	00_curricular	sch/00_curricular/06_cuadripolo.sch	06 cuadripolo	cpt:p, cpt:r, cpt:w, curricular-base, curricular:tcii, etiqueta-i, etiqueta-v, visibilidad-nodos	p,r,w	down,draw_nodes,i>^,i^<,label_nodes,right,v,v_
+07-transformador	00_curricular	sch/00_curricular/07_transformador.sch	07 transformador	cpt:r, cpt:tf, cpt:v, cpt:w, curricular-base, curricular:tcii, etiqueta, etiquetas-globales, visibilidad-nodos	r,tf,v,w	down,draw_nodes,l,label_ids,right
+08-opamp-inversor	00_curricular	sch/00_curricular/08_opamp_inversor.sch	08 opamp inversor	cpt:e, cpt:p, cpt:r, cpt:w, curricular-base, curricular:tcii, espejo, visibilidad-nodos	e,p,r,w	down,draw_nodes,mirror,right
+09-impedancia-generica	00_curricular	sch/00_curricular/09_impedancia_generica.sch	09 impedancia generica	cpt:c, cpt:r, cpt:v, cpt:w, cpt:z, curricular-base, curricular:tcii, etiqueta, visibilidad-nodos	c,r,v,w,z	down,draw_nodes,l,label_nodes,right
+10-dipolo-thevenin	00_curricular	sch/00_curricular/10_dipolo_thevenin.sch	10 dipolo thevenin	cpt:p, cpt:r, cpt:v, cpt:w, curricular-base, curricular:tcii, etiqueta-v, visibilidad-nodos	p,r,v,w	down,draw_nodes,label_nodes,right,v
+11-resonante-paralelo	00_curricular	sch/00_curricular/11_resonante_paralelo.sch	11 resonante paralelo	cpt:c, cpt:i, cpt:l, cpt:r, cpt:w, curricular-base, curricular:tcii, visibilidad-nodos	c,i,l,r,w	down,draw_nodes,right,up
+14-opamp-no-inversor	00_curricular	sch/00_curricular/14_opamp_no_inversor.sch	14 opamp no inversor	cpt:e, cpt:p, cpt:r, cpt:w, curricular-base, curricular:tcii, visibilidad-nodos	e,p,r,w	down,draw_nodes,right
+15-opamp-integrador	00_curricular	sch/00_curricular/15_opamp_integrador.sch	15 opamp integrador	cpt:c, cpt:e, cpt:p, cpt:r, cpt:w, curricular-base, curricular:tcii, espejo, visibilidad-nodos	c,e,p,r,w	down,draw_nodes,mirror,right
+16-opamp-derivador	00_curricular	sch/00_curricular/16_opamp_derivador.sch	16 opamp derivador	cpt:c, cpt:e, cpt:p, cpt:r, cpt:w, curricular-base, curricular:tcii, espejo, visibilidad-nodos	c,e,p,r,w	down,draw_nodes,mirror,right
+17-cuadripolo-t	00_curricular	sch/00_curricular/17_cuadripolo_T.sch	17 cuadripolo T	cpt:p, cpt:w, cpt:z, curricular-base, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	p,w,z	down,draw_nodes,i>^,i^<,l,label_nodes,right,v,v_
+18-cuadripolo-pi	00_curricular	sch/00_curricular/18_cuadripolo_pi.sch	18 cuadripolo pi	cpt:p, cpt:w, cpt:z, curricular-base, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	p,w,z	down,draw_nodes,i>^,l,label_nodes,right,v,v_
+19-filtro-rc-pasabajo	00_curricular	sch/00_curricular/19_filtro_RC_pasabajo.sch	19 filtro RC pasabajo	cpt:c, cpt:p, cpt:r, cpt:w, curricular-base, curricular:tcii, etiqueta, etiqueta-v, visibilidad-nodos	c,p,r,w	down,draw_nodes,l,label_nodes,right,v,v_
+20-filtro-cr-pasaalto	00_curricular	sch/00_curricular/20_filtro_CR_pasaalto.sch	20 filtro CR pasaalto	cpt:c, cpt:p, cpt:r, cpt:w, curricular-base, curricular:tcii, etiqueta, etiqueta-v, visibilidad-nodos	c,p,r,w	down,draw_nodes,l,label_nodes,right,v,v_
+21-transformador-real	00_curricular	sch/00_curricular/21_transformador_real.sch	21 transformador real	cpt:l, cpt:r, cpt:tf, cpt:v, cpt:w, curricular-base, curricular:tcii, etiqueta, etiquetas-globales, visibilidad-nodos	l,r,tf,v,w	down,draw_nodes,l,label_ids,right
+22-cuadripolo-caja-negra	00_curricular	sch/00_curricular/22_cuadripolo_caja_negra.sch	22 cuadripolo caja negra	cpt:p, cpt:tp, cpt:w, curricular-base, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	p,tp,w	down,draw_nodes,i,i^<,i_,ir,l,label_nodes,right,v^,v_
+c-stamp	01_pasivos	sch/01_pasivos/C-stamp.sch	C stamp	cpt:c, cpt:p, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, pasivo, tierra, visibilidad-nodos	c,p,w	down,ground,i,label_nodes,right,v
+capacitors	01_pasivos	sch/01_pasivos/capacitors.sch	Capacitors	cpt:c, curricular:tcii, etiqueta, kind, kind:curved, kind:electrolytic, kind:polar, kind:sensor, kind:tunable, kind:variable, pasivo, visibilidad-nodos	c	draw_nodes,kind,l,label_nodes,right
+cpe1	01_pasivos	sch/01_pasivos/CPE1.sch	CPE1	cpt:cpe, curricular:tcii, pasivo	cpe	right
+fb1	01_pasivos	sch/01_pasivos/FB1.sch	FB1	cpt:fb, curricular:tcii, pasivo	fb	right
+fb2	01_pasivos	sch/01_pasivos/FB2.sch	FB2	cpt:c, cpt:fb, curricular:tcii, pasivo	c,fb	down,right
+ferrite-choke1	01_pasivos	sch/01_pasivos/ferrite-choke1.sch	Ferrite choke1	cpt:c, cpt:o, cpt:r, cpt:tf, cpt:v, cpt:w, curricular:tcii, estilo, etiqueta, etiqueta-i, kind, layout, pasivo, visibilidad-nodos	c,o,r,tf,v,w	blue,core,dashed,down,draw_nodes,fixed,i,l,label_nodes,right,up
+ferrite-choke2	01_pasivos	sch/01_pasivos/ferrite-choke2.sch	Ferrite choke2	cpt:c, cpt:o, cpt:r, cpt:tf, cpt:v, cpt:w, curricular:tcii, estilo, etiqueta, etiqueta-i, kind, layout, pasivo, raw-tikz, tierra, visibilidad-nodos	c,o,r,tf,v,w	blue,core,dashed,down,draw_nodes,fixed,ground,i,l,label_nodes,right,up
+i-stamp	01_pasivos	sch/01_pasivos/I-stamp.sch	I stamp	cpt:i, cpt:p, cpt:w, curricular:tcii, etiqueta-v, pasivo, tierra, visibilidad-nodos	i,p,w	down,ground,label_nodes,right,v
+inductors	01_pasivos	sch/01_pasivos/inductors.sch	Inductors	cpt:l, curricular:tcii, etiqueta, kind, kind:american, kind:choke, kind:european, kind:sensor, kind:tunable, kind:twolineschoke, kind:variable, pasivo, visibilidad-nodos	l	draw_nodes,kind,l,label_nodes,right
+l-stamp	01_pasivos	sch/01_pasivos/L-stamp.sch	L stamp	cpt:l, cpt:p, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, pasivo, tierra, visibilidad-nodos	l,p,w	down,ground,i,label_nodes,right,v
+l1	01_pasivos	sch/01_pasivos/L1.sch	L1	cpt:l, curricular:tcii, pasivo, raw-tikz	l	right
+l2	01_pasivos	sch/01_pasivos/L2.sch	L2	cpt:l, curricular:tcii, estilo, pasivo	l	inductors/coils,purple,right,thick
+lc1	01_pasivos	sch/01_pasivos/LC1.sch	LC a tierra	cpt:c, cpt:l, cpt:w, curricular:tcii, pasivo	c,l,w	down,right
+massspringdamper1	01_pasivos	sch/01_pasivos/massspringdamper1.sch	Massspringdamper1	cpt:mecanico, curricular:tcii, pasivo	mecanico	right
+r-stamp	01_pasivos	sch/01_pasivos/R-stamp.sch	R stamp	cpt:p, cpt:r, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, pasivo, tierra, visibilidad-nodos	p,r,w	down,ground,i,label_nodes,right,v
+rc1	01_pasivos	sch/01_pasivos/RC1.sch	RC serie horizontal	cpt:c, cpt:r, curricular:tcii, pasivo	c,r	right
+rc2	01_pasivos	sch/01_pasivos/RC2.sch	R y C en paralelo (par vertical)	cpt:c, cpt:r, cpt:w, curricular:tcii, pasivo	c,r,w	down,right
+rcparallel1	01_pasivos	sch/01_pasivos/RCparallel1.sch	RCparallel1	cpt:c, cpt:r, cpt:w, curricular:tcii, pasivo	c,r,w	down,right
+rcparallel1noisy	01_pasivos	sch/01_pasivos/RCparallel1noisy.sch	RCparallel1noisy	cpt:c, cpt:r, cpt:v, cpt:w, curricular:tcii, pasivo	c,r,v,w	down,right
+resistors	01_pasivos	sch/01_pasivos/resistors.sch	Resistencias (variantes)	cpt:r, curricular:tcii, etiqueta, kind, kind:tunable, kind:variable, pasivo, visibilidad-nodos	r	draw_nodes,kind,l,label_nodes,right
+resistors1	01_pasivos	sch/01_pasivos/resistors1.sch	Resistors1	cpt:r, curricular:tcii, grilla, pasivo	r	help_lines,right
+resistors2	01_pasivos	sch/01_pasivos/resistors2.sch	Resistors2	cpt:r, curricular:tcii, geometria-global, grilla, pasivo	r	help_lines,node_spacing,right
+resistors3	01_pasivos	sch/01_pasivos/resistors3.sch	Resistors3	cpt:r, curricular:tcii, geometria-global, grilla, pasivo	r	cpt_size,help_lines,right
+resistors4	01_pasivos	sch/01_pasivos/resistors4.sch	Resistors4	cpt:r, curricular:tcii, geometria-global, grilla, pasivo	r	cpt_size,help_lines,node_spacing,right
+resistors5	01_pasivos	sch/01_pasivos/resistors5.sch	Resistors5	cpt:r, curricular:tcii, geometria-global, grilla, pasivo	r	help_lines,right,scale
+resistors6	01_pasivos	sch/01_pasivos/resistors6.sch	Resistors6	cpt:r, curricular:tcii, geometria-global, grilla, pasivo	r	help_lines,right,scale
+resistors7	01_pasivos	sch/01_pasivos/resistors7.sch	Resistors7	cpt:r, curricular:tcii, grilla, pasivo	r	help_lines,right
+rright	01_pasivos	sch/01_pasivos/Rright.sch	Rright	cpt:r, curricular:tcii, pasivo	r	right
+rright2	01_pasivos	sch/01_pasivos/Rright2.sch	Rright2	cpt:r, curricular:tcii, pasivo	r	right
+v-stamp	01_pasivos	sch/01_pasivos/V-stamp.sch	V stamp	cpt:p, cpt:v, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, pasivo, tierra, visibilidad-nodos	p,v,w	down,ground,i<,label_nodes,right,v
+vacrl1	01_pasivos	sch/01_pasivos/VacRL1.sch	VacRL1	cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, pasivo	l,r,v,w	down,right
+variable1	01_pasivos	sch/01_pasivos/variable1.sch	Variable1	cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, kind, pasivo	c,l,r,v,w	down,right,variable
+vilrc	01_pasivos	sch/01_pasivos/VILRC.sch	VILRC	cpt:c, cpt:i, cpt:l, cpt:r, cpt:v, curricular:tcii, etiqueta-i, pasivo	c,i,l,r,v	i,right
+virlc	01_pasivos	sch/01_pasivos/VIRLC.sch	VIRLC	cpt:c, cpt:i, cpt:l, cpt:r, cpt:v, curricular:tcii, etiqueta-i, pasivo	c,i,l,r,v	i,right
+voltage-divider	01_pasivos	sch/01_pasivos/voltage-divider.sch	Divisor de tensión	cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta-v, pasivo	p,r,v,w	down,right,v
+voltage-divider2	01_pasivos	sch/01_pasivos/voltage-divider2.sch	Divisor de tensión (variante)	cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, estilo-simbolo, etiqueta-v, geometria-global, pasivo, visibilidad-nodos	p,r,v,w	bipole label style,down,draw_nodes,node_spacing,right,scale,style,v
+vrl1	01_pasivos	sch/01_pasivos/VRL1.sch	VRL1	cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, pasivo	l,r,v,w	down,i,l,right,size,v
+vrl2	01_pasivos	sch/01_pasivos/VRL2.sch	VRL2	cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, pasivo	l,r,v,w	down,i,left,right,v
+vrl3	01_pasivos	sch/01_pasivos/VRL3.sch	VRL3	cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, pasivo	l,r,v,w	down,i,left,right,v
+vrl4	01_pasivos	sch/01_pasivos/VRL4.sch	VRL4	cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, pasivo	l,r,v,w	down,i,left,right,size,v
+e1	02_fuentes	sch/02_fuentes/E1.sch	E1	cpt:c, cpt:e, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, etiqueta-v, etiquetas-globales, fuente, visibilidad-nodos	c,e,p,r,v,w	down,draw_nodes,l,label_ids,label_nodes,right,size,v
+f1	02_fuentes	sch/02_fuentes/F1.sch	F1	cpt:c, cpt:f, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, etiqueta-v, etiquetas-globales, fuente, visibilidad-nodos	c,f,p,r,v,w	down,draw_nodes,l,label_ids,label_nodes,right,size,v
+g1	02_fuentes	sch/02_fuentes/G1.sch	G1	cpt:c, cpt:g, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, etiqueta-v, etiquetas-globales, fuente, visibilidad-nodos	c,g,p,r,v,w	down,draw_nodes,l,label_ids,label_nodes,right,size,v
+h1	02_fuentes	sch/02_fuentes/H1.sch	H1	cpt:c, cpt:h, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, etiqueta-v, etiquetas-globales, fuente, visibilidad-nodos	c,h,p,r,v,w	down,draw_nodes,l,label_ids,label_nodes,right,size,v
+hsources	02_fuentes	sch/02_fuentes/hsources.sch	Hsources	cpt:i, cpt:o, cpt:v, curricular:tcii, fuente	i,o,v	down,right,up
+v5	02_fuentes	sch/02_fuentes/V5.sch	V5	cpt:v, curricular:tcii, fuente	v	down,left,right,up
+voltage-sources	02_fuentes	sch/02_fuentes/voltage_sources.sch	Voltage sources	cpt:v, curricular:tcii, fuente	v	down,up
+vsources	02_fuentes	sch/02_fuentes/vsources.sch	Vsources	cpt:i, cpt:o, cpt:v, curricular:tcii, fuente	i,o,v	left,right
+d1	03_diodos	sch/03_diodos/D1.sch	D1	cpt:d, cpt:r, diodo	d,r	down
+d2	03_diodos	sch/03_diodos/D2.sch	D2	cpt:d, cpt:r, diodo, espejo	d,r	down,reverse
+d3	03_diodos	sch/03_diodos/D3.sch	D3	cpt:d, diodo, espejo	d	reverse,right
+d4	03_diodos	sch/03_diodos/D4.sch	D4	cpt:d, diodo	d	down,left,right,up
+d5	03_diodos	sch/03_diodos/D5.sch	D5	cpt:d, diodo	d	down,left,right,up
+dbridge	03_diodos	sch/03_diodos/Dbridge.sch	Dbridge	cpt:d, diodo, rotacion	d	rotate,size
+ddown	03_diodos	sch/03_diodos/Ddown.sch	Ddown	cpt:d, diodo	d	down
+diodes	03_diodos	sch/03_diodos/diodes.sch	Tipos de diodo	cpt:d, diodo, etiqueta, kind, kind:bidirectional, kind:laser, kind:led, kind:photo, kind:schottky, kind:tunnel, kind:tvs, kind:varcap, kind:zener, kind:zzener, visibilidad-nodos	d	draw_nodes,kind,l,label_nodes,right
+diodes2	03_diodos	sch/03_diodos/diodes2.sch	Diodes2	cpt:d, diodo, estilo-simbolo, etiqueta, visibilidad-nodos	d	draw_nodes,l,label_nodes,right,style
+dleft	03_diodos	sch/03_diodos/Dleft.sch	Dleft	cpt:d, diodo	d	left
+dright	03_diodos	sch/03_diodos/Dright.sch	Dright	cpt:d, diodo	d	right
+dup	03_diodos	sch/03_diodos/Dup.sch	Dup	cpt:d, diodo	d	up
+accelerometer1	04_transistores	sch/04_transistores/accelerometer1.sch	Accelerometer1	cpt:c, cpt:l, cpt:p, cpt:r, cpt:tf, cpt:w, estilo, etiqueta-i, etiqueta-v, layout, transistor, visibilidad-nodos	c,l,p,r,tf,w	dashed,down,draw_nodes,free,i,i>^,i^<,label_nodes,right,turns,v,v_
+amp	04_transistores	sch/04_transistores/amp.sch	Amp	cpt:e, grilla, transistor	e	help_lines,right
+cmos-c-load-thevenin	04_transistores	sch/04_transistores/cmos_C_load_thevenin.sch	Cmos C load thevenin	cpt:c, cpt:p, cpt:r, cpt:u, cpt:v, cpt:w, estilo, etiqueta, etiqueta-i, etiqueta-v, transistor, visibilidad-nodos	c,p,r,u,v,w	color,down,draw_nodes,fill,i,l,label_nodes,right,v
+cmos-ibis-r-series-c-load-thevenin	04_transistores	sch/04_transistores/cmos_ibis_R_series_C_load_thevenin.sch	Cmos ibis R series C load thevenin	cpt:c, cpt:i, cpt:l, cpt:r, cpt:v, cpt:w, transistor	c,i,l,r,v,w	down,right
+cmos-r-series-c-load-thevenin	04_transistores	sch/04_transistores/cmos_R_series_C_load_thevenin.sch	Cmos R series C load thevenin	cpt:c, cpt:p, cpt:r, cpt:u, cpt:v, cpt:w, estilo, etiqueta, etiqueta-i, etiqueta-v, transistor, visibilidad-nodos	c,p,r,u,v,w	down,draw_nodes,fill,i,l,label_nodes,right,v
+common-base	04_transistores	sch/04_transistores/common-base.sch	Common base	cpt:p, cpt:q, cpt:r, cpt:w, transistor	p,q,r,w	down,right,up
+j1	04_transistores	sch/04_transistores/J1.sch	J1	cpt:j, cpt:r, transistor	j,r	down,right
+j2	04_transistores	sch/04_transistores/J2.sch	J2	cpt:j, cpt:r, transistor	j,r	down,right
+j3	04_transistores	sch/04_transistores/J3.sch	J3	cpt:j, cpt:r, transistor	j,r	down,right
+m1	04_transistores	sch/04_transistores/M1.sch	M1	cpt:m, cpt:r, transistor	m,r	down,right
+m1b	04_transistores	sch/04_transistores/M1b.sch	M1b	cpt:m, transistor	m	right
+m1c	04_transistores	sch/04_transistores/M1c.sch	M1c	cpt:m, cpt:p, transistor	m,p	down,right
+m2	04_transistores	sch/04_transistores/M2.sch	M2	cpt:m, cpt:r, transistor	m,r	down,right
+m3	04_transistores	sch/04_transistores/M3.sch	M3	cpt:m, cpt:r, transistor	m,r	down,right
+m6	04_transistores	sch/04_transistores/M6.sch	M6	cpt:m, cpt:r, transistor	m,r	down,left,right
+mosfet-push-pull-load	04_transistores	sch/04_transistores/mosfet_push_pull_load.sch	Mosfet push pull load	cpt:m, cpt:p, cpt:r, cpt:v, cpt:w, etiqueta, etiqueta-f, etiqueta-v, kind, kind:nfet, kind:pfet, tierra, transistor, visibilidad-nodos	m,p,r,v,w	bipole flow style,bipole voltage style,down,draw_nodes,f,f<,implicit,kind,l,label_nodes,right,up,v
+nmosfet-simple-amplifier	04_transistores	sch/04_transistores/nmosfet_simple_amplifier.sch	Nmosfet simple amplifier	cpt:m, cpt:p, cpt:r, cpt:v, cpt:w, etiqueta, etiqueta-f, etiqueta-v, kind, kind:nfet, tierra, transistor, visibilidad-nodos	m,p,r,v,w	bipole flow style,bipole voltage style,down,draw_nodes,f,implicit,kind,l,label_nodes,right,up,v
+q1	04_transistores	sch/04_transistores/Q1.sch	Q1	cpt:q, cpt:r, transistor	q,r	down,right
+q1b	04_transistores	sch/04_transistores/Q1b.sch	Q1b	cpt:q, transistor	q	right
+q1c	04_transistores	sch/04_transistores/Q1c.sch	Q1c	cpt:p, cpt:q, transistor	p,q	down,right
+q2	04_transistores	sch/04_transistores/Q2.sch	Q2	cpt:q, cpt:r, transistor	q,r	down,right
+q3	04_transistores	sch/04_transistores/Q3.sch	Q3	cpt:q, transistor	q	up
+qnpndown	04_transistores	sch/04_transistores/Qnpndown.sch	Qnpndown	cpt:q, transistor	q	down
+qnpnleft	04_transistores	sch/04_transistores/Qnpnleft.sch	Qnpnleft	cpt:q, transistor	q	left
+qnpnright	04_transistores	sch/04_transistores/Qnpnright.sch	Qnpnright	cpt:q, transistor	q	right
+qnpnrot45	04_transistores	sch/04_transistores/Qnpnrot45.sch	Qnpnrot45	cpt:q, rotacion, transistor	q	rotate
+qnpnup	04_transistores	sch/04_transistores/Qnpnup.sch	Qnpnup	cpt:q, transistor	q	up
+qpnpdown	04_transistores	sch/04_transistores/Qpnpdown.sch	Qpnpdown	cpt:q, transistor	q	down
+qpnpleft	04_transistores	sch/04_transistores/Qpnpleft.sch	Qpnpleft	cpt:q, transistor	q	left
+qpnpright	04_transistores	sch/04_transistores/Qpnpright.sch	Qpnpright	cpt:q, transistor	q	right
+qpnpup	04_transistores	sch/04_transistores/Qpnpup.sch	Qpnpup	cpt:q, transistor	q	up
+totem	04_transistores	sch/04_transistores/totem.sch	Totem	cpt:q, transistor	q	right
+transistors	04_transistores	sch/04_transistores/transistors.sch	Tipos de transistor	cpt:j, cpt:m, cpt:o, cpt:q, etiqueta, kind, kind:nfet, kind:nfetd, kind:nigfetd, kind:nigfete, kind:nigfetebulk, kind:nmos, kind:nmosd, kind:pfet, kind:pfetd, kind:pigfetd, kind:pigfete, kind:pigfetebulk, kind:pmos, kind:pmosd, transistor, visibilidad-nodos	j,m,o,q	arrowmos,bodydiode,bulk,bulksource,down,draw_nodes,kind,l,label_nodes,up
+transistors1	04_transistores	sch/04_transistores/transistors1.sch	Transistors1	cpt:q, transistor	q	right
+transistors2	04_transistores	sch/04_transistores/transistors2.sch	Transistors2	cpt:o, cpt:q, espejo, transistor	o,q	invert,mirror,right
+transistors3	04_transistores	sch/04_transistores/transistors3.sch	Transistors3	cpt:m, kind, kind:nfet, transistor	m	bodydiode,kind,right
+diffamp1	05_opamps	sch/05_opamps/diffamp1.sch	Diffamp1	cpt:u, curricular:tcii, grilla, opamp, pines	u	help_lines,pinnames,right
+eopamp-mirror	05_opamps	sch/05_opamps/Eopamp_mirror.sch	Eopamp mirror	cpt:e, cpt:o, curricular:tcii, espejo, grilla, opamp	e,o	help_lines,mirror,mirrorinputs,right
+eopamp-uopamp	05_opamps	sch/05_opamps/Eopamp_Uopamp.sch	Eopamp Uopamp	cpt:e, cpt:o, cpt:u, curricular:tcii, grilla, opamp, pines	e,o,u	help_lines,pinnames,pinnodes,right
+fdopamp-amplifier1	05_opamps	sch/05_opamps/fdopamp-amplifier1.sch	Fdopamp amplifier1	cpt:e, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, espejo, etiqueta, opamp, tierra, visibilidad-nodos	e,p,r,v,w	0V,down,draw_nodes,l,mirror,right
+fdopamp-test1	05_opamps	sch/05_opamps/fdopamp-test1.sch	Fdopamp test1	cpt:e, curricular:tcii, grilla, opamp, visibilidad-nodos	e	draw_nodes,help_lines,right
+fdopamp1	05_opamps	sch/05_opamps/fdopamp1.sch	Fdopamp1	cpt:e, curricular:tcii, etiqueta, opamp, visibilidad-nodos	e	draw_nodes,l,right
+fdopamp1	05_opamps	sch/05_opamps/fdopamp1__1.sch	Fdopamp1	cpt:e, curricular:tcii, grilla, opamp	e	help_lines,right
+fdopamp2	05_opamps	sch/05_opamps/fdopamp2.sch	Fdopamp2	cpt:e, curricular:tcii, grilla, opamp	e	help_lines,right
+fdopamp3	05_opamps	sch/05_opamps/fdopamp3.sch	Fdopamp3	cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, opamp, visibilidad-nodos	e,p,r,w	down,draw_nodes,right
+fdopamp4	05_opamps	sch/05_opamps/fdopamp4.sch	Fdopamp4	cpt:e, cpt:r, cpt:w, curricular:tcii, geometria-global, grilla, opamp	e,r,w	down,help_lines,left,right,scale,up
+fdopampright	05_opamps	sch/05_opamps/fdopampright.sch	Fdopampright	cpt:e, curricular:tcii, opamp	e	right
+fdopamps	05_opamps	sch/05_opamps/fdopamps.sch	Fdopamps	cpt:e, cpt:o, curricular:tcii, espejo, opamp, pines, visibilidad-nodos	e,o	label_nodes,mirror,pinnames,pinnodes,right
+inamp-amplifier1	05_opamps	sch/05_opamps/inamp-amplifier1.sch	Inamp amplifier1	cpt:e, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, geometria-global, opamp, tierra, visibilidad-nodos	e,r,v,w	0V,down,draw_nodes,l,right,scale
+inamp1	05_opamps	sch/05_opamps/inamp1.sch	Inamp1	cpt:e, cpt:r, cpt:w, curricular:tcii, etiqueta, geometria-global, opamp, tierra, visibilidad-nodos	e,r,w	0V,down,draw_nodes,l,right,scale
+inamp1	05_opamps	sch/05_opamps/inamp1__1.sch	Inamp1	cpt:e, curricular:tcii, grilla, opamp	e	help_lines,right
+integrator	05_opamps	sch/05_opamps/integrator.sch	Integrator	cpt:c, cpt:e, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, espejo, etiquetas-globales, opamp, visibilidad-nodos	c,e,p,r,v,w	down,draw_nodes,label_ids,label_nodes,mirror,right,up
+lpf1-buffer-loaded	05_opamps	sch/05_opamps/lpf1-buffer-loaded.sch	Lpf1 buffer loaded	cpt:c, cpt:e, cpt:p, cpt:r, cpt:rel, cpt:v, cpt:w, curricular:tcii, etiqueta, etiqueta-v, opamp, visibilidad-nodos	c,e,p,r,rel,v,w	down,draw_nodes,l,right,size,v
+lpf1-buffer-loaded2	05_opamps	sch/05_opamps/lpf1-buffer-loaded2.sch	Lpf1 buffer loaded2	cpt:c, cpt:e, cpt:p, cpt:r, cpt:rel, cpt:v, cpt:w, curricular:tcii, etiqueta, etiqueta-v, opamp, visibilidad-nodos	c,e,p,r,rel,v,w	down,draw_nodes,l,right,size,v
+lpf1-buffer-loaded3	05_opamps	sch/05_opamps/lpf1-buffer-loaded3.sch	Lpf1 buffer loaded3	cpt:c, cpt:e, cpt:p, cpt:r, cpt:rel, cpt:v, cpt:w, curricular:tcii, estilo-simbolo, etiqueta, etiqueta-v, opamp	c,e,p,r,rel,v,w	down,l,right,size,style,v
+multiple-feedback-lpf	05_opamps	sch/05_opamps/multiple-feedback-lpf.sch	Multiple feedback lpf	cpt:c, cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, etiqueta, etiquetas-globales, geometria-global, opamp, visibilidad-nodos	c,e,p,r,w	down,draw_nodes,l,label_ids,label_nodes,left,mirror,right,scale,size,up
+opamp-differential-amplifier1	05_opamps	sch/05_opamps/opamp-differential-amplifier1.sch	Opamp differential amplifier1	cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, opamp, visibilidad-nodos	e,p,r,w	down,draw_nodes,mirror,right
+opamp-displacement-current-sensor-noise-model1	05_opamps	sch/05_opamps/opamp-displacement-current-sensor-noise-model1.sch	Opamp displacement current sensor noise model1	cpt:c, cpt:e, cpt:i, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, espejo, opamp, visibilidad-nodos	c,e,i,p,r,v,w	down,draw_nodes,label_nodes,mirror,right,up
+opamp-displacement-current-sensor1	05_opamps	sch/05_opamps/opamp-displacement-current-sensor1.sch	Opamp displacement current sensor1	cpt:c, cpt:e, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, espejo, etiqueta-v, opamp, visibilidad-nodos	c,e,p,r,v,w	down,draw_nodes,label_nodes,mirror,right,up,v
+opamp-inverting-amplifier	05_opamps	sch/05_opamps/opamp-inverting-amplifier.sch	Opamp inversor	cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, opamp, visibilidad-nodos	e,p,r,w	down,draw_nodes,mirror,right
+opamp-inverting-amplifier1	05_opamps	sch/05_opamps/opamp-inverting-amplifier1.sch	Opamp inverting amplifier1	cpt:e, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, espejo, etiquetas-globales, opamp, visibilidad-nodos	e,p,r,v,w	down,draw_nodes,flipud,label_ids,label_nodes,right,up
+opamp-inverting-amplifier2	05_opamps	sch/05_opamps/opamp-inverting-amplifier2.sch	Opamp inverting amplifier2	cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, geometria-global, opamp, visibilidad-nodos	e,p,r,w	down,draw_nodes,mirror,right,scale,size
+opamp-inverting-amplifier3	05_opamps	sch/05_opamps/opamp-inverting-amplifier3.sch	Opamp inverting amplifier3	cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, geometria-global, opamp, visibilidad-nodos	e,p,r,w	down,draw_nodes,label_nodes,mirror,right,scale,size
+opamp-inverting-integrator	05_opamps	sch/05_opamps/opamp-inverting-integrator.sch	Integrador con opamp	cpt:c, cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, opamp	c,e,p,r,w	down,mirror,right
+opamp-inverting2	05_opamps	sch/05_opamps/opamp-inverting2.sch	Opamp inverting2	cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, opamp	e,p,r,w	down,mirror,right
+opamp-noninverting-amplifier	05_opamps	sch/05_opamps/opamp-noninverting-amplifier.sch	Opamp no inversor	cpt:e, cpt:i, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, opamp, visibilidad-nodos	e,i,p,r,v,w	down,draw_nodes,l,label_nodes,right
+opamp-noninverting-amplifier	05_opamps	sch/05_opamps/opamp-noninverting-amplifier__1.sch	Opamp no inversor	cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, opamp	e,p,r,w	down,right
+opamp-noninverting-amplifier-noisy	05_opamps	sch/05_opamps/opamp-noninverting-amplifier-noisy.sch	Opamp noninverting amplifier noisy	cpt:e, cpt:i, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, opamp, visibilidad-nodos	e,i,p,r,v,w	down,draw_nodes,l,label_nodes,right
+opamp-noninverting-amplifier1	05_opamps	sch/05_opamps/opamp-noninverting-amplifier1.sch	Opamp noninverting amplifier1	cpt:e, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiquetas-globales, opamp, visibilidad-nodos	e,p,r,v,w	down,draw_nodes,label_ids,label_nodes,right
+opamp-noninverting-amplifier2	05_opamps	sch/05_opamps/opamp-noninverting-amplifier2.sch	Opamp noninverting amplifier2	cpt:e, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiquetas-globales, opamp, visibilidad-nodos	e,p,r,v,w	down,draw_nodes,label_ids,label_nodes,right
+opamp-piezo-amplifier1	05_opamps	sch/05_opamps/opamp-piezo-amplifier1.sch	Opamp piezo amplifier1	cpt:c, cpt:e, cpt:i, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta-v, opamp, visibilidad-nodos	c,e,i,p,r,v,w	down,draw_nodes,label_nodes,right,v
+opamp-piezo-amplifier2	05_opamps	sch/05_opamps/opamp-piezo-amplifier2.sch	Opamp piezo amplifier2	cpt:c, cpt:e, cpt:i, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta-v, opamp, visibilidad-nodos	c,e,i,p,r,v,w	down,draw_nodes,label_nodes,right,v
+opamp-test1	05_opamps	sch/05_opamps/opamp-test1.sch	Opamp test1	cpt:e, curricular:tcii, grilla, opamp, visibilidad-nodos	e	draw_nodes,help_lines,right
+opamp-transimpedance-amplifier-with-voltage-gain1	05_opamps	sch/05_opamps/opamp-transimpedance-amplifier-with-voltage-gain1.sch	Opamp transimpedance amplifier with voltage gain1	cpt:e, cpt:r, cpt:w, curricular:tcii, etiquetas-globales, opamp, tierra, visibilidad-nodos	e,r,w	0V,down,draw_nodes,label_ids,label_nodes,right
+opamp-transimpedance-amplifier1	05_opamps	sch/05_opamps/opamp-transimpedance-amplifier1.sch	Opamp transimpedance amplifier1	cpt:e, cpt:i, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, etiquetas-globales, opamp, visibilidad-nodos	e,i,p,r,w	down,draw_nodes,flipud,label_ids,label_nodes,right,up
+opamp-transimpedance-amplifier2	05_opamps	sch/05_opamps/opamp-transimpedance-amplifier2.sch	Opamp transimpedance amplifier2	cpt:c, cpt:e, cpt:i, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, espejo, opamp, visibilidad-nodos	c,e,i,p,r,v,w	down,draw_nodes,mirror,right,up
+opamp-voltage-follower-c-load	05_opamps	sch/05_opamps/opamp-voltage-follower-C-load.sch	Opamp voltage follower C load	cpt:c, cpt:e, cpt:p, cpt:w, curricular:tcii, espejo, opamp	c,e,p,w	down,mirror,right,up
+opamp-voltage-follower-c-load-model1	05_opamps	sch/05_opamps/opamp-voltage-follower-C-load-model1.sch	Opamp voltage follower C load model1	cpt:c, cpt:e, cpt:r, cpt:w, curricular:tcii, opamp	c,e,r,w	down,right
+opamp-voltage-follower-c-load-open-loop	05_opamps	sch/05_opamps/opamp-voltage-follower-C-load-open-loop.sch	Opamp voltage follower C load open loop	cpt:c, cpt:e, cpt:p, cpt:w, curricular:tcii, espejo, opamp, tierra	c,e,p,w	0V,down,mirror,right
+opamp-voltage-follower-rc-load	05_opamps	sch/05_opamps/opamp-voltage-follower-RC-load.sch	Opamp voltage follower RC load	cpt:c, cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, opamp	c,e,p,r,w	down,mirror,right,up
+opamp-voltage-follower-rc-load-model1	05_opamps	sch/05_opamps/opamp-voltage-follower-RC-load-model1.sch	Opamp voltage follower RC load model1	cpt:c, cpt:e, cpt:r, cpt:w, curricular:tcii, opamp	c,e,r,w	down,right
+opamp-voltage-follower-rc-load-open-loop	05_opamps	sch/05_opamps/opamp-voltage-follower-RC-load-open-loop.sch	Opamp voltage follower RC load open loop	cpt:c, cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, opamp, tierra	c,e,p,r,w	0V,down,mirror,right
+opamp-voltage-follower-rc-load-open-loop1	05_opamps	sch/05_opamps/opamp-voltage-follower-RC-load-open-loop1.sch	Opamp voltage follower RC load open loop1	cpt:c, cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, opamp, tierra	c,e,p,r,w	0V,down,mirror,right
+opamp1	05_opamps	sch/05_opamps/opamp1.sch	Opamp1	cpt:e, curricular:tcii, grilla, opamp	e	help_lines,right
+opamp2	05_opamps	sch/05_opamps/opamp2.sch	Opamp2	cpt:e, curricular:tcii, geometria-global, grilla, opamp	e	help_lines,right,scale,size
+opamp3	05_opamps	sch/05_opamps/opamp3.sch	Opamp3	cpt:e, curricular:tcii, geometria-global, grilla, opamp	e	help_lines,right,scale
+opamp4	05_opamps	sch/05_opamps/opamp4.sch	Opamp4	cpt:e, curricular:tcii, geometria-global, grilla, opamp	e	help_lines,right,scale
+opamp5	05_opamps	sch/05_opamps/opamp5.sch	Opamp5	cpt:e, cpt:r, curricular:tcii, grilla, opamp	e,r	down,help_lines,right
+opamp6	05_opamps	sch/05_opamps/opamp6.sch	Opamp6	cpt:e, cpt:r, cpt:w, curricular:tcii, geometria-global, grilla, opamp	e,r,w	down,help_lines,left,right,scale,up
+opamp7	05_opamps	sch/05_opamps/opamp7.sch	Opamp7	cpt:e, cpt:r, cpt:w, curricular:tcii, grilla, opamp	e,r,w	down,help_lines,left,right,up
+opamp8	05_opamps	sch/05_opamps/opamp8.sch	Opamp8	cpt:e, cpt:r, cpt:w, curricular:tcii, geometria-global, grilla, opamp	e,r,w	down,help_lines,left,right,scale,up
+opamp9	05_opamps	sch/05_opamps/opamp9.sch	Opamp9	cpt:e, cpt:r, cpt:w, curricular:tcii, geometria-global, grilla, opamp	e,r,w	down,help_lines,left,right,scale,up
+opamps	05_opamps	sch/05_opamps/opamps.sch	Opamps	cpt:e, cpt:o, curricular:tcii, espejo, opamp, pines, visibilidad-nodos	e,o	label_nodes,mirror,pinnames,pinnodes,right
+opampup	05_opamps	sch/05_opamps/opampup.sch	Opampup	cpt:e, curricular:tcii, opamp	e	up
+sallen-key-lpf1	05_opamps	sch/05_opamps/sallen-key-lpf1.sch	Sallen key lpf1	cpt:c, cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, etiqueta-v, geometria-global, grilla, opamp, visibilidad-nodos	c,e,p,r,w	down,draw_nodes,help_lines,label_nodes,mirror,right,scale,size,up,v^,v_
+sallen-key-lpf2	05_opamps	sch/05_opamps/sallen-key-lpf2.sch	Sallen key lpf2	cpt:c, cpt:e, cpt:p, cpt:r, cpt:w, curricular:tcii, espejo, etiqueta-v, grilla, opamp, visibilidad-nodos	c,e,p,r,w	down,draw_nodes,help_lines,mirror,right,up,v,v_
+ufdopamp	05_opamps	sch/05_opamps/Ufdopamp.sch	Ufdopamp	cpt:u, curricular:tcii, etiqueta, grilla, opamp, pines	u	help_lines,l,pinnames,pinnodes,right
+ufdopamps	05_opamps	sch/05_opamps/Ufdopamps.sch	Ufdopamps	cpt:o, cpt:u, curricular:tcii, espejo, opamp, pines, visibilidad-nodos	o,u	label_nodes,mirror,pinnames,pinnodes,right
+uinamp	05_opamps	sch/05_opamps/Uinamp.sch	Uinamp	cpt:u, curricular:tcii, etiqueta, grilla, opamp, pines	u	help_lines,l,pinnames,pinnodes,right
+uisoamp	05_opamps	sch/05_opamps/Uisoamp.sch	Uisoamp	cpt:u, curricular:tcii, etiqueta, grilla, opamp, pines	u	help_lines,l,pinnames,pinnodes,right
+uopamp	05_opamps	sch/05_opamps/Uopamp.sch	Uopamp	cpt:u, curricular:tcii, etiqueta, grilla, opamp, pines	u	help_lines,l,pinnames,pinnodes,right
+uopamp1	05_opamps	sch/05_opamps/Uopamp1.sch	Uopamp1	cpt:u, cpt:w, curricular:tcii, opamp	u,w	right
+uopamp-comparison	05_opamps	sch/05_opamps/Uopamp_comparison.sch	Uopamp comparison	cpt:o, cpt:u, curricular:tcii, etiqueta, grilla, opamp, pines	o,u	help_lines,l,pinlabels,pinnames,pinnodes,right
+uopamp-mirror	05_opamps	sch/05_opamps/Uopamp_mirror.sch	Uopamp mirror	cpt:o, cpt:u, curricular:tcii, espejo, grilla, opamp, pines	o,u	help_lines,mirror,mirrorinputs,pinnames,pinnodes,right
+uopamps	05_opamps	sch/05_opamps/Uopamps.sch	Uopamps	cpt:o, cpt:u, curricular:tcii, espejo, opamp, pines, visibilidad-nodos	o,u	label_nodes,mirror,pinnames,pinnodes,right
+bh-mag	06_magneticos	sch/06_magneticos/BH-mag.sch	BH mag	cpt:c, cpt:d, cpt:l, cpt:m, cpt:o, cpt:v, cpt:w, curricular:tcii, estilo, etiqueta, etiqueta-i, etiqueta-v, geometria-global, kind, kind:nfet, magnetico, visibilidad-nodos	c,d,l,m,o,v,w	bodydiode,color,down,draw_nodes,i>_,kind,l,label_nodes,right,scale,v
+gy1	06_magneticos	sch/06_magneticos/GY1.sch	GY1	cpt:gy, curricular:tcii, magnetico	gy	right
+ideal-tf1	06_magneticos	sch/06_magneticos/ideal-tf1.sch	Ideal tf1	convencion, cpt:p, cpt:tf, cpt:w, curricular:tcii, estilo-simbolo, etiqueta, etiqueta-f, etiqueta-v, etiquetas-globales, magnetico, visibilidad-nodos	p,tf,w	down,draw_nodes,f,f<,l,label_nodes,label_style,right,style,v,voltage_dir
+ideal-tf1-model1	06_magneticos	sch/06_magneticos/ideal-tf1-model1.sch	Ideal tf1 model1	anotacion, convencion, cpt:e, cpt:f, cpt:o, cpt:p, cpt:w, curricular:tcii, estilo-simbolo, etiqueta, etiqueta-f, etiqueta-v, etiquetas-globales, magnetico, visibilidad-nodos	e,f,o,p,w	a,down,draw_nodes,f,f<,l,label_nodes,label_style,right,style,v,voltage_dir
+ideal-tf1-model2	06_magneticos	sch/06_magneticos/ideal-tf1-model2.sch	Ideal tf1 model2	anotacion, convencion, cpt:e, cpt:f, cpt:o, cpt:p, cpt:w, curricular:tcii, estilo-simbolo, etiqueta, etiqueta-f, etiqueta-v, etiquetas-globales, magnetico, visibilidad-nodos	e,f,o,p,w	a,down,draw_nodes,f,f<,l,label_nodes,label_style,right,style,v,voltage_dir
+k1	06_magneticos	sch/06_magneticos/K1.sch	Acoplamiento mutuo	cpt:k, cpt:l, curricular:tcii, etiquetas-globales, magnetico	k,l	down,label_ids,size
+k2	06_magneticos	sch/06_magneticos/K2.sch	K2	cpt:c, cpt:k, cpt:l, cpt:v, cpt:w, curricular:tcii, etiquetas-globales, magnetico	c,k,l,v,w	down,label_ids,right,size
+ltft	06_magneticos	sch/06_magneticos/LTFT.sch	LTFT	cpt:o, cpt:shape, cpt:w, curricular:tcii, estilo, etiqueta, etiquetas-globales, forma, layout, magnetico, visibilidad-nodos	o,shape,w	aspect,color,down,draw,draw_nodes,endarrow,l,label_ids,label_nodes,left,right,startarrow
+mutual1	06_magneticos	sch/06_magneticos/mutual1.sch	Mutual1	cpt:k, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, etiquetas-globales, magnetico	k,l,r,v,w	down,label_ids,right,size
+mutual2	06_magneticos	sch/06_magneticos/mutual2.sch	Mutual2	cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, etiquetas-globales, magnetico	l,r,v,w	down,label_ids,right
+mutualinductances1	06_magneticos	sch/06_magneticos/mutualinductances1.sch	Mutualinductances1	cpt:k, cpt:l, cpt:p, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, magnetico, visibilidad-nodos	k,l,p,w	down,draw_nodes,i,label_nodes,left,right,v^,v_
+mutualinductances2	06_magneticos	sch/06_magneticos/mutualinductances2.sch	Mutualinductances2	cpt:k, cpt:l, cpt:p, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, magnetico, visibilidad-nodos	k,l,p,w	down,draw_nodes,i>^,i_>,label_nodes,left,right,v^,v_
+mutualinductances3	06_magneticos	sch/06_magneticos/mutualinductances3.sch	Mutualinductances3	control, cpt:k, cpt:l, cpt:p, cpt:v, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, magnetico, visibilidad-nodos	k,l,p,v,w	down,draw_nodes,i>^,i_>,label_nodes,left,nodraw,right,v,v^
+non-ideal-transformer	06_magneticos	sch/06_magneticos/non-ideal-transformer.sch	Non ideal transformer	cpt:l, cpt:p, cpt:r, cpt:tf, cpt:w, curricular:tcii, etiqueta, etiqueta-v, etiquetas-globales, magnetico, visibilidad-nodos	l,p,r,tf,w	down,draw_nodes,l,label_ids,label_nodes,right,v^,v_
+non-ideal-transformer-primary	06_magneticos	sch/06_magneticos/non-ideal-transformer-primary.sch	Non ideal transformer primary	cpt:l, cpt:p, cpt:r, cpt:tf, cpt:w, curricular:tcii, etiqueta, etiqueta-v, etiquetas-globales, magnetico, visibilidad-nodos	l,p,r,tf,w	down,draw_nodes,l,label_ids,label_nodes,right,v^,v_
+non-ideal-transformer1	06_magneticos	sch/06_magneticos/non-ideal-transformer1.sch	Non ideal transformer1	cpt:l, cpt:p, cpt:tf, cpt:w, curricular:tcii, etiqueta, etiqueta-v, etiquetas-globales, magnetico, visibilidad-nodos	l,p,tf,w	down,draw_nodes,l,label_ids,label_nodes,right,v^,v_
+reluctance	06_magneticos	sch/06_magneticos/reluctance.sch	Reluctance	cpt:rel, curricular:tcii, magnetico	rel	right
+stepup	06_magneticos	sch/06_magneticos/stepup.sch	Stepup	cpt:m, cpt:tf, cpt:u, cpt:w, curricular:tcii, etiqueta, kind, magnetico, pines, tierra, visibilidad-nodos	m,tf,u,w	0V,core,down,draw_nodes,implicit,l,label_nodes,pinlabels,right,up
+tee-model-transformer1	06_magneticos	sch/06_magneticos/tee-model-transformer1.sch	Tee model transformer1	cpt:l, cpt:p, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, etiquetas-globales, magnetico, visibilidad-nodos	l,p,w	down,draw_nodes,i>^,i^<,label_ids,label_nodes,right,v^,v_
+tee-model-transformer2	06_magneticos	sch/06_magneticos/tee-model-transformer2.sch	Tee model transformer2	cpt:l, cpt:p, cpt:tf, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, etiquetas-globales, magnetico, visibilidad-nodos	l,p,tf,w	down,draw_nodes,i>^,i^<,label_ids,label_nodes,right,v^,v_
+tee-model-transformer3	06_magneticos	sch/06_magneticos/tee-model-transformer3.sch	Tee model transformer3	cpt:l, cpt:p, cpt:tf, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, etiquetas-globales, magnetico, visibilidad-nodos	l,p,tf,w	down,draw_nodes,i>^,i^<,label_ids,label_nodes,right,v^,v_
+tf1	06_magneticos	sch/06_magneticos/TF1.sch	Transformador ideal	cpt:tf, curricular:tcii, magnetico	tf	right
+tf2	06_magneticos	sch/06_magneticos/tf2.sch	Tf2	convencion, cpt:r, cpt:v, cpt:w, curricular:tcii, estilo-simbolo, etiquetas-globales, magnetico, visibilidad-nodos	r,v,w	down,draw_nodes,label_nodes,label_style,right,style,voltage_dir
+tf2	06_magneticos	sch/06_magneticos/TF2.sch	TF2	cpt:r, cpt:tf, cpt:w, curricular:tcii, magnetico	r,tf,w	down,right
+tf2w	06_magneticos	sch/06_magneticos/TF2w.sch	TF2w	cpt:o, cpt:tf, curricular:tcii, magnetico, visibilidad-nodos	o,tf	label_nodes,right
+tf2wi	06_magneticos	sch/06_magneticos/TF2wi.sch	TF2wi	cpt:o, cpt:tf, curricular:tcii, espejo, magnetico, visibilidad-nodos	o,tf	invert,label_nodes,right
+tf3	06_magneticos	sch/06_magneticos/TF3.sch	TF3	cpt:l, cpt:r, cpt:tf, cpt:w, curricular:tcii, magnetico	l,r,tf,w	down,right
+tf3w	06_magneticos	sch/06_magneticos/TF3w.sch	TF3w	cpt:o, cpt:tf, curricular:tcii, magnetico, visibilidad-nodos	o,tf	label_nodes,right
+tf3wi	06_magneticos	sch/06_magneticos/TF3wi.sch	TF3wi	cpt:o, cpt:tf, curricular:tcii, espejo, magnetico, visibilidad-nodos	o,tf	invert,label_nodes,right
+tf4	06_magneticos	sch/06_magneticos/TF4.sch	TF4	cpt:tf, curricular:tcii, magnetico	tf	right,turns
+tf4wi	06_magneticos	sch/06_magneticos/TF4wi.sch	TF4wi	cpt:o, cpt:tf, curricular:tcii, magnetico, visibilidad-nodos	o,tf	label_nodes,right
+tfcore1	06_magneticos	sch/06_magneticos/TFcore1.sch	Transformador con núcleo	cpt:tf, curricular:tcii, kind, magnetico	tf	core,right
+tfcore2	06_magneticos	sch/06_magneticos/TFcore2.sch	TFcore2	cpt:r, cpt:tf, cpt:w, curricular:tcii, kind, magnetico	r,tf,w	core,down,right
+tfscs-stamp	06_magneticos	sch/06_magneticos/TFscs-stamp.sch	TFscs stamp	cpt:tf, cpt:w, curricular:tcii, etiqueta, etiqueta-i, magnetico	tf,w	i,l,right,turns
+tfscss-stamp	06_magneticos	sch/06_magneticos/TFscss-stamp.sch	TFscss stamp	cpt:tf, cpt:w, curricular:tcii, etiqueta, etiqueta-i, magnetico	tf,w	i,i>,l,right,turns
+tftap1	06_magneticos	sch/06_magneticos/TFtap1.sch	TFtap1	cpt:tf, cpt:w, curricular:tcii, magnetico	tf,w	right
+tftapcore1	06_magneticos	sch/06_magneticos/TFtapcore1.sch	TFtapcore1	cpt:tf, cpt:w, curricular:tcii, kind, magnetico	tf,w	core,right
+transformers	06_magneticos	sch/06_magneticos/transformers.sch	Transformers	cpt:o, cpt:tf, cpt:w, curricular:tcii, kind, magnetico	o,tf,w	core,right
+btwoport1	07_cuadripolos	sch/07_cuadripolos/Btwoport1.sch	Btwoport1	cpt:p, cpt:tp, cpt:w, cuadripolo, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	p,tp,w	down,draw_nodes,i,i^<,i_,ir,l,label_nodes,right,v,v^
+tf-current-gain	07_cuadripolos	sch/07_cuadripolos/tf_current_gain.sch	Tf current gain	cpt:a, cpt:i, cpt:p, cpt:tp, cpt:w, cuadripolo, curricular:tcii, estilo, etiqueta, etiqueta-i, etiquetas-globales, forma, pines, visibilidad-nodos	a,i,p,tp,w	anchor,down,draw_nodes,fill,i<,l,label_nodes,label_style,right,shape
+tf-transadmittance	07_cuadripolos	sch/07_cuadripolos/tf_transadmittance.sch	Tf transadmittance	cpt:a, cpt:p, cpt:tp, cpt:v, cpt:w, cuadripolo, curricular:tcii, estilo, etiqueta, etiqueta-i, etiquetas-globales, forma, pines, visibilidad-nodos	a,p,tp,v,w	anchor,down,draw_nodes,fill,i<,l,label_nodes,label_style,right,shape
+tf-transimpedance	07_cuadripolos	sch/07_cuadripolos/tf_transimpedance.sch	Tf transimpedance	cpt:a, cpt:i, cpt:p, cpt:tp, cpt:w, cuadripolo, curricular:tcii, estilo, etiqueta, etiqueta-v, etiquetas-globales, forma, pines, visibilidad-nodos	a,i,p,tp,w	anchor,down,draw_nodes,fill,l,label_nodes,label_style,right,shape,v
+tf-twoport	07_cuadripolos	sch/07_cuadripolos/tf_twoport.sch	Tf twoport	cpt:a, cpt:p, cpt:tp, cpt:w, cuadripolo, curricular:tcii, estilo, etiqueta, etiqueta-i, etiqueta-v, etiquetas-globales, forma, pines, visibilidad-nodos	a,p,tp,w	anchor,down,draw_nodes,fill,i,i<,l,label_nodes,label_style,right,shape,v
+tf-voltage-gain	07_cuadripolos	sch/07_cuadripolos/tf_voltage_gain.sch	Tf voltage gain	cpt:a, cpt:p, cpt:tp, cpt:v, cpt:w, cuadripolo, curricular:tcii, estilo, etiqueta, etiqueta-v, etiquetas-globales, forma, pines, visibilidad-nodos	a,p,tp,v,w	anchor,down,draw_nodes,fill,l,label_nodes,label_style,right,shape,v
+tp1	07_cuadripolos	sch/07_cuadripolos/TP1.sch	TP1	cpt:tp, cuadripolo, curricular:tcii	tp	right
+tpa	07_cuadripolos	sch/07_cuadripolos/TPA.sch	TPA	cpt:i, cpt:p, cpt:tp, cpt:v, cpt:w, cuadripolo, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	i,p,tp,v,w	down,draw_nodes,i,i<,l,label_nodes,right,up,v^,v_
+tpb	07_cuadripolos	sch/07_cuadripolos/TPB.sch	TPB	cpt:i, cpt:p, cpt:tp, cpt:v, cpt:w, cuadripolo, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	i,p,tp,v,w	down,draw_nodes,i,i<,l,label_nodes,left,right,up,v^,v_
+tpg	07_cuadripolos	sch/07_cuadripolos/TPG.sch	TPG	cpt:i, cpt:p, cpt:tp, cpt:v, cpt:w, cuadripolo, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	i,p,tp,v,w	down,draw_nodes,i,i<,l,label_nodes,left,right,up,v^,v_
+tph	07_cuadripolos	sch/07_cuadripolos/TPH.sch	TPH	cpt:i, cpt:p, cpt:tp, cpt:v, cpt:w, cuadripolo, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	i,p,tp,v,w	down,draw_nodes,i,i<,l,label_nodes,right,up,v^,v_
+tpy	07_cuadripolos	sch/07_cuadripolos/TPY.sch	TPY	cpt:i, cpt:p, cpt:tp, cpt:w, cuadripolo, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	i,p,tp,w	down,draw_nodes,i,i<,l,label_nodes,right,up,v^,v_
+tpz	07_cuadripolos	sch/07_cuadripolos/TPZ.sch	TPZ	cpt:p, cpt:tp, cpt:v, cpt:w, cuadripolo, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	p,tp,v,w	down,draw_nodes,i,i<,l,label_nodes,left,right,v^,v_
+twoport1	07_cuadripolos	sch/07_cuadripolos/twoport1.sch	Cuadripolo genérico (caja)	cpt:p, cpt:tp, cpt:w, cuadripolo, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	p,tp,w	down,draw_nodes,i,i^<,i_,ir,l,label_nodes,right,v^,v_
+twoport2	07_cuadripolos	sch/07_cuadripolos/twoport2.sch	Cuadripolo genérico (variante)	cpt:p, cpt:tp, cpt:w, cuadripolo, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, forma, visibilidad-nodos	p,tp,w	down,draw_nodes,i,i^<,i_,ir,l,label_nodes,right,shape,v^,v_
+fosteri	08_redes	sch/08_redes/fosterI.sch	FosterI	convencion, cpt:c, cpt:r, cpt:w, curricular:tcii, estilo-simbolo, etiquetas-globales, geometria-global, red, visibilidad-nodos	c,r,w	down,draw_nodes,label_nodes,label_style,nodes,right,scale,style,up,voltage_dir
+fosterii	08_redes	sch/08_redes/fosterII.sch	FosterII	convencion, cpt:c, cpt:r, cpt:w, curricular:tcii, estilo-simbolo, etiquetas-globales, geometria-global, red, visibilidad-nodos	c,r,w	down,draw_nodes,label_nodes,label_style,nodes,right,scale,style,voltage_dir
+ladder	08_redes	sch/08_redes/ladder.sch	Red en escalera	cpt:o, cpt:p, cpt:w, cpt:y, cpt:z, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, red, visibilidad-nodos	o,p,w,y,z	down,draw_nodes,i<_,i>_,l,label_nodes,right,v
+ladderalt	08_redes	sch/08_redes/ladderalt.sch	Ladderalt	cpt:o, cpt:p, cpt:w, cpt:y, cpt:z, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, red, visibilidad-nodos	o,p,w,y,z	down,draw_nodes,i<_,i>_,l,label_nodes,right,v
+lsection	08_redes	sch/08_redes/lsection.sch	Sección en L	cpt:p, cpt:w, cpt:y, cpt:z, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, red, visibilidad-nodos	p,w,y,z	down,draw_nodes,i,l,label_nodes,left,right,v,v^
+net1	08_redes	sch/08_redes/net1.sch	Net1	cpt:r, cpt:w, curricular:tcii, red	r,w	down,right
+net2	08_redes	sch/08_redes/net2.sch	Net2	cpt:r, cpt:w, curricular:tcii, red	r,w	down,right
+parallel	08_redes	sch/08_redes/parallel.sch	Parallel	cpt:r, curricular:tcii, layout, red, visibilidad-nodos	r	draw_nodes,label_nodes,offset,right
+pisection	08_redes	sch/08_redes/pisection.sch	Sección en π	cpt:p, cpt:w, cpt:y, cpt:z, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, red, visibilidad-nodos	p,w,y,z	down,draw_nodes,i,l,label_nodes,left,right,v^,v_
+r4	08_redes	sch/08_redes/R4.sch	R4	cpt:r, curricular:tcii, red	r	down,right
+rnet1	08_redes	sch/08_redes/rnet1.sch	Rnet1	cpt:r, cpt:w, curricular:tcii, red	r,w	down
+rnet2	08_redes	sch/08_redes/rnet2.sch	Rnet2	cpt:r, cpt:w, curricular:tcii, red	r,w	down
+rnet3	08_redes	sch/08_redes/rnet3.sch	Rnet3	cpt:r, cpt:w, curricular:tcii, red	r,w	down
+rnet4	08_redes	sch/08_redes/rnet4.sch	Rnet4	cpt:r, cpt:w, curricular:tcii, red	r,w	up
+series	08_redes	sch/08_redes/series.sch	Series	cpt:p, cpt:w, cpt:z, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, red, visibilidad-nodos	p,w,z	down,draw_nodes,i,l,label_nodes,left,right,v^,v_
+seriespair	08_redes	sch/08_redes/seriespair.sch	Seriespair	cpt:p, cpt:w, cpt:z, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, red, visibilidad-nodos	p,w,z	down,draw_nodes,i,l,label_nodes,left,right,v^,v_
+shunt	08_redes	sch/08_redes/shunt.sch	Shunt	cpt:p, cpt:w, cpt:z, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, red, visibilidad-nodos	p,w,z	down,draw_nodes,i,l,label_nodes,left,right,v^,v_
+tsection	08_redes	sch/08_redes/tsection.sch	Sección en T	cpt:p, cpt:w, cpt:y, cpt:z, curricular:tcii, etiqueta, etiqueta-i, etiqueta-v, red, visibilidad-nodos	p,w,y,z	down,draw_nodes,i,l,label_nodes,left,right,v^,v_
+amplifier1	09_analisis	sch/09_analisis/amplifier1.sch	Amplifier1	analisis, cpt:e, cpt:p, cpt:v, cpt:w, curricular:tcii, etiquetas-globales, visibilidad-nodos	e,p,v,w	down,draw_nodes,label_ids,label_nodes,right
+circuit-rlc-ivp1	09_analisis	sch/09_analisis/circuit-RLC-ivp1.sch	Circuit RLC ivp1	analisis, cpt:c, cpt:l, cpt:r, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, etiquetas-globales	c,l,r,w	down,i,label_ids,right,v
+circuit-vrc1	09_analisis	sch/09_analisis/circuit-VRC1.sch	Circuit VRC1	analisis, cpt:c, cpt:r, cpt:v, cpt:w, curricular:tcii	c,r,v,w	down,right,size
+circuit-vrlc1	09_analisis	sch/09_analisis/circuit-VRLC1.sch	Circuit VRLC1	analisis, cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii	c,l,r,v,w	down,right
+circuit-vrlc2	09_analisis	sch/09_analisis/circuit-VRLC2.sch	Circuit VRLC2	analisis, cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii	c,l,r,v,w	down,right
+graph1	09_analisis	sch/09_analisis/graph1.sch	Graph1	analisis, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, visibilidad-nodos	l,r,v,w	down,draw_nodes,right
+graph2	09_analisis	sch/09_analisis/graph2.sch	Graph2	analisis, cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, visibilidad-nodos	c,l,r,v,w	down,draw_nodes,right
+graph4	09_analisis	sch/09_analisis/graph4.sch	Graph4	analisis, cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v	c,l,r,v,w	down,i,right,v
+ladder1	09_analisis	sch/09_analisis/ladder1.sch	Ladder1	analisis, convencion, cpt:c, cpt:l, cpt:p, cpt:r, cpt:w, curricular:tcii, estilo-simbolo, etiquetas-globales, geometria-global, visibilidad-nodos	c,l,p,r,w	down,draw_nodes,label_ids,label_nodes,label_values,left,nodes,right,scale,style,voltage_dir
+mesh2r	09_analisis	sch/09_analisis/mesh2R.sch	Mesh2R	analisis, cpt:r, cpt:v, cpt:w, curricular:tcii	r,v,w	down,right
+ss1	09_analisis	sch/09_analisis/ss1.sch	Ss1	analisis, cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v	c,l,r,v,w	down,i,right,v
+ss2	09_analisis	sch/09_analisis/ss2.sch	Ss2	analisis, cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v	c,l,r,v,w	down,i,right,v
+transfer1	09_analisis	sch/09_analisis/transfer1.sch	Transfer1	analisis, cpt:p, cpt:r, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, visibilidad-nodos	p,r,w	down,draw_nodes,i>^,i^<,label_nodes,right,v,v_
+vrc1	09_analisis	sch/09_analisis/VRC1.sch	VRC1	analisis, cpt:c, cpt:r, cpt:v, cpt:w, curricular:tcii, etiquetas-globales, visibilidad-nodos	c,r,v,w	down,draw_nodes,label_ids,right
+vrl1	09_analisis	sch/09_analisis/VRL1.sch	VRL1	analisis, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, etiquetas-globales, visibilidad-nodos	l,r,v,w	down,draw_nodes,label_ids,right
+vrlc1	09_analisis	sch/09_analisis/VRLC1.sch	VRLC1	analisis, cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii	c,l,r,v,w	down,right
+vrmesh1	09_analisis	sch/09_analisis/VRmesh1.sch	VRmesh1	analisis, cpt:r, cpt:v, curricular:tcii, etiqueta-v	r,v	down,left,right,up,v
+circuit-simplify1	10_simplificacion	sch/10_simplificacion/circuit-simplify1.sch	Circuit simplify1	cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, simplificacion	l,r,v,w	down,right
+circuit-simplify2	10_simplificacion	sch/10_simplificacion/circuit-simplify2.sch	Circuit simplify2	cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, simplificacion	l,r,v,w	down,right
+circuit-simplify3	10_simplificacion	sch/10_simplificacion/circuit-simplify3.sch	Circuit simplify3	cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, simplificacion	l,r,v,w	down,right
+circuit-simplify4	10_simplificacion	sch/10_simplificacion/circuit-simplify4.sch	Circuit simplify4	cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, simplificacion	c,l,r,v,w	down,right
+inseries1	10_simplificacion	sch/10_simplificacion/inseries1.sch	Inseries1	cpt:r, curricular:tcii, estilo, simplificacion	r	color,right
+simplify-r1a	10_simplificacion	sch/10_simplificacion/simplify_R1a.sch	Simplify R1a	cpt:r, cpt:w, curricular:tcii, etiquetas-globales, simplificacion, visibilidad-nodos	r,w	down,draw_nodes,label_ids,label_nodes,right,up
+simplify-r1b	10_simplificacion	sch/10_simplificacion/simplify_R1b.sch	Simplify R1b	cpt:r, cpt:w, curricular:tcii, etiquetas-globales, simplificacion, visibilidad-nodos	r,w	down,draw_nodes,label_ids,label_nodes,right,up
+simplify-r1c	10_simplificacion	sch/10_simplificacion/simplify_R1c.sch	Simplify R1c	cpt:o, cpt:r, cpt:w, curricular:tcii, etiquetas-globales, simplificacion, visibilidad-nodos	o,r,w	down,draw_nodes,label_ids,label_nodes,right,up
+simplify-r1d	10_simplificacion	sch/10_simplificacion/simplify_R1d.sch	Simplify R1d	cpt:o, cpt:r, cpt:w, curricular:tcii, etiquetas-globales, simplificacion, visibilidad-nodos	o,r,w	down,draw_nodes,label_ids,label_nodes,right,up
+simplify-r1e	10_simplificacion	sch/10_simplificacion/simplify_R1e.sch	Simplify R1e	cpt:r, curricular:tcii, etiquetas-globales, simplificacion, visibilidad-nodos	r	draw_nodes,label_ids,label_nodes,right
+switches	11_switches	sch/11_switches/switches.sch	Tipos de llave	cpt:sw, curricular:tcii, switch	sw	right
+switches2	11_switches	sch/11_switches/switches2.sch	Switches2	cpt:sw, curricular:tcii, espejo, switch	sw	invert,mirror,right
+swrc	11_switches	sch/11_switches/SWRC.sch	SWRC	cpt:c, cpt:r, cpt:sw, cpt:v, cpt:w, curricular:tcii, espejo, switch, visibilidad-nodos	c,r,sw,v,w	down,draw_nodes,invert,mirror,right
+swrc2	11_switches	sch/11_switches/SWRC2.sch	SWRC2	cpt:c, cpt:r, cpt:sw, cpt:v, cpt:w, curricular:tcii, espejo, switch, visibilidad-nodos	c,r,sw,v,w	down,draw_nodes,invert,mirror,right
+swrc2ivp	11_switches	sch/11_switches/SWRC2ivp.sch	SWRC2ivp	control, cpt:c, cpt:r, cpt:sw, cpt:v, cpt:w, curricular:tcii, espejo, etiqueta, switch, visibilidad-nodos	c,r,sw,v,w	down,draw_nodes,ignore,invert,l,mirror,nosim,right
+swrc3	11_switches	sch/11_switches/SWRC3.sch	SWRC3	cpt:c, cpt:r, cpt:sw, cpt:v, cpt:w, curricular:tcii, switch, visibilidad-nodos	c,r,sw,v,w	down,draw_nodes,right
+swrc3ivp	11_switches	sch/11_switches/SWRC3ivp.sch	SWRC3ivp	cpt:c, cpt:r, cpt:v, cpt:w, curricular:tcii, switch, visibilidad-nodos	c,r,v,w	down,draw_nodes,right
+swrcafter	11_switches	sch/11_switches/SWRCafter.sch	SWRCafter	control, cpt:c, cpt:r, cpt:sw, cpt:v, cpt:w, curricular:tcii, espejo, etiqueta, switch, visibilidad-nodos	c,r,sw,v,w	down,draw_nodes,ignore,invert,l,mirror,nosim,right
+swrcbefore	11_switches	sch/11_switches/SWRCbefore.sch	SWRCbefore	control, cpt:c, cpt:r, cpt:sw, cpt:v, cpt:w, curricular:tcii, espejo, etiqueta, switch, visibilidad-nodos	c,r,sw,v,w	down,draw_nodes,ignore,invert,l,mirror,nosim,right
+swrcivp	11_switches	sch/11_switches/SWRCivp.sch	SWRCivp	control, cpt:c, cpt:r, cpt:sw, cpt:v, cpt:w, curricular:tcii, espejo, etiqueta, switch, visibilidad-nodos	c,r,sw,v,w	down,draw_nodes,ignore,invert,l,mirror,nosim,right
+swri	11_switches	sch/11_switches/SWRI.sch	SWRI	cpt:l, cpt:r, cpt:sw, cpt:v, cpt:w, curricular:tcii, switch, visibilidad-nodos	l,r,sw,v,w	down,draw_nodes,right
+swrl	11_switches	sch/11_switches/SWRL.sch	SWRL	cpt:l, cpt:r, cpt:sw, cpt:v, cpt:w, curricular:tcii, switch, visibilidad-nodos	l,r,sw,v,w	down,draw_nodes,right
+swrlivp	11_switches	sch/11_switches/SWRLivp.sch	SWRLivp	cpt:l, cpt:r, cpt:v, cpt:w, curricular:tcii, switch, visibilidad-nodos	l,r,v,w	down,draw_nodes,right
+buffer1	12_logica	sch/12_logica/buffer1.sch	Buffer1	cpt:u, curricular:senales, logica	u	right
+buffer2	12_logica	sch/12_logica/buffer2.sch	Buffer2	cpt:u, curricular:senales, logica, pines	u	down,pinnames
+buffers	12_logica	sch/12_logica/buffers.sch	Buffers	cpt:u, cpt:w, curricular:senales, logica	u,w	right
+dff	12_logica	sch/12_logica/dff.sch	Dff	cpt:u, curricular:senales, grilla, logica, visibilidad-nodos	u	draw_nodes,help_lines,right
+dff1	12_logica	sch/12_logica/DFF1.sch	DFF1	cpt:u, curricular:senales, etiqueta, grilla, logica, pines	u	help_lines,l,pinlabels,pinnames,pinnodes,right
+dff1b	12_logica	sch/12_logica/DFF1b.sch	DFF1b	cpt:r, cpt:u, curricular:senales, grilla, logica, pines, visibilidad-nodos	r,u	draw_nodes,help_lines,pinlabels,right
+dff2	12_logica	sch/12_logica/DFF2.sch	DFF2	cpt:u, curricular:senales, grilla, logica, pines, visibilidad-nodos	u	draw_nodes,help_lines,pinlabels,pinnodes,right
+flipflops	12_logica	sch/12_logica/flipflops.sch	Flipflops	cpt:o, cpt:u, curricular:senales, etiqueta, logica, pines	o,u	l,pinlabels,pinnames,pinnodes,right
+gates	12_logica	sch/12_logica/gates.sch	Gates	cpt:o, cpt:u, curricular:senales, etiqueta, logica, pines, visibilidad-nodos	o,u	draw_nodes,l,label_nodes,pinnames,pinnodes,right
+multiplexers	12_logica	sch/12_logica/multiplexers.sch	Multiplexers	cpt:o, cpt:u, curricular:senales, etiqueta, logica, pines	o,u	l,pinnames,pinnodes,right
+ubuffer	12_logica	sch/12_logica/Ubuffer.sch	Ubuffer	cpt:u, curricular:senales, etiqueta, grilla, logica, pines	u	help_lines,l,pinnames,pinnodes,right
+ubuffer1	12_logica	sch/12_logica/Ubuffer1.sch	Ubuffer1	cpt:u, curricular:senales, grilla, logica	u	help_lines,right
+ubuffer2	12_logica	sch/12_logica/Ubuffer2.sch	Ubuffer2	cpt:r, cpt:u, curricular:senales, grilla, logica	r,u	help_lines,right
+udff	12_logica	sch/12_logica/Udff.sch	Udff	cpt:u, curricular:senales, etiqueta, grilla, logica, pines	u	help_lines,l,pinnames,pinnodes,right
+uinverter	12_logica	sch/12_logica/Uinverter.sch	Uinverter	cpt:u, curricular:senales, etiqueta, grilla, logica, pines	u	help_lines,l,pinnames,pinnodes,right
+uinverter1	12_logica	sch/12_logica/Uinverter1.sch	Uinverter1	cpt:u, curricular:senales, grilla, logica	u	help_lines,right
+uinverter2	12_logica	sch/12_logica/Uinverter2.sch	Uinverter2	cpt:r, cpt:u, curricular:senales, grilla, logica	r,u	help_lines,right
+ujkff	12_logica	sch/12_logica/Ujkff.sch	Ujkff	cpt:u, curricular:senales, etiqueta, grilla, logica, pines	u	help_lines,l,pinnames,pinnodes,right
+umux21	12_logica	sch/12_logica/Umux21.sch	Umux21	cpt:u, curricular:senales, etiqueta, grilla, logica, pines	u	help_lines,l,pinnames,pinnodes,right
+umux41	12_logica	sch/12_logica/Umux41.sch	Umux41	cpt:u, curricular:senales, etiqueta, grilla, logica, pines	u	help_lines,l,pinnames,pinnodes,right
+umux42	12_logica	sch/12_logica/Umux42.sch	Umux42	cpt:u, curricular:senales, etiqueta, grilla, logica, pines	u	help_lines,l,pinnames,pinnodes,right
+urslatch	12_logica	sch/12_logica/Urslatch.sch	Urslatch	cpt:u, curricular:senales, etiqueta, grilla, logica, pines	u	help_lines,l,pinlabels,pinnodes,right
+frankenstein	13_formas_bloques	sch/13_formas_bloques/frankenstein.sch	Frankenstein	bloque, cpt:i, cpt:l, cpt:r, cpt:v, curricular:senales, visibilidad-nodos	i,l,r,v	current_source_style,draw_nodes,inductor_style,label_nodes,resistor_style,right,voltage_source_style
+misc	13_formas_bloques	sch/13_formas_bloques/misc.sch	Misc	bloque, cpt:misc, curricular:senales, etiqueta, kind, kind:memristor, kind:thermistor	misc	kind,l,right
+mx1	13_formas_bloques	sch/13_formas_bloques/MX1.sch	MX1	bloque, cpt:mx, cpt:w, curricular:senales, layout	mx,w	endarrow,right,up
+sbox1	13_formas_bloques	sch/13_formas_bloques/Sbox1.sch	Sbox1	bloque, cpt:shape, curricular:senales, etiqueta, grilla, pines	shape	help_lines,l,pinnames,pinnodes,right
+sbox2	13_formas_bloques	sch/13_formas_bloques/Sbox2.sch	Sbox2	bloque, cpt:shape, curricular:senales, etiqueta, grilla, pines	shape	help_lines,l,pinnames,pinnodes,right
+sbox3	13_formas_bloques	sch/13_formas_bloques/Sbox3.sch	Sbox3	bloque, cpt:shape, curricular:senales, etiqueta, grilla, pines	shape	help_lines,l,pinnames,pinnodes,right
+scircle1	13_formas_bloques	sch/13_formas_bloques/Scircle1.sch	Scircle1	bloque, cpt:shape, curricular:senales, grilla	shape	help_lines,right
+scircle2	13_formas_bloques	sch/13_formas_bloques/Scircle2.sch	Scircle2	bloque, cpt:shape, curricular:senales, etiqueta, grilla, pines	shape	help_lines,l,pinnames,pinnodes,right
+sp1	13_formas_bloques	sch/13_formas_bloques/SP1.sch	SP1	bloque, cpt:sp, cpt:w, curricular:senales, layout	sp,w	down,endarrow,right,up
+sp2	13_formas_bloques	sch/13_formas_bloques/SP2.sch	SP2	bloque, cpt:sp, cpt:w, curricular:senales, layout	sp,w	endarrow,right,up
+sp3	13_formas_bloques	sch/13_formas_bloques/SP3.sch	SP3	bloque, cpt:sp, cpt:w, curricular:senales, espejo, layout	sp,w	down,endarrow,mirror,right
+sp4	13_formas_bloques	sch/13_formas_bloques/SP4.sch	SP4	bloque, cpt:sp, cpt:w, curricular:senales, layout, visibilidad-nodos	sp,w	down,draw_nodes,endarrow,right
+sp5	13_formas_bloques	sch/13_formas_bloques/SP5.sch	SP5	bloque, cpt:sp, cpt:v, cpt:w, curricular:senales, layout	sp,v,w	down,endarrow,right,up
+striangle2	13_formas_bloques	sch/13_formas_bloques/Striangle2.sch	Striangle2	bloque, cpt:shape, curricular:senales, etiqueta, forma, grilla, pines	shape	aspect,help_lines,l,pinnames,pinnodes,right
+striangle3	13_formas_bloques	sch/13_formas_bloques/Striangle3.sch	Striangle3	bloque, cpt:shape, curricular:senales, etiqueta, forma, grilla, pines, rotacion	shape	aspect,help_lines,l,pinnames,pinnodes,right,rotate
+striangle4	13_formas_bloques	sch/13_formas_bloques/Striangle4.sch	Striangle4	bloque, cpt:shape, curricular:senales, etiqueta, forma, grilla, pines	shape	aspect,help_lines,l,pinnames,pinnodes,right
+tr1	13_formas_bloques	sch/13_formas_bloques/TR1.sch	TR1	bloque, cpt:tr, cpt:w, curricular:senales, etiqueta, visibilidad-nodos	tr,w	draw_nodes,l,label_nodes,right
+blocks	14_diagramas_bloques	sch/14_diagramas_bloques/blocks.sch	Blocks	cpt:bl, curricular:senales, diagrama-bloques, etiqueta, kind, kind:acdc, kind:amp, kind:bandpass, kind:dcac, kind:dcdc, kind:highpass, kind:highpass2, kind:lowpass, kind:lowpass2, kind:twoportsplit, kind:vco, visibilidad-nodos	bl	draw_nodes,kind,l,label_nodes,right
+blocks2	14_diagramas_bloques	sch/14_diagramas_bloques/blocks2.sch	Blocks2	cpt:bl, curricular:senales, diagrama-bloques, etiqueta, kind, kind:adc, kind:dac, kind:dsp, kind:fft, kind:phaseshifter, kind:piattenuator, kind:tattenuator, kind:twoport, kind:vphaseshifter, kind:vpiattenuator, kind:vtattenuator, visibilidad-nodos	bl	draw_nodes,kind,l,label_nodes,right
+domains	14_diagramas_bloques	sch/14_diagramas_bloques/domains.sch	Domains	cpt:shape, cpt:w, curricular:senales, diagrama-bloques, estilo, etiqueta, etiquetas-globales, forma, layout, visibilidad-nodos	shape,w	aspect,color,dashed,down,draw,draw_nodes,endarrow,l,label_ids,label_nodes,left,right,startarrow
+negative-feedback1	14_diagramas_bloques	sch/14_diagramas_bloques/negative-feedback1.sch	Negative feedback1	cpt:shape, cpt:sp, cpt:w, curricular:senales, diagrama-bloques, etiqueta, forma, layout, visibilidad-nodos	shape,sp,w	aspect,down,draw_nodes,endarrow,l,label_nodes,left,right,up
+negative-feedback2	14_diagramas_bloques	sch/14_diagramas_bloques/negative-feedback2.sch	Negative feedback2	cpt:shape, cpt:sp, cpt:w, curricular:senales, diagrama-bloques, etiqueta, forma, layout, visibilidad-nodos	shape,sp,w	aspect,down,draw_nodes,endarrow,l,label_nodes,left,right,up
+negative-feedback3	14_diagramas_bloques	sch/14_diagramas_bloques/negative-feedback3.sch	Negative feedback3	cpt:sp, cpt:tr, cpt:w, curricular:senales, diagrama-bloques, etiqueta, layout, visibilidad-nodos	sp,tr,w	down,draw_nodes,endarrow,l,label_nodes,left,right,up
+proportional-control	14_diagramas_bloques	sch/14_diagramas_bloques/proportional-control.sch	Proportional control	cpt:a, cpt:sp, cpt:tr, cpt:w, curricular:senales, diagrama-bloques, etiqueta, layout, pines, visibilidad-nodos	a,sp,tr,w	anchor,down,draw_nodes,endarrow,l,label_nodes,left,right,up
+filter1	15_dsp_fir	sch/15_dsp_fir/filter1.sch	Filter1	cpt:c, cpt:p, cpt:r, cpt:w, curricular:senales, dsp, visibilidad-nodos	c,p,r,w	down,draw_nodes,label_nodes,right
+filter2	15_dsp_fir	sch/15_dsp_fir/filter2.sch	Filter2	cpt:c, cpt:p, cpt:r, cpt:w, curricular:senales, dsp, visibilidad-nodos	c,p,r,w	down,draw_nodes,label_nodes,right
+fir1	15_dsp_fir	sch/15_dsp_fir/fir1.sch	Fir1	cpt:shape, cpt:w, curricular:senales, dsp, etiqueta	shape,w	l,right
+fir2	15_dsp_fir	sch/15_dsp_fir/fir2.sch	Fir2	cpt:shape, cpt:w, curricular:senales, dsp, etiqueta, forma	shape,w	aspect,l,right
+fir3	15_dsp_fir	sch/15_dsp_fir/fir3.sch	Fir3	cpt:shape, cpt:w, curricular:senales, dsp, etiqueta	shape,w	down,l,up
+fir4	15_dsp_fir	sch/15_dsp_fir/fir4.sch	Fir4	cpt:shape, cpt:w, curricular:senales, dsp, etiqueta, layout	shape,w	down,endarrow,l,right
+fir5	15_dsp_fir	sch/15_dsp_fir/fir5.sch	Fir5	cpt:o, cpt:shape, cpt:w, curricular:senales, dsp, etiqueta, layout, visibilidad-nodos	o,shape,w	down,draw_nodes,endarrow,l,label_nodes,right
+adc1	16_chips_ic	sch/16_chips_ic/ADC1.sch	ADC1	chip, cpt:u, etiqueta, pines	u	l,pinnames,pinnodes,right
+adc2	16_chips_ic	sch/16_chips_ic/ADC2.sch	ADC2	chip, cpt:u, espejo, grilla, pines	u	help_lines,left,mirror,pinnames
+adc3	16_chips_ic	sch/16_chips_ic/ADC3.sch	ADC3	chip, cpt:u, pines	u	pinnames,pinnodes,right
+chips	16_chips_ic	sch/16_chips_ic/chips.sch	Chips	chip, cpt:o, cpt:u, etiqueta, pines	o,u	down,l,pinnames,pinnodes,right
+chips2	16_chips_ic	sch/16_chips_ic/chips2.sch	Chips2	chip, cpt:o, cpt:u, etiqueta, forma, pines	o,u	aspect,down,l,pinnames,pinnodes,right
+chips3	16_chips_ic	sch/16_chips_ic/chips3.sch	Chips3	chip, cpt:o, cpt:u, etiqueta, pines	o,u	down,l,pinnames,pinnodes,right
+chips4	16_chips_ic	sch/16_chips_ic/chips4.sch	Chips4	chip, cpt:o, cpt:u, estilo, etiqueta, pines	o,u	down,fill,l,pinnames,pinnodes,right
+dac1	16_chips_ic	sch/16_chips_ic/DAC1.sch	DAC1	chip, cpt:u, etiqueta, pines	u	l,pinlabels,right
+dac3	16_chips_ic	sch/16_chips_ic/DAC3.sch	DAC3	chip, cpt:u, etiqueta, pines	u	l,pinnames,pinnodes,right
+i2c2	16_chips_ic	sch/16_chips_ic/I2C2.sch	I2C2	chip, cpt:r, cpt:u, cpt:w, etiqueta, pines, tierra, visibilidad-nodos	r,u,w	down,draw_nodes,implicit,l,label_nodes,pindefs,pinlabels,right,up
+ic1	16_chips_ic	sch/16_chips_ic/ic1.sch	Ic1	chip, cpt:d, cpt:r, cpt:u, cpt:w, etiqueta, grilla, pines, tierra, visibilidad-nodos	d,r,u,w	0V,down,draw_nodes,help_lines,implicit,l,pinlabels,right,up
+ic1b	16_chips_ic	sch/16_chips_ic/ic1b.sch	Ic1b	chip, cpt:d, cpt:r, cpt:u, cpt:w, etiqueta, grilla, pines, tierra, visibilidad-nodos	d,r,u,w	0V,down,draw_nodes,help_lines,l,label_nodes,pinlabels,right
+ic1c	16_chips_ic	sch/16_chips_ic/ic1c.sch	Ic1c	chip, cpt:d, cpt:r, cpt:u, cpt:w, grilla, pines, tierra, visibilidad-nodos	d,r,u,w	0V,down,draw_nodes,help_lines,pinlabels,right
+ic2	16_chips_ic	sch/16_chips_ic/ic2.sch	Ic2	chip, cpt:d, cpt:r, cpt:u, cpt:w, etiqueta, grilla, pines, tierra, visibilidad-nodos	d,r,u,w	0V,down,draw_nodes,help_lines,implicit,l,pinlabels,right,up
+ic2b	16_chips_ic	sch/16_chips_ic/ic2b.sch	Ic2b	chip, cpt:u, grilla, pines, visibilidad-nodos	u	draw_nodes,help_lines,pinlabels,right
+ic3	16_chips_ic	sch/16_chips_ic/ic3.sch	Ic3	chip, cpt:u, cpt:w, etiqueta, etiquetas-globales, forma, grilla, pines, tierra	u,w	aspect,down,draw_labels,help_lines,implicit,l,pinnames,right,up
+mcu-bt	16_chips_ic	sch/16_chips_ic/mcu-bt.sch	Mcu bt	chip, cpt:o, cpt:r, cpt:u, cpt:w, etiqueta, forma, geometria-global, pines, tierra, visibilidad-nodos	o,r,u,w	0V,aspect,down,draw_nodes,implicit,l,label_nodes,node_spacing,pinlabels,right,up
+pic1	16_chips_ic	sch/16_chips_ic/pic1.sch	Pic1	chip, cpt:c, cpt:l, cpt:p, cpt:r, etiqueta-v	c,l,p,r	down,right,v,v^
+pic2	16_chips_ic	sch/16_chips_ic/pic2.sch	Pic2	chip, cpt:c, cpt:l, cpt:p, cpt:r	c,l,p,r	down,right,size
+pic3	16_chips_ic	sch/16_chips_ic/pic3.sch	Pic3	chip, cpt:c, cpt:l, cpt:p, cpt:r	c,l,p,r	down,right
+pic4	16_chips_ic	sch/16_chips_ic/pic4.sch	Pic4	chip, cpt:c, cpt:l, cpt:p, cpt:r, cpt:w, etiqueta-v	c,l,p,r,w	down,right,v,v_
+pic5	16_chips_ic	sch/16_chips_ic/pic5.sch	Pic5	chip, cpt:c, cpt:l, cpt:p, cpt:r	c,l,p,r	down,right
+pic6	16_chips_ic	sch/16_chips_ic/pic6.sch	Pic6	chip, cpt:c, cpt:l, cpt:p, cpt:r, cpt:w	c,l,p,r,w	down,right
+pic7	16_chips_ic	sch/16_chips_ic/pic7.sch	Pic7	chip, cpt:c, cpt:l, cpt:p, cpt:r, cpt:w	c,l,p,r,w	down,right
+pio-input2	16_chips_ic	sch/16_chips_ic/PIO-input2.sch	PIO input2	chip, cpt:a, cpt:u, cpt:w, espejo, estilo, etiqueta, pad-senal, pines, visibilidad-nodos	a,u,w	anchor,bidir,down,draw_nodes,fill,fliplr,input,l,label_nodes,left,pinlabels,right
+pio-input3	16_chips_ic	sch/16_chips_ic/PIO-input3.sch	PIO input3	chip, cpt:a, cpt:u, cpt:w, espejo, estilo, etiqueta, pad-senal, pines, visibilidad-nodos	a,u,w	anchor,bidir,down,draw_nodes,fill,fliplr,l,label_nodes,left,pinlabels,right
+pio-output2	16_chips_ic	sch/16_chips_ic/PIO-output2.sch	PIO output2	chip, cpt:o, cpt:u, cpt:w, estilo, etiqueta, layout, pad-senal, pines, visibilidad-nodos	o,u,w	bidir,down,draw_nodes,fill,free,l,label_nodes,pinlabels,right,steps
+pio-pullup2	16_chips_ic	sch/16_chips_ic/PIO-pullup2.sch	PIO pullup2	chip, cpt:m, cpt:r, cpt:u, cpt:w, espejo, estilo, etiqueta, pad-senal, pines, tierra, visibilidad-nodos	m,r,u,w	bidir,down,draw_nodes,fill,fliplr,l,label_nodes,pinlabels,rground,right,up
+pio1	16_chips_ic	sch/16_chips_ic/PIO1.sch	PIO1	chip, cpt:u, cpt:w, espejo, estilo, etiqueta, pad-senal, visibilidad-nodos	u,w	bidir,down,draw_nodes,fill,fliplr,l,label_nodes,right,up
+uadc	16_chips_ic	sch/16_chips_ic/Uadc.sch	Uadc	chip, cpt:u, etiqueta, grilla, pines	u	help_lines,l,pinnames,pinnodes,right
+uchip1313	16_chips_ic	sch/16_chips_ic/Uchip1313.sch	Uchip1313	chip, cpt:u, etiqueta, grilla, pines	u	help_lines,l,pinnames,pinnodes,right
+uchip2121	16_chips_ic	sch/16_chips_ic/Uchip2121.sch	Uchip2121	chip, cpt:u, etiqueta, grilla, pines	u	help_lines,l,pinnames,pinnodes,right
+uchip2222	16_chips_ic	sch/16_chips_ic/Uchip2222.sch	Uchip2222	chip, cpt:u, etiqueta, grilla, pines	u	help_lines,l,pinnames,pinnodes,right
+uchip3131	16_chips_ic	sch/16_chips_ic/Uchip3131.sch	Uchip3131	chip, cpt:u, etiqueta, grilla, pines	u	help_lines,l,pinnames,pinnodes,right
+uchip3333	16_chips_ic	sch/16_chips_ic/Uchip3333.sch	Uchip3333	chip, cpt:u, etiqueta, grilla, pines	u	help_lines,l,pinnames,pinnodes,right
+uchip4141	16_chips_ic	sch/16_chips_ic/Uchip4141.sch	Uchip4141	chip, cpt:u, etiqueta, grilla, pines	u	help_lines,l,pinnames,pinnodes,right
+udac	16_chips_ic	sch/16_chips_ic/Udac.sch	Udac	chip, cpt:u, etiqueta, grilla, pines	u	help_lines,l,pinnames,pinnodes,right
+uregulator	16_chips_ic	sch/16_chips_ic/Uregulator.sch	Uregulator	chip, cpt:u, etiqueta, grilla, pines	u	help_lines,l,pinnames,pinnodes,right
+cmos-backdrive1	17_cmos	sch/17_cmos/cmos-backdrive1.sch	Cmos backdrive1	cmos, cpt:u, cpt:w, etiqueta, tierra, visibilidad-nodos	u,w	0V,down,draw_nodes,implicit,l,label_nodes,right,thickness,up
+cmos-backdrive2	17_cmos	sch/17_cmos/cmos-backdrive2.sch	Cmos backdrive2	cmos, cpt:d, cpt:m, cpt:u, cpt:w, estilo, etiqueta, geometria-global, layout, tierra, visibilidad-nodos	d,m,u,w	0V,color,dashed,down,draw_nodes,fixed,implicit,l,label_nodes,right,scale,thickness,up
+cmos-backdrive3	17_cmos	sch/17_cmos/cmos-backdrive3.sch	Cmos backdrive3	cmos, cpt:m, cpt:u, cpt:w, estilo, etiqueta, geometria-global, tierra, visibilidad-nodos	m,u,w	0V,dashed,down,draw_nodes,implicit,l,label_nodes,right,scale,thickness,up
+cmos-esd-damage	17_cmos	sch/17_cmos/cmos-esd-damage.sch	Cmos esd damage	cmos, cpt:c, cpt:r, cpt:sw, cpt:w, etiqueta, etiqueta-v, etiquetas-globales, raw-tikz, visibilidad-nodos	c,r,sw,w	down,draw_nodes,l,label_ids,label_nodes,right,size,v
+cmos-high-low	17_cmos	sch/17_cmos/cmos-high-low.sch	Cmos high low	cmos, cpt:c, cpt:p, cpt:r, cpt:sw, cpt:v, cpt:w, etiqueta, etiqueta-i, etiqueta-v, etiquetas-globales, visibilidad-nodos	c,p,r,sw,v,w	down,draw_nodes,i<,l,label_ids,label_nodes,right,size,v
+cmos-high-low-simple	17_cmos	sch/17_cmos/cmos-high-low-simple.sch	Cmos high low simple	cmos, cpt:c, cpt:p, cpt:r, cpt:sw, cpt:w, etiqueta, etiqueta-i, etiqueta-v, etiquetas-globales, visibilidad-nodos	c,p,r,sw,w	down,draw_nodes,i<,l,label_ids,label_nodes,right,size,v
+cmos-input-model	17_cmos	sch/17_cmos/cmos-input-model.sch	Cmos input model	cmos, cpt:c, cpt:p, cpt:r, cpt:v, cpt:w, visibilidad-nodos	c,p,r,v,w	down,draw_nodes,label_nodes,right,size,up
+cmos-input-model-thevenin	17_cmos	sch/17_cmos/cmos-input-model-thevenin.sch	Cmos input model thevenin	cmos, cpt:c, cpt:p, cpt:r, cpt:v, cpt:w, etiquetas-globales, visibilidad-nodos	c,p,r,v,w	down,draw_nodes,label_ids,right,size,up
+cmos-input-model1	17_cmos	sch/17_cmos/cmos-input-model1.sch	Cmos input model1	cmos, cpt:d, cpt:m, cpt:p, cpt:v, cpt:w, visibilidad-nodos	d,m,p,v,w	down,draw_nodes,label_nodes,right,size,up
+cmos-input-model2	17_cmos	sch/17_cmos/cmos-input-model2.sch	Cmos input model2	cmos, cpt:c, cpt:p, cpt:r, cpt:v, cpt:w, etiqueta, etiquetas-globales, visibilidad-nodos	c,p,r,v,w	down,draw_nodes,l,label_ids,label_nodes,right,size,up
+cmos-input-model3	17_cmos	sch/17_cmos/cmos-input-model3.sch	Cmos input model3	cmos, cpt:c, cpt:p, cpt:r, cpt:v, cpt:w, etiquetas-globales, visibilidad-nodos	c,p,r,v,w	down,draw_nodes,label_ids,right,size,up
+cmos-input-model4	17_cmos	sch/17_cmos/cmos-input-model4.sch	Cmos input model4	cmos, cpt:c, cpt:p, cpt:r, cpt:w, raw-tikz, visibilidad-nodos	c,p,r,w	down,draw_nodes,right,size
+cmos-input-model5	17_cmos	sch/17_cmos/cmos-input-model5.sch	Cmos input model5	cmos, cpt:c, cpt:p, cpt:r, cpt:w, raw-tikz, visibilidad-nodos	c,p,r,w	down,draw_nodes,right,size
+cmos-input-model6	17_cmos	sch/17_cmos/cmos-input-model6.sch	Cmos input model6	cmos, cpt:c, cpt:r, cpt:w, etiquetas-globales, raw-tikz, visibilidad-nodos	c,r,w	down,draw_nodes,label_ids,label_nodes,right,size
+cmos-led-model1	17_cmos	sch/17_cmos/cmos-led-model1.sch	Cmos led model1	cmos, cpt:d, cpt:p, cpt:r, cpt:v, cpt:w, etiqueta, etiqueta-i, etiqueta-v, visibilidad-nodos	d,p,r,v,w	down,draw_nodes,i>^,l,label_nodes,right,v
+cmos-led1	17_cmos	sch/17_cmos/cmos-led1.sch	Cmos led1	cmos, cpt:d, cpt:o, cpt:r, cpt:u, cpt:w, etiqueta, etiqueta-i, etiqueta-v, tierra, visibilidad-nodos	d,o,r,u,w	0V,down,draw_nodes,i>^,implicit,l,label_nodes,right,up,v
+cmos-low-high	17_cmos	sch/17_cmos/cmos-low-high.sch	Cmos low high	cmos, cpt:c, cpt:p, cpt:r, cpt:sw, cpt:v, cpt:w, etiqueta, etiqueta-i, etiqueta-v, etiquetas-globales, visibilidad-nodos	c,p,r,sw,v,w	down,draw_nodes,i,l,label_ids,label_nodes,right,size,v
+cmos-low-high-simple	17_cmos	sch/17_cmos/cmos-low-high-simple.sch	Cmos low high simple	cmos, cpt:c, cpt:p, cpt:r, cpt:sw, cpt:v, cpt:w, etiqueta, etiqueta-i, etiqueta-v, etiquetas-globales, visibilidad-nodos	c,p,r,sw,v,w	down,draw_nodes,i,l,label_ids,label_nodes,right,size,v
+cmos-open-drain	17_cmos	sch/17_cmos/cmos-open-drain.sch	Cmos open drain	cmos, cpt:m, cpt:r, cpt:w, etiqueta, etiquetas-globales, tierra, visibilidad-nodos	m,r,w	down,draw_nodes,l,label_ids,label_nodes,right,sground,up
+cmos-protection1	17_cmos	sch/17_cmos/cmos-protection1.sch	Cmos protection1	cmos, cpt:d, cpt:r, cpt:u, cpt:w	d,r,u,w	right,size,up
+cmos-protection2	17_cmos	sch/17_cmos/cmos-protection2.sch	Cmos protection2	cmos, cpt:d, cpt:r, cpt:u, cpt:w, etiqueta, tierra, visibilidad-nodos	d,r,u,w	down,draw_nodes,implicit,l,label_nodes,right,up
+cmos-simple-output-model	17_cmos	sch/17_cmos/cmos-simple-output-model.sch	Cmos simple output model	cmos, cpt:p, cpt:r, cpt:sw, cpt:v, cpt:w, etiqueta, visibilidad-nodos	p,r,sw,v,w	down,draw_nodes,l,label_nodes,left,right
+cmos-totem	17_cmos	sch/17_cmos/cmos-totem.sch	Cmos totem	cmos, cpt:m, cpt:w, etiqueta, etiquetas-globales, pad-senal, tierra, visibilidad-nodos	m,w	down,draw_nodes,l,label_ids,label_nodes,output,right,sground,up
+cmos-totem2	17_cmos	sch/17_cmos/cmos-totem2.sch	Cmos totem2	cmos, cpt:d, cpt:m, cpt:w, etiqueta, etiquetas-globales, pad-senal, tierra, visibilidad-nodos	d,m,w	down,draw_nodes,implicit,l,label_ids,label_nodes,output,right,sground,up
+cmos1	17_cmos	sch/17_cmos/cmos1.sch	Cmos1	cmos, cpt:m, cpt:p, cpt:w	m,p,w	down,right
+antenna	18_lineas_transmision	sch/18_lineas_transmision/antenna.sch	Antenna	cpt:ant, kind, kind:rx, linea-transmision	ant	kind,right
+antennas	18_lineas_transmision	sch/18_lineas_transmision/antennas.sch	Antennas	cpt:ant, espejo, etiqueta, kind, kind:rx, kind:tx, linea-transmision	ant	kind,l,left,mirror,right
+cable	18_lineas_transmision	sch/18_lineas_transmision/cable.sch	Cable	cpt:cable, kind, kind:tline, linea-transmision, pines	cable	kind,pinnames,pinnodes,right
+cable-coax	18_lineas_transmision	sch/18_lineas_transmision/cable-coax.sch	Cable coax	cpt:cable, cpt:w, estilo, kind, kind:coax, linea-transmision	cable,w	dashed,kind,right
+cable-tline	18_lineas_transmision	sch/18_lineas_transmision/cable-tline.sch	Cable tline	cpt:cable, cpt:w, kind, kind:tline, linea-transmision	cable,w	kind,right
+cable-tline2	18_lineas_transmision	sch/18_lineas_transmision/cable-tline2.sch	Cable tline2	cpt:cable, cpt:w, grilla, kind, kind:tline, linea-transmision	cable,w	help_lines,kind,right
+cable-tline3	18_lineas_transmision	sch/18_lineas_transmision/cable-tline3.sch	Cable tline3	cpt:cable, cpt:w, forma, grilla, kind, kind:tline, linea-transmision	cable,w	aspect,help_lines,kind,right
+cable-tp	18_lineas_transmision	sch/18_lineas_transmision/cable-tp.sch	Cable tp	cpt:cable, cpt:w, estilo, kind, kind:shieldedtwistedpair, linea-transmision	cable,w	dashed,kind,right
+cable-twinax	18_lineas_transmision	sch/18_lineas_transmision/cable-twinax.sch	Cable twinax	cpt:cable, cpt:w, estilo, kind, kind:twinax, linea-transmision	cable,w	dashed,kind,right
+cable-utp	18_lineas_transmision	sch/18_lineas_transmision/cable-utp.sch	Cable utp	cpt:cable, cpt:w, estilo, kind, kind:twistedpair, linea-transmision	cable,w	dashed,kind,right
+cable4	18_lineas_transmision	sch/18_lineas_transmision/cable4.sch	Cable4	cpt:cable, cpt:w, estilo, kind, kind:twistedpair, linea-transmision	cable,w	dashed,kind,right
+guard1	18_lineas_transmision	sch/18_lineas_transmision/guard1.sch	Guard1	control, cpt:c, cpt:cable, cpt:e, cpt:r, cpt:w, espejo, estilo, geometria-global, kind, kind:coax, layout, linea-transmision, visibilidad-nodos	c,cable,e,r,w	dashed,down,draw_nodes,free,invisible,kind,label_nodes,left,mirror,right,scale,up
+pierce-oscillator	18_lineas_transmision	sch/18_lineas_transmision/pierce-oscillator.sch	Pierce oscillator	cpt:c, cpt:r, cpt:u, cpt:w, cpt:xt, etiqueta, linea-transmision, tierra, visibilidad-nodos	c,r,u,w,xt	down,draw_nodes,implicit,l,label_nodes,right,up
+shield-ground	18_lineas_transmision	sch/18_lineas_transmision/shield-ground.sch	Shield ground	cpt:c, cpt:cable, cpt:e, cpt:r, cpt:v, cpt:w, estilo, etiqueta, geometria-global, kind, kind:coax, linea-transmision, tierra, visibilidad-nodos	c,cable,e,r,v,w	dashed,down,draw_nodes,kind,l,label_nodes,right,scale,sground,up
+shield-guard	18_lineas_transmision	sch/18_lineas_transmision/shield-guard.sch	Shield guard	cpt:c, cpt:cable, cpt:e, cpt:r, cpt:v, cpt:w, espejo, estilo, etiqueta, geometria-global, kind, kind:coax, linea-transmision, tierra, visibilidad-nodos	c,cable,e,r,v,w	dashed,down,draw_nodes,kind,l,label_nodes,left,mirror,right,scale,sground,up
+tline1	18_lineas_transmision	sch/18_lineas_transmision/tline1.sch	Tline1	cpt:tl, grilla, linea-transmision	tl	help_lines,right
+tline2	18_lineas_transmision	sch/18_lineas_transmision/tline2.sch	Tline2	cpt:r, cpt:tl, cpt:u, cpt:w, etiqueta, geometria-global, linea-transmision, visibilidad-nodos	r,tl,u,w	down,draw_nodes,l,right,scale
+tline3	18_lineas_transmision	sch/18_lineas_transmision/tline3.sch	Tline3	cpt:r, cpt:tl, cpt:u, cpt:w, etiqueta, geometria-global, linea-transmision, tierra, visibilidad-nodos	r,tl,u,w	down,draw_nodes,implicit,l,right,scale,up
+tline4	18_lineas_transmision	sch/18_lineas_transmision/tline4.sch	Tline4	cpt:tl, grilla, linea-transmision	tl	down,help_lines
+tline5	18_lineas_transmision	sch/18_lineas_transmision/tline5.sch	Tline5	cpt:tl, cpt:u, cpt:w, etiqueta, geometria-global, layout, linea-transmision, visibilidad-nodos	tl,u,w	draw_nodes,l,nowires,right,scale
+txline1	18_lineas_transmision	sch/18_lineas_transmision/txline1.sch	Txline1	cpt:p, cpt:r, cpt:tl, cpt:v, cpt:w, etiqueta, etiqueta-v, linea-transmision, visibilidad-nodos	p,r,tl,v,w	down,draw_nodes,l,label_nodes,right,v,v_
+xt1	18_lineas_transmision	sch/18_lineas_transmision/XT1.sch	XT1	cpt:xt, linea-transmision	xt	right
+xt2	18_lineas_transmision	sch/18_lineas_transmision/XT2.sch	XT2	cpt:c, cpt:xt, linea-transmision	c,xt	down,right
+xt3	18_lineas_transmision	sch/18_lineas_transmision/XT3.sch	XT3	cpt:c, cpt:xt, geometria-global, linea-transmision	c,xt	down,right,scale
+meters1	19_medidores	sch/19_medidores/meters1.sch	Meters1	cpt:am, cpt:r, cpt:v, cpt:vm, cpt:w, curricular:tcii, medidor	am,r,v,vm,w	down,right
+meters2	19_medidores	sch/19_medidores/meters2.sch	Meters2	cpt:am, cpt:bat, cpt:r, cpt:vm, cpt:w, curricular:tcii, etiqueta, medidor	am,bat,r,vm,w	down,l,right
+autoground1	20_tierras_alimentacion	sch/20_tierras_alimentacion/autoground1.sch	Autoground1	cpt:i, cpt:l, cpt:r, cpt:w, curricular:tcii, etiquetas-globales, tierra	i,l,r,w	autoground,down,label_ids,size
+autoground2	20_tierras_alimentacion	sch/20_tierras_alimentacion/autoground2.sch	Autoground2	cpt:i, cpt:l, cpt:r, cpt:w, curricular:tcii, etiquetas-globales, tierra	i,l,r,w	autoground,down,label_ids,size
+autoground3	20_tierras_alimentacion	sch/20_tierras_alimentacion/autoground3.sch	Autoground3	cpt:i, cpt:l, cpt:p, cpt:r, cpt:w, curricular:tcii, etiquetas-globales, tierra	i,l,p,r,w	autoground,down,label_ids,right,size
+batteries	20_tierras_alimentacion	sch/20_tierras_alimentacion/batteries.sch	Batteries	cpt:bat, curricular:tcii, etiqueta, kind, kind:cell1, tierra, visibilidad-nodos	bat	draw_nodes,kind,l,label_nodes,right
+connections1	20_tierras_alimentacion	sch/20_tierras_alimentacion/connections1.sch	Connections1	cpt:o, cpt:w, curricular:tcii, estilo, etiqueta, pad-senal, tierra, visibilidad-nodos	o,w	bidir,draw_nodes,fill,input,l,label_nodes,output,pad,right
+connections2	20_tierras_alimentacion	sch/20_tierras_alimentacion/connections2.sch	Connections2	cpt:o, cpt:w, curricular:tcii, estilo, etiqueta, forma, pad-senal, tierra	o,w	aspect,fill,l,output,right
+connections3	20_tierras_alimentacion	sch/20_tierras_alimentacion/connections3.sch	Connections3	cpt:u, cpt:w, curricular:tcii, estilo, etiqueta, etiqueta-nodo, pad-senal, tierra, visibilidad-nodos	u,w	.+.fill,.+.input,.+.l,.-.fill,.-.l,.-.output,draw_nodes,l,label_nodes,right
+ground1	20_tierras_alimentacion	sch/20_tierras_alimentacion/ground1.sch	Ground1	cpt:r, cpt:w, curricular:tcii, tierra	r,w	down,ground,sground,up
+grounddown1	20_tierras_alimentacion	sch/20_tierras_alimentacion/grounddown1.sch	Grounddown1	cpt:r, cpt:w, curricular:tcii, tierra	r,w	down,ground
+groundloop1	20_tierras_alimentacion	sch/20_tierras_alimentacion/groundloop1.sch	Groundloop1	cpt:i, cpt:r, cpt:v, cpt:w, curricular:tcii, tierra	i,r,v,w	down,right
+groundloop1-break	20_tierras_alimentacion	sch/20_tierras_alimentacion/groundloop1-break.sch	Groundloop1 break	cpt:r, cpt:v, cpt:w, curricular:tcii, tierra	r,v,w	down,right
+grounds	20_tierras_alimentacion	sch/20_tierras_alimentacion/grounds.sch	Tipos de tierra	cpt:a, cpt:w, curricular:tcii, etiqueta, pines, tierra, visibilidad-nodos	a,w	0V,anchor,cground,down,draw_nodes,ground,l,label_nodes,nground,pground,rground,right,sground
+grounds2	20_tierras_alimentacion	sch/20_tierras_alimentacion/grounds2.sch	Grounds2	cpt:a, cpt:w, curricular:tcii, etiqueta, pines, tierra, visibilidad-nodos	a,w	anchor,down,draw_nodes,eground,eground2,l,label_nodes,right,tground,tlground
+implicit1	20_tierras_alimentacion	sch/20_tierras_alimentacion/implicit1.sch	Implicit1	alimentacion, cpt:r, curricular:tcii, tierra	r	vdd,vss
+implicit2	20_tierras_alimentacion	sch/20_tierras_alimentacion/implicit2.sch	Implicit2	alimentacion, cpt:r, curricular:tcii, etiqueta, tierra	r	down,l,right,sground,vdd,vss
+implicit3	20_tierras_alimentacion	sch/20_tierras_alimentacion/implicit3.sch	Implicit3	alimentacion, cpt:m, cpt:r, cpt:w, curricular:tcii, etiqueta-nodo, kind, kind:nfet, tierra	m,r,w	.p.l,.p.vdd,.s.l,.s.vss,down,kind,right
+implicit-star	20_tierras_alimentacion	sch/20_tierras_alimentacion/implicit_star.sch	Implicit star	cpt:w, curricular:tcii, etiqueta, rotacion, tierra, visibilidad-nodos	w	draw_nodes,implicit,l,label_nodes,right,rotate
+implicit-wire1	20_tierras_alimentacion	sch/20_tierras_alimentacion/implicit_wire1.sch	Implicit wire1	cpt:v, cpt:w, curricular:tcii, etiqueta, tierra, visibilidad-nodos	v,w	down,draw_nodes,implicit,l,right,size,up
+supplies	20_tierras_alimentacion	sch/20_tierras_alimentacion/supplies.sch	Rieles de alimentación	alimentacion, cpt:r, curricular:tcii, tierra	r	.n.vee,.p.vcc,right
+annotate1	21_etiquetas	sch/21_etiquetas/annotate1.sch	Annotate1	cpt:a, cpt:r, curricular:tcii, etiqueta, pines, visibilidad-nodos	a,r	anchor,l,label_nodes,right
+annotate2	21_etiquetas	sch/21_etiquetas/annotate2.sch	Annotate2	cpt:a, cpt:shape, curricular:tcii, etiqueta, pines, visibilidad-nodos	a,shape	anchor,l,label_nodes,yoffset
+arrows	21_etiquetas	sch/21_etiquetas/arrows.sch	Arrows	cpt:w, curricular:tcii, etiqueta, grilla, layout, visibilidad-nodos	w	draw_nodes,endarrow,help_lines,right,startarrow
+arrows2	21_etiquetas	sch/21_etiquetas/arrows2.sch	Arrows2	cpt:w, curricular:tcii, etiqueta, layout, pad-senal	w	arrow,bus,down,endarrow,left,right,startarrow,up
+attr1	21_etiquetas	sch/21_etiquetas/attr1.sch	Attr1	cpt:r, curricular:tcii, estilo, etiqueta	r	color,right
+circuit	21_etiquetas	sch/21_etiquetas/circuit.sch	Circuit	cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta	r,v,w	down,right
+circuit1	21_etiquetas	sch/21_etiquetas/circuit1.sch	Circuit1	cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, visibilidad-nodos	r,v,w	down,draw_nodes,label_nodes,right
+colors1	21_etiquetas	sch/21_etiquetas/colors1.sch	Colors1	cpt:o, cpt:shape, curricular:tcii, estilo, etiqueta	o,shape	down,fill,l,right
+current-labels1	21_etiquetas	sch/21_etiquetas/current_labels1.sch	Etiquetas de corriente (todas las variantes)	cpt:r, curricular:tcii, etiqueta, etiqueta-i, visibilidad-nodos	r	draw_nodes,i,i<^,i<_,i>^,i>_,i^<,i^>,i_<,i_>,l,label_nodes,right
+current-labels2	21_etiquetas	sch/21_etiquetas/current_labels2.sch	Current labels2	cpt:r, curricular:tcii, etiqueta, etiqueta-i, visibilidad-nodos	r	draw_nodes,i,i<^,i<_,i>^,i>_,i^<,i^>,i_<,i_>,l,label_nodes,left
+currents	21_etiquetas	sch/21_etiquetas/currents.sch	Currents	cpt:r, cpt:w, curricular:tcii, etiqueta, etiqueta-i	r,w	down,i,i<,i<^,i<_,i^,i_,right
+demo1	21_etiquetas	sch/21_etiquetas/demo1.sch	Demo1	cpt:c, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, geometria-global	c,r,v,w	down,node_spacing,right
+fliplr1	21_etiquetas	sch/21_etiquetas/fliplr1.sch	Fliplr1	cpt:o, cpt:u, curricular:tcii, espejo, etiqueta	o,u	fliplr,left,right
+flow-labels1	21_etiquetas	sch/21_etiquetas/flow_labels1.sch	Etiquetas de flujo	cpt:r, curricular:tcii, etiqueta, etiqueta-f, visibilidad-nodos	r	draw_nodes,f,f<^,f<_,f>^,f>_,f^<,f^>,f_<,f_>,l,label_nodes,right
+label-aligned	21_etiquetas	sch/21_etiquetas/label_aligned.sch	Label aligned	cpt:r, curricular:tcii, etiqueta, etiquetas-globales	r	label_style,right
+label-flip	21_etiquetas	sch/21_etiquetas/label_flip.sch	Label flip	cpt:r, curricular:tcii, etiqueta, etiquetas-globales	r	label_flip,right
+label-name	21_etiquetas	sch/21_etiquetas/label_name.sch	Label name	cpt:r, curricular:tcii, etiqueta, etiquetas-globales	r	label_style,right
+label-split	21_etiquetas	sch/21_etiquetas/label_split.sch	Label split	cpt:r, curricular:tcii, etiqueta, etiquetas-globales	r	label_style,right
+label-stacked	21_etiquetas	sch/21_etiquetas/label_stacked.sch	Label stacked	cpt:r, curricular:tcii, etiqueta, etiquetas-globales	r	label_style,right
+label-value	21_etiquetas	sch/21_etiquetas/label_value.sch	Label value	cpt:r, curricular:tcii, etiqueta, etiquetas-globales	r	label_style,right
+label-value-style	21_etiquetas	sch/21_etiquetas/label_value_style.sch	Label value style	anotacion, cpt:r, cpt:w, curricular:tcii, etiqueta, etiquetas-globales, visibilidad-nodos	r,w	a,down,draw_nodes,label_nodes,label_style,label_value_style,right
+labels1	21_etiquetas	sch/21_etiquetas/labels1.sch	Labels1	cpt:r, curricular:tcii, etiqueta, visibilidad-nodos	r	draw_nodes,l,l^,l_,label_nodes,right
+labels-loop	21_etiquetas	sch/21_etiquetas/labels_loop.sch	Labels loop	cpt:r, curricular:tcii, etiqueta, etiqueta-v, geometria-global, visibilidad-nodos	r	down,draw_nodes,label_nodes,left,node_spacing,right,up,v
+labels-loop-flip	21_etiquetas	sch/21_etiquetas/labels_loop_flip.sch	Labels loop flip	cpt:r, curricular:tcii, etiqueta, etiqueta-v, etiquetas-globales, geometria-global, visibilidad-nodos	r	down,draw_nodes,label_flip,label_nodes,left,node_spacing,right,up,v
+rlabels	21_etiquetas	sch/21_etiquetas/Rlabels.sch	Rlabels	anotacion, cpt:r, curricular:tcii, etiqueta, geometria-global, visibilidad-nodos	r	a,a_,draw_nodes,l^,label_nodes,node_spacing
+steppedwire0	21_etiquetas	sch/21_etiquetas/steppedwire0.sch	Steppedwire0	cpt:o, cpt:w, curricular:tcii, etiqueta, layout, rotacion	o,w	free,right,rotate,steps
+steppedwire1	21_etiquetas	sch/21_etiquetas/steppedwire1.sch	Steppedwire1	cpt:o, cpt:w, curricular:tcii, etiqueta, layout, rotacion	o,w	free,right,rotate,steps
+steppedwire2	21_etiquetas	sch/21_etiquetas/steppedwire2.sch	Steppedwire2	cpt:o, cpt:w, curricular:tcii, etiqueta, layout, rotacion	o,w	free,right,rotate,steps
+steppedwire4	21_etiquetas	sch/21_etiquetas/steppedwire4.sch	Steppedwire4	cpt:o, cpt:w, curricular:tcii, etiqueta, layout, rotacion	o,w	free,right,rotate,steps
+voltage-labels1	21_etiquetas	sch/21_etiquetas/voltage_labels1.sch	Etiquetas de tensión	cpt:r, curricular:tcii, etiqueta, etiqueta-v, visibilidad-nodos	r	draw_nodes,l,label_nodes,right,v,v^,v_
+voltage-labels2	21_etiquetas	sch/21_etiquetas/voltage_labels2.sch	Voltage labels2	cpt:r, curricular:tcii, etiqueta, etiqueta-v, visibilidad-nodos	r	bipole voltage style,draw_nodes,label_nodes,right,v
+voltage-labels3	21_etiquetas	sch/21_etiquetas/voltage_labels3.sch	Voltage labels3	cpt:r, curricular:tcii, etiqueta, etiqueta-v, visibilidad-nodos	r	bipole voltage style,draw_nodes,label_nodes,right,v
+wirestyles	21_etiquetas	sch/21_etiquetas/wirestyles.sch	Wirestyles	cpt:w, curricular:tcii, estilo, etiqueta, grilla	w	dashed,dotted,help_lines,line width,right,thick,ultra thick
+circles	22_intro	sch/22_intro/circles.sch	Circles	cpt:o, cpt:shape, curricular:tcii, estilo, intro, rotacion	o,shape	fill,fill opacity,right,rotate,size
+fit1	22_intro	sch/22_intro/fit1.sch	Fit1	cpt:c, cpt:r, cpt:sw, cpt:w, curricular:tcii, etiqueta, etiquetas-globales, intro, raw-tikz, visibilidad-nodos	c,r,sw,w	down,draw_nodes,l,label_ids,label_nodes,right
+fit2	22_intro	sch/22_intro/fit2.sch	Fit2	cpt:c, cpt:r, cpt:w, curricular:tcii, etiquetas-globales, intro, raw-tikz, visibilidad-nodos	c,r,w	down,draw_nodes,label_ids,label_nodes,right
+fit3	22_intro	sch/22_intro/fit3.sch	Fit3	cpt:a, cpt:c, cpt:l, cpt:r, cpt:u, cpt:v, cpt:w, curricular:tcii, estilo, etiqueta, etiquetas-globales, intro, kind, kind:electrolytic, pines, raw-tikz, visibilidad-nodos	a,c,l,r,u,v,w	color,down,draw_nodes,kind,l,label_ids,label_nodes,label_values,pinlabels,right,up
+image1	22_intro	sch/22_intro/image1.sch	Image1	cpt:shape, curricular:tcii, imagen, intro	shape	image,right
+image2	22_intro	sch/22_intro/image2.sch	Image2	cpt:shape, curricular:tcii, imagen, intro	shape	image,right
+include1	22_intro	sch/22_intro/include1.sch	Include1	cpt:w, curricular:tcii, intro	w	right
+include2	22_intro	sch/22_intro/include2.sch	Include2	cpt:w, curricular:tcii, intro, visibilidad-nodos	w	draw_nodes,right
+nodes1	22_intro	sch/22_intro/nodes1.sch	Nodes1	cpt:r, curricular:tcii, estilo, etiqueta-nodo, intro, tierra	r	.+.fill,.+.implicit,.+.l,.-.fill,.-.implicit,.-.l,down
+pindefs1	22_intro	sch/22_intro/pindefs1.sch	Pindefs1	cpt:u, curricular:tcii, intro, pines	u	pindefs,pinlabels,pinnames,pinnodes,right
+qnpright	22_intro	sch/22_intro/Qnpright.sch	Qnpright	cpt:q, curricular:tcii, intro	q	right
+rv1	22_intro	sch/22_intro/RV1.sch	RV1	cpt:rv, curricular:tcii, intro, visibilidad-nodos	rv	label_nodes,right
+rv2	22_intro	sch/22_intro/RV2.sch	RV2	cpt:r, curricular:tcii, intro, kind	r	variable
+schematic	22_intro	sch/22_intro/schematic.sch	Schematic	cpt:c, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta-i, etiqueta-v, etiquetas-globales, intro, visibilidad-nodos	c,r,v,w	down,draw_nodes,i,label_ids,label_nodes,right,v
+schematic2	22_intro	sch/22_intro/schematic2.sch	Schematic2	cpt:c, cpt:r, cpt:v, curricular:tcii, etiquetas-globales, intro, tierra, visibilidad-nodos	c,r,v	autoground,down,draw_nodes,label_ids,right
+test1	22_intro	sch/22_intro/test1.sch	Test1	cpt:w, curricular:tcii, etiqueta-i, intro	w	i
+tfup	22_intro	sch/22_intro/TFup.sch	TFup	cpt:tf, curricular:tcii, intro	tf	up
+tofix1	22_intro	sch/22_intro/tofix1.sch	Tofix1	cpt:c, cpt:r, cpt:w, curricular:tcii, etiquetas-globales, intro, visibilidad-nodos	c,r,w	down,draw_nodes,label_ids,label_nodes,right,up
+transforms	22_intro	sch/22_intro/transforms.sch	Transforms	cpt:shape, cpt:w, curricular:tcii, estilo, etiqueta, etiquetas-globales, forma, intro, layout, visibilidad-nodos	shape,w	aspect,color,dashed,down,draw,draw_nodes,endarrow,l,label_ids,label_nodes,right,startarrow
+tricky1	22_intro	sch/22_intro/tricky1.sch	Tricky1	cpt:c, cpt:r, cpt:w, curricular:tcii, etiquetas-globales, intro, visibilidad-nodos	c,r,w	down,draw_nodes,label_ids,label_nodes,right,up
+uamp	22_intro	sch/22_intro/Uamp.sch	Uamp	cpt:u, curricular:tcii, etiqueta, grilla, intro, pines	u	help_lines,l,pinnames,pinnodes,right
+vacsup2	22_intro	sch/22_intro/Vacsup2.sch	Vacsup2	cpt:c, cpt:v, cpt:w, curricular:tcii, intro	c,v,w	down,right
+vrc1	22_intro	sch/22_intro/VRC1.sch	VRC1	cpt:c, cpt:r, cpt:v, cpt:w, curricular:tcii, intro	c,r,v,w	down,right
+vrc1step	22_intro	sch/22_intro/VRC1step.sch	VRC1step	cpt:c, cpt:r, cpt:v, cpt:w, curricular:tcii, intro	c,r,v,w	down,right
+vrc2	22_intro	sch/22_intro/VRC2.sch	VRC2	cpt:c, cpt:p, cpt:r, cpt:w, curricular:tcii, etiqueta-v, intro	c,p,r,w	down,right,v^,v_
+vrr1	22_intro	sch/22_intro/VRR1.sch	VRR1	cpt:r, cpt:v, cpt:w, curricular:tcii, intro	r,v,w	down,right
+vsup3	22_intro	sch/22_intro/Vsup3.sch	Vsup3	cpt:r, cpt:v, cpt:w, curricular:tcii, intro	r,v,w	down,left,right
+klm2	23_otros	sch/23_otros/KLM2.sch	KLM2	control, cpt:c, cpt:cable, cpt:p, cpt:tf, cpt:w, cpt:z, etiqueta, etiqueta-i, etiqueta-v, etiquetas-globales, kind, kind:coax, varios, visibilidad-nodos	c,cable,p,tf,w,z	down,draw_nodes,i,i<,i>^,ignore,kind,l,label_ids,label_nodes,right,v^,v_
+klm3	23_otros	sch/23_otros/KLM3.sch	KLM3	control, cpt:c, cpt:p, cpt:tf, cpt:tl, cpt:w, cpt:z, estilo, etiqueta-i, etiqueta-v, etiquetas-globales, varios, visibilidad-nodos	c,p,tf,tl,w,z	dashed,down,draw_nodes,i>^,ignore,label_ids,label_nodes,right,v^,v_
+test1	23_otros	sch/23_otros/test1.sch	Test1	cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, varios	c,l,r,v,w	down,right
+test2	23_otros	sch/23_otros/test2.sch	Test2	cpt:c, cpt:l, cpt:r, cpt:v, cpt:w, varios	c,l,r,v,w	down,right

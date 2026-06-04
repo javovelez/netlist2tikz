@@ -113,6 +113,12 @@ class Node:
         if draw_nodes == 'primary':
             return self.primary
 
+        if draw_nodes in ('labeled', 'label'):
+            # Ports and dangling terminals already returned True above.
+            # Any other node only gets a dot if it has a visible label,
+            # which is decided in Cpt.draw_node (needs label_nodes).
+            return False
+
         raise ValueError('Unknown argument %s for draw_nodes' % draw_nodes)
 
     @property

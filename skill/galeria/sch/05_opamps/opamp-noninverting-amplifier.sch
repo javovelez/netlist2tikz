@@ -1,0 +1,20 @@
+# n2t-id: opamp-noninverting-amplifier  ·  Opamp no inversor
+# n2t-tags: cpt:e, cpt:i, cpt:p, cpt:r, cpt:v, cpt:w, curricular:tcii, etiqueta, opamp, visibilidad-nodos  ·  cpts: e,i,p,r,v,w  ·  src: doc/examples/tutorials/opampnoise/opamp-noninverting-amplifier.sch
+Rs 1 0; down
+Vn 1 2 noise; right
+W 2 3; right
+In1 2 0_2 noise; down, l=I_{n+}
+W 0 0_2; right
+In2 5 0_5 noise; down, l=I_{n-}
+W 5 4; right
+W 0_2 0_5; right
+W 4 6; down
+R1 6 0_6; down
+W 0_5 0_6; right
+R2 6 7; right
+W 8 7; down
+E 8 0 opamp 3 4 A; right
+W 8 9; right
+W 0_6 0_9; right
+P 9 0_9; down
+; draw_nodes=connections, label_nodes=none
